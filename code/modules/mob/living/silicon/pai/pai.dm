@@ -71,7 +71,7 @@
 	var/can_transmit = TRUE
 	var/can_receive = TRUE
 	var/chassis = "repairbot"
-	var/list/possible_chassis = list("cat" = TRUE, "mouse" = TRUE, "monkey" = TRUE, "corgi" = FALSE, "fox" = FALSE, "repairbot" = TRUE, "rabbit" = TRUE, "bat" = FALSE, "butterfly" = FALSE, "hawk" = FALSE, "lizard" = FALSE, "duffel" = TRUE)		//assoc value is whether it can be picked up.
+	var/list/possible_chassis = list("cat" = TRUE, "mouse" = TRUE, "monkey" = TRUE, "corgi" = TRUE, "fox" = TRUE, "repairbot" = TRUE, "rabbit" = TRUE, "bat" = TRUE, "butterfly" = TRUE, "hawk" = TRUE, "lizard" = TRUE, "duffel" = TRUE)		//assoc value is whether it can be picked up.
 
 	var/emitterhealth = 20
 	var/emittermaxhealth = 20
@@ -160,7 +160,7 @@
 
 
 	if(hacking_cable && hacking_cable.machine && istype(hacking_cable.machine, /obj/machinery/door) && hacking_cable.machine == hackdoor && get_dist(src, hackdoor) <= 1)
-		hackprogress = clamp(hackprogress + 4, 0, 100)
+		hackprogress = clamp(hackprogress + 4, 0, 50)
 	else
 		temp = "Door Jack: Connection to airlock has been lost. Hack aborted."
 		hackprogress = 0
@@ -172,7 +172,7 @@
 		return
 	if(screen == "doorjack" && subscreen == 0) // Update our view, if appropriate
 		paiInterface()
-	if(hackprogress >= 100)
+	if(hackprogress >= 50)
 		hackprogress = 0
 		var/obj/machinery/door/D = hacking_cable.machine
 		D.open()
