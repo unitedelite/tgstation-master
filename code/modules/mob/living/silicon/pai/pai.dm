@@ -165,7 +165,7 @@
 
 
 	if(hacking_cable && hacking_cable.machine && istype(hacking_cable.machine, /obj/machinery/door) && hacking_cable.machine == hackdoor && get_dist(src, hackdoor) <= 1)
-		hackprogress = clamp(hackprogress + 4, 0, 50)
+		hackprogress = clamp(hackprogress + 8, 0, 100)
 	else
 		temp = "Door Jack: Connection to airlock has been lost. Hack aborted."
 		hackprogress = 0
@@ -177,7 +177,7 @@
 		return
 	if(screen == "doorjack" && subscreen == 0) // Update our view, if appropriate
 		paiInterface()
-	if(hackprogress >= 50)
+	if(hackprogress >= 100)
 		hackprogress = 0
 		var/obj/machinery/door/D = hacking_cable.machine
 		D.open()
