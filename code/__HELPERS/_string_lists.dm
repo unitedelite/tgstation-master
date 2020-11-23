@@ -25,6 +25,14 @@ GLOBAL_VAR(string_filename_current_key)
 	else
 		CRASH("strings list not found: [directory]/[filename], index=[key]")
 
+
+/proc/strings_translate(filename as text, key as text, word as text, directory = "strings")
+	load_strings_file(filename, directory)
+	if((filename in GLOB.string_cache) && (key in GLOB.string_cache[filename]))
+		return GLOB.string_cache[filename][key][word]
+	else
+		CRASH("strings list not found: [directory]/[filename], index=[key]")
+
 /proc/strings_subkey_lookup(match, group1)
 	return pick_list(GLOB.string_filename_current_key, group1)
 
