@@ -4,6 +4,25 @@
 /////////////////////// DRINKS BELOW, Beer is up there though, along with cola. Cap'n Pete's Cuban Spiced Rum////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/datum/reagent/consumable/salty_water
+	name = "Salty Water"
+	description = "Water and, hmm, salt?"
+	color = "#ffe65b"
+	taste_description = "salty water"
+	glass_icon_state = "glass_clear"
+	glass_name = "Water?"
+	glass_desc = "Who would ask that, seriously"
+
+/datum/reagent/consumable/salty_water/on_mob_add(mob/living/L)
+	metabolization_rate = 2.5
+	L.emote("scream")
+	if(prob(50))
+		L.adjustBruteLoss(5, 0)
+		L.adjustFireLoss(5, 0)
+		. = TRUE
+	..()
+//Kryyto (salty water)
+
 /datum/reagent/consumable/orangejuice
 	name = "Orange Juice"
 	description = "Both delicious AND rich in Vitamin C, what more do you need?"
