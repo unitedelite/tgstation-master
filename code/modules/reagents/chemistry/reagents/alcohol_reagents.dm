@@ -2390,3 +2390,4 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(!HAS_TRAIT(M, TRAIT_ALCOHOL_TOLERANCE))
 		new /datum/hallucination/shock(M, TRUE)
 	..()
+//test
