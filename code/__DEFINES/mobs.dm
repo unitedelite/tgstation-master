@@ -144,14 +144,15 @@
 #define SCREWYDOLL_R_LEG /obj/item/bodypart/r_leg
 
 //Threshold levels for beauty for humans
-#define BEAUTY_LEVEL_HORRID -66
-#define BEAUTY_LEVEL_BAD -33
-#define BEAUTY_LEVEL_DECENT 33
-#define BEAUTY_LEVEL_GOOD 66
-#define BEAUTY_LEVEL_GREAT 100
+#define BEAUTY_LEVEL_HORRID -40
+#define BEAUTY_LEVEL_BAD -15
+#define BEAUTY_LEVEL_SCRUFFY 5
+#define BEAUTY_LEVEL_DECENT 30
+#define BEAUTY_LEVEL_GOOD 60
+#define BEAUTY_LEVEL_GREAT 90
 
 //Moods levels for humans
-#define MOOD_LEVEL_HAPPY4 15
+#define MOOD_LEVEL_HAPPY4 20
 #define MOOD_LEVEL_HAPPY3 10
 #define MOOD_LEVEL_HAPPY2 6
 #define MOOD_LEVEL_HAPPY1 2
@@ -162,12 +163,12 @@
 #define MOOD_LEVEL_SAD4 -20
 
 //Sanity levels for humans
-#define SANITY_MAXIMUM 150
-#define SANITY_GREAT 125
-#define SANITY_NEUTRAL 100
-#define SANITY_DISTURBED 75
-#define SANITY_UNSTABLE 50
-#define SANITY_CRAZY 25
+#define SANITY_MAXIMUM 200
+#define SANITY_GREAT 175
+#define SANITY_NEUTRAL 145
+#define SANITY_DISTURBED 105
+#define SANITY_UNSTABLE 70
+#define SANITY_CRAZY 30
 #define SANITY_INSANE 0
 
 //Nutrition levels for humans

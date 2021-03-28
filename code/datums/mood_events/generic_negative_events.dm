@@ -338,3 +338,13 @@
 	description = "<span class='boldwarning'>MY PRECIOUS WINGS!!</span>\n"
 	mood_change = -10
 	timeout = 10 MINUTES
+
+/datum/mood_event/hardsuit_body
+	description = "<span class='warning'>Hardsuits are unconfortable.</span>\n"
+	mood_change = -1
+	timeout = 2 SECONDS
+
+/datum/mood_event/hardsuit_helmet
+	description = "<span class='warning'>I can't see anything with that helmet.</span>\n"
+	mood_change = -1
+	timeout = 2 SECONDS

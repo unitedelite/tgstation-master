@@ -6,7 +6,7 @@
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")
 	blood_state = BLOOD_STATE_HUMAN
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
-	beauty = -100
+	beauty = -400
 	clean_type = CLEAN_TYPE_BLOOD
 	var/dryname = "dried blood" //when the blood lasts long enough, it becomes dry and gets a new name
 	var/drydesc = "Looks like it's been here a while. Eew." //as above
@@ -67,7 +67,7 @@
 	icon_state = "tracks"
 	desc = "They look like tracks left by wheels."
 	random_icon_states = null
-	beauty = -50
+	beauty = -75
 	dryname = "dried tracks"
 	drydesc = "Some old bloody tracks left by wheels. Machines are evil, perhaps."
 
@@ -75,7 +75,7 @@
 	name = "blood"
 	icon = 'icons/effects/blood.dmi'
 	desc = "Your instincts say you shouldn't be following these."
-	beauty = -50
+	beauty = -75
 	var/list/existing_dirs = list()
 
 /obj/effect/decal/cleanable/trail_holder/can_bloodcrawl_in()

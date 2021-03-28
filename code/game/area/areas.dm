@@ -29,7 +29,7 @@
 	/// Beauty average per open turf in the area
 	var/beauty = 0
 	/// If a room is too big it doesn't have beauty.
-	var/beauty_threshold = 150
+	var/beauty_threshold = 450
 
 	/// For space, the asteroid, lavaland, etc. Used with blueprints or with weather to determine if we are adding a new area (vs editing a station room)
 	var/outdoors = FALSE

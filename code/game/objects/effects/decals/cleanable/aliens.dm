@@ -8,7 +8,7 @@
 	random_icon_states = list("xfloor1", "xfloor2", "xfloor3", "xfloor4", "xfloor5", "xfloor6", "xfloor7")
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
 	blood_state = BLOOD_STATE_XENO
-	beauty = -250
+	beauty = -350
 	clean_type = CLEAN_TYPE_BLOOD
 
 /obj/effect/decal/cleanable/xenoblood/Initialize()
