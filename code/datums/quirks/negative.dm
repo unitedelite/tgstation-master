@@ -612,12 +612,12 @@
 
 /datum/quirk/unstable
 	name = "Unstable"
-	desc = "Due to past troubles, you are unable to recover your sanity if you lose it. Be very careful managing your mood!"
+	desc = "Due to past troubles, you very slowly recover your sanity if you lose it. Be very careful managing your mood!"
 	value = -10
 	mob_trait = TRAIT_UNSTABLE
 	gain_text = "<span class='danger'>There's a lot on your mind right now.</span>"
 	lose_text = "<span class='notice'>Your mind finally feels calm.</span>"
-	medical_record_text = "Patient's mind is in a vulnerable state, and cannot recover from traumatic events."
+	medical_record_text = "Patient's mind is in a vulnerable state, and need time to recover from traumatic events."
 	hardcore_value = 9
 
 /datum/quirk/allergic

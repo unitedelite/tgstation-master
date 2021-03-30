@@ -213,7 +213,9 @@
 	// If the new amount would move towards the acceptable range faster then use it instead
 	if(amount < minimum)
 		amount += clamp(minimum - amount, 0, 0.7)
-	if((!override && HAS_TRAIT(parent, TRAIT_UNSTABLE)) || amount > maximum)
+	if(!override && HAS_TRAIT(parent, TRAIT_UNSTABLE) && amount > sanity)
+		amount = (sanity*9 + amount)/10 // Unstable greatly decrease senity regen instead of stopping it.
+	if(amount > maximum)
 		amount = min(sanity, amount)
 	var/mob/living/carbon/master = parent
 	if(amount == sanity) //Prevents stuff from flicking around.
