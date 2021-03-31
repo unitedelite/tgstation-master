@@ -1,16 +1,16 @@
 /datum/mood_event/high
-	mood_change = 6
+	mood_change = 4
 	description = "<span class='nicegreen'>Woooow duudeeeeee... I'm tripping baaalls...</span>\n"
 
 /datum/mood_event/smoked
 	description = "<span class='nicegreen'>I have had a smoke recently.</span>\n"
 	mood_change = 2
-	timeout = 6 MINUTES
+	timeout = 5 MINUTES
 
 /datum/mood_event/wrong_brand
 	description = "<span class='warning'>I hate that brand of cigarettes.</span>\n"
 	mood_change = -2
-	timeout = 6 MINUTES
+	timeout = 5 MINUTES
 
 /datum/mood_event/overdose
 	mood_change = -8
@@ -61,23 +61,23 @@
 
 /datum/mood_event/narcotic_medium
 	description = "<span class='nicegreen'>I feel comfortably numb.</span>\n"
-	mood_change = 4
-	timeout = 3 MINUTES
+	mood_change = 6
+	timeout = 1 MINUTES
 
 /datum/mood_event/narcotic_heavy
 	description = "<span class='nicegreen'>I feel like I'm wrapped up in cotton!</span>\n"
-	mood_change = 9
-	timeout = 3 MINUTES
+	mood_change = 12
+	timeout = 1 MINUTES
 
 /datum/mood_event/stimulant_medium
 	description = "<span class='nicegreen'>I have so much energy! I feel like I could do anything!</span>\n"
-	mood_change = 4
-	timeout = 3 MINUTES
+	mood_change = 6
+	timeout = 1 MINUTES
 
 /datum/mood_event/stimulant_heavy
 	description = "<span class='nicegreen'>Eh ah AAAAH! HA HA HA HA HAA! Uuuh.</span>\n"
-	mood_change = 6
-	timeout = 3 MINUTES
+	mood_change = 8
+	timeout = 1 MINUTES
 
 #define EIGENTRIP_MOOD_RANGE 10
 

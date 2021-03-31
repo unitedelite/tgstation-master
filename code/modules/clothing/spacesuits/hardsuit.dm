@@ -79,6 +79,7 @@
 	current_tick_amount += amount
 
 /obj/item/clothing/head/helmet/space/hardsuit/process(delta_time)
+	SEND_SIGNAL(loc, COMSIG_ADD_MOOD_EVENT, "hardsuit_helmet", /datum/mood_event/hardsuit_helmet)
 	radiation_count = LPFILTER(radiation_count, current_tick_amount, delta_time, RAD_GEIGER_RC)
 
 	if(current_tick_amount)
@@ -170,6 +171,10 @@
 			to_chat(user, "<span class='notice'>You have successfully repaired [src]'s helmet.</span>")
 			new /obj/item/light/bulb/broken(drop_location())
 	return ..()
+
+/obj/item/clothing/suit/space/hardsuit/process()
+	. = ..()
+	SEND_SIGNAL(loc, COMSIG_ADD_MOOD_EVENT, "hardsuit_body", /datum/mood_event/hardsuit_body)
 
 /obj/item/clothing/suit/space/hardsuit/equipped(mob/user, slot)
 	..()
@@ -802,6 +807,7 @@
 			owner.update_inv_wear_suit()
 		return TRUE
 	return FALSE
+
 
 /obj/item/clothing/suit/space/hardsuit/shielded/process()
 	. = ..()

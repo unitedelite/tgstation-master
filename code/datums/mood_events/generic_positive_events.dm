@@ -1,12 +1,12 @@
 /datum/mood_event/hug
 	description = "<span class='nicegreen'>Hugs are nice.</span>\n"
-	mood_change = 1
+	mood_change = 2
 	timeout = 2 MINUTES
 
 /datum/mood_event/betterhug
 	description = "<span class='nicegreen'>Someone was very nice to me.</span>\n"
 	mood_change = 3
-	timeout = 4 MINUTES
+	timeout = 5 MINUTES
 
 /datum/mood_event/betterhug/add_effects(mob/friend)
 	description = "<span class='nicegreen'>[friend.name] was very nice to me.</span>\n"
@@ -14,20 +14,20 @@
 /datum/mood_event/besthug
 	description = "<span class='nicegreen'>Someone is great to be around, they make me feel so happy!</span>\n"
 	mood_change = 5
-	timeout = 4 MINUTES
+	timeout = 6 MINUTES
 
 /datum/mood_event/besthug/add_effects(mob/friend)
 	description = "<span class='nicegreen'>[friend.name] is great to be around, [friend.p_they()] makes me feel so happy!</span>\n"
 
 /datum/mood_event/warmhug
 	description = "<span class='nicegreen'>Warm cozy hugs are the best!</span>\n"
-	mood_change = 1
+	mood_change = 2
 	timeout = 2 MINUTES
 
 /datum/mood_event/arcade
 	description = "<span class='nicegreen'>I beat the arcade game!</span>\n"
 	mood_change = 3
-	timeout = 8 MINUTES
+	timeout = 10 MINUTES
 
 /datum/mood_event/blessing
 	description = "<span class='nicegreen'>I've been blessed.</span>\n"
@@ -36,18 +36,18 @@
 
 /datum/mood_event/book_nerd
 	description = "<span class='nicegreen'>I have recently read a book.</span>\n"
-	mood_change = 1
-	timeout = 5 MINUTES
+	mood_change = 2
+	timeout = 8 MINUTES
 
 /datum/mood_event/exercise
 	description = "<span class='nicegreen'>Working out releases those endorphins!</span>\n"
-	mood_change = 2
-	timeout = 5 MINUTES
+	mood_change = 3
+	timeout = 6 MINUTES
 
 /datum/mood_event/pet_animal
 	description = "<span class='nicegreen'>Animals are adorable! I can't stop petting them!</span>\n"
-	mood_change = 2
-	timeout = 5 MINUTES
+	mood_change = 3
+	timeout = 6 MINUTES
 
 /datum/mood_event/pet_animal/add_effects(mob/animal)
 	description = "<span class='nicegreen'>\The [animal.name] is adorable! I can't stop petting [animal.p_them()]!</span>\n"
@@ -55,14 +55,14 @@
 /datum/mood_event/honk
 	description = "<span class='nicegreen'>I've been honked!</span>\n"
 	mood_change = 2
-	timeout = 4 MINUTES
+	timeout = 5 MINUTES
 	special_screen_obj = "honked_nose"
 	special_screen_replace = FALSE
 
 /datum/mood_event/saved_life
 	description = "<span class='nicegreen'>It feels good to save a life.</span>\n"
-	mood_change = 6
-	timeout = 8 MINUTES
+	mood_change = 8
+	timeout = 5 MINUTES
 
 /datum/mood_event/oblivious
 	description = "<span class='nicegreen'>What a lovely day.</span>\n"
@@ -70,7 +70,7 @@
 
 /datum/mood_event/jolly
 	description = "<span class='nicegreen'>I feel happy for no particular reason.</span>\n"
-	mood_change = 6
+	mood_change = 4
 	timeout = 2 MINUTES
 
 /datum/mood_event/focused
@@ -98,12 +98,12 @@
 
 /datum/mood_event/cult
 	description = "<span class='nicegreen'>I have seen the truth, praise the almighty one!</span>\n"
-	mood_change = 10 //maybe being a cultist isn't that bad after all
+	mood_change = 5 //maybe being a cultist isn't that bad after all
 	hidden = TRUE
 
 /datum/mood_event/heretics
 	description = "<span class='nicegreen'>THE HIGHER I RISE, THE MORE I SEE.</span>\n"
-	mood_change = 10 //maybe being a cultist isnt that bad after all
+	mood_change = 8 //maybe being a cultist isnt that bad after all
 	hidden = TRUE
 
 /datum/mood_event/family_heirloom
@@ -137,14 +137,34 @@
 	mood_change = 12
 	timeout = 3 MINUTES
 
+/datum/mood_event/psy_comforted
+	description = "<span class='nicegreen'>Heard a soothing voice.</span>\n"
+	mood_change = 2
+	timeout = 5 MINUTES
+
 /datum/mood_event/religiously_comforted
+	description = "<span class='nicegreen'>I feel comforted by the presence of a holy person.</span>\n"
+	mood_change = 3
+	timeout = 5 MINUTES
+
+/datum/mood_event/clown_comforted
+	description = "<span class='nicegreen'>The clown is so funny.</span>\n"
+	mood_change = 4
+	timeout = 5 MINUTES
+
+/datum/mood_event/mime_comforted
+	description = "<span class='nicegreen'>Mimes are fun.</span>\n"
+	mood_change = 4
+	timeout = 5 MINUTES
+
+/datum/mood_event/chaplain_comforted
 	description = "<span class='nicegreen'>I feel comforted by the presence of a holy person.</span>\n"
 	mood_change = 3
 	timeout = 5 MINUTES
 
 /datum/mood_event/clownshoes
 	description = "<span class='nicegreen'>The shoes are a clown's legacy, I never want to take them off!</span>\n"
-	mood_change = 5
+	mood_change = 2
 
 /datum/mood_event/sacrifice_good
 	description ="<span class='nicegreen'>The gods are pleased with this offering!</span>\n"
@@ -222,7 +242,7 @@
 /datum/mood_event/aquarium_positive
 	description = "<span class='nicegreen'>Watching fish in an aquarium is calming.</span>\n"
 	mood_change = 3
-	timeout = 90 SECONDS
+	timeout = 5 MINUTES
 
 /datum/mood_event/gondola
 	description = "<span class='nicegreen'>I feel at peace and feel no need to make any sudden or rash actions.</span>\n"
@@ -231,7 +251,7 @@
 /datum/mood_event/kiss
 	description = "<span class='nicegreen'>Someone blew a kiss at me, I must be a real catch!</span>\n"
 	mood_change = 1.5
-	timeout = 2 MINUTES
+	timeout = 3 MINUTES
 
 /datum/mood_event/kiss/add_effects(mob/beau)
 	if(beau)

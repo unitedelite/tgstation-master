@@ -96,7 +96,7 @@
 
 ///Called after moodevent/s have been added/removed.
 /datum/component/mood/proc/update_mood()
-	mood = 0
+	mood = -sanity_level
 	shown_mood = 0
 	for(var/i in mood_events)
 		var/datum/mood_event/event = mood_events[i]
@@ -179,21 +179,21 @@
 		if(1)
 			setSanity(sanity-0.3*delta_time, SANITY_INSANE)
 		if(2)
-			setSanity(sanity-0.15*delta_time, SANITY_INSANE)
+			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
 		if(3)
-			setSanity(sanity-0.1*delta_time, SANITY_CRAZY)
+			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
 		if(4)
-			setSanity(sanity-0.05*delta_time, SANITY_UNSTABLE)
+			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
 		if(5)
-			setSanity(sanity, SANITY_UNSTABLE) //This makes sure that mood gets increased should you be below the minimum.
+			setSanity(sanity+mood*delta_time/100, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
 		if(6)
-			setSanity(sanity+0.2*delta_time, SANITY_UNSTABLE)
+			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
 		if(7)
-			setSanity(sanity+0.3*delta_time, SANITY_UNSTABLE)
+			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
 		if(8)
-			setSanity(sanity+0.4*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
+			setSanity(sanity+mood*delta_time/60, SANITY_UNSTABLE, SANITY_MAXIMUM)
 		if(9)
-			setSanity(sanity+0.6*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
+			setSanity(sanity+0.5*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
 	HandleNutrition()
 
 	// 0.416% is 15 successes / 3600 seconds. Calculated with 2 minute
@@ -213,27 +213,39 @@
 	// If the new amount would move towards the acceptable range faster then use it instead
 	if(amount < minimum)
 		amount += clamp(minimum - amount, 0, 0.7)
-	if((!override && HAS_TRAIT(parent, TRAIT_UNSTABLE)) || amount > maximum)
+	if(!override && HAS_TRAIT(parent, TRAIT_UNSTABLE) && amount > sanity)
+		amount = (sanity*9 + amount)/10 // Unstable greatly decrease senity regen instead of stopping it.
+	if(amount > maximum)
 		amount = min(sanity, amount)
+	var/mob/living/carbon/master = parent
 	if(amount == sanity) //Prevents stuff from flicking around.
+		switch(sanity)
+			if(SANITY_INSANE to SANITY_CRAZY)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+			if(SANITY_CRAZY to SANITY_UNSTABLE)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+			if(SANITY_GREAT+1 to INFINITY)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 		return
 	sanity = amount
-	var/mob/living/master = parent
 	switch(sanity)
 		if(SANITY_INSANE to SANITY_CRAZY)
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(0)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 20)
 			sanity_level = 4
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			setInsanityEffect(0)
@@ -249,6 +261,7 @@
 			setInsanityEffect(0)
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/high_sanity)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 			sanity_level = 1
 	update_mood_icon()
 
@@ -379,8 +392,11 @@
 	SIGNAL_HANDLER
 
 	update_beauty(A)
-	if(A.mood_bonus && (!A.mood_trait || HAS_TRAIT(source, A.mood_trait)))
-		add_event(null, "area", /datum/mood_event/area, A.mood_bonus, A.mood_message)
+	if(A.mood_bonus)
+		if( (!A.mood_trait || !HAS_TRAIT(source, A.mood_trait)))
+			add_event(null, "area", /datum/mood_event/area, A.mood_bonus, A.mood_message)
+		else
+			add_event(null, "area", /datum/mood_event/area, A.mood_bonus*2, A.mood_message)
 	else
 		clear_event(null, "area")
 
@@ -388,16 +404,26 @@
 	if(A.outdoors) //if we're outside, we don't care.
 		clear_event(null, "area_beauty")
 		return FALSE
+
 	if(HAS_TRAIT(parent, TRAIT_SNOB))
 		switch(A.beauty)
 			if(-INFINITY to BEAUTY_LEVEL_HORRID)
-				add_event(null, "area_beauty", /datum/mood_event/horridroom)
+				add_event(null, "area_beauty", /datum/mood_event/horridroomsnob)
 				return
 			if(BEAUTY_LEVEL_HORRID to BEAUTY_LEVEL_BAD)
-				add_event(null, "area_beauty", /datum/mood_event/badroom)
+				add_event(null, "area_beauty", /datum/mood_event/badroomsnob)
+				return
+			if(BEAUTY_LEVEL_BAD to BEAUTY_LEVEL_SCRUFFY)
+				add_event(null, "area_beauty", /datum/mood_event/shabbyroomsnob)
 				return
 	switch(A.beauty)
-		if(BEAUTY_LEVEL_BAD to BEAUTY_LEVEL_DECENT)
+		if(-INFINITY to BEAUTY_LEVEL_HORRID)
+			add_event(null, "area_beauty", /datum/mood_event/horridroom)
+		if(BEAUTY_LEVEL_HORRID to BEAUTY_LEVEL_BAD)
+			add_event(null, "area_beauty", /datum/mood_event/badroom)
+		if(BEAUTY_LEVEL_BAD to BEAUTY_LEVEL_SCRUFFY)
+			add_event(null, "area_beauty", /datum/mood_event/shabbyroom)
+		if(BEAUTY_LEVEL_SCRUFFY to BEAUTY_LEVEL_DECENT)
 			clear_event(null, "area_beauty")
 		if(BEAUTY_LEVEL_DECENT to BEAUTY_LEVEL_GOOD)
 			add_event(null, "area_beauty", /datum/mood_event/decentroom)
@@ -405,6 +431,7 @@
 			add_event(null, "area_beauty", /datum/mood_event/goodroom)
 		if(BEAUTY_LEVEL_GREAT to INFINITY)
 			add_event(null, "area_beauty", /datum/mood_event/greatroom)
+
 
 ///Called when parent is ahealed.
 /datum/component/mood/proc/on_revive(datum/source, full_heal)

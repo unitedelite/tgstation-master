@@ -658,6 +658,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/service/cafeteria
 	name = "Cafeteria"
+	mood_bonus = 2
+	mood_message = "<span class='nicegreen'>I like being in the cafeteria!</span>\n"
 	icon_state = "cafeteria"
 
 /area/service/kitchen
@@ -675,7 +677,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/service/bar
 	name = "Bar"
 	icon_state = "bar"
-	mood_bonus = 5
+	mood_bonus = 3
 	mood_message = "<span class='nicegreen'>I love being in the bar!</span>\n"
 	mood_trait = TRAIT_EXTROVERT
 	airlock_wires = /datum/wires/airlock/service
@@ -688,6 +690,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/service/bar/atrium
 	name = "Atrium"
 	icon_state = "bar"
+	mood_bonus = 2
+	mood_message = "<span class='nicegreen'>I like being in the atrium!</span>\n"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/service/electronic_marketing_den
@@ -713,7 +717,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/service/library
 	name = "Library"
 	icon_state = "library"
-	mood_bonus = 5
+	mood_bonus = 3
 	mood_message = "<span class='nicegreen'>I love being in the library!</span>\n"
 	mood_trait = TRAIT_INTROVERT
 	area_flags = CULT_PERMITTED | BLOBS_ALLOWED | UNIQUE_AREA
@@ -746,7 +750,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/service/chapel
 	icon_state = "chapel"
-	mood_bonus = 5
+	mood_bonus = 3
 	mood_message = "<span class='nicegreen'>Being in the chapel brings me peace.</span>\n"
 	mood_trait = TRAIT_SPIRITUAL
 	ambience_index = AMBIENCE_HOLY
@@ -1099,7 +1103,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical/psychology
 	name = "Psychology Office"
 	icon_state = "psychology"
-	mood_bonus = 3
+	mood_bonus = 5
 	mood_message = "<span class='nicegreen'>I feel at ease here.</span>\n"
 	ambientsounds = list('sound/ambience/aurora_caelus_short.ogg')
 
