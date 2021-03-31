@@ -1,15 +1,15 @@
 //nutrition
 /datum/mood_event/fat
 	description = "<span class='warning'><B>I'm so fat...</B></span>\n" //muh fatshaming
-	mood_change = -6
+	mood_change = -5
 
 /datum/mood_event/wellfed
 	description = "<span class='nicegreen'>I'm stuffed!</span>\n"
-	mood_change = 8
+	mood_change = 4
 
 /datum/mood_event/fed
 	description = "<span class='nicegreen'>I have recently had some food.</span>\n"
-	mood_change = 5
+	mood_change = 2
 
 /datum/mood_event/hungry
 	description = "<span class='warning'>I'm getting a bit hungry.</span>\n"
@@ -53,6 +53,10 @@
 	description = "<span class='boldwarning'>Oh god, that's disgusting...</span>\n"
 	mood_change = -8
 
+/datum/mood_event/disgust/unpleasant_smell
+	description = "<span class='warning'>I can smell something unpleasant.</span>\n"
+	mood_change = -2
+
 /datum/mood_event/disgust/bad_smell
 	description = "<span class='warning'>I can smell something horribly decayed inside this room.</span>\n"
 	mood_change = -6
@@ -85,9 +89,9 @@
 /datum/mood_event/nice_shower
 	description = "<span class='nicegreen'>I have recently had a nice shower.</span>\n"
 	mood_change = 4
-	timeout = 5 MINUTES
+	timeout = 7 MINUTES
 
 /datum/mood_event/fresh_laundry
 	description = "<span class='nicegreen'>There's nothing like the feeling of a freshly laundered jumpsuit.</span>\n"
-	mood_change = 2
+	mood_change = 3
 	timeout = 10 MINUTES

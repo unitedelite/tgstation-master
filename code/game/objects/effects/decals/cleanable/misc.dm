@@ -3,7 +3,7 @@
 	desc = "Someone should clean that up."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
-	beauty = -50
+	beauty = -75
 
 /obj/effect/decal/cleanable/ash
 	name = "ashes"
@@ -11,7 +11,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 	mergeable_decal = FALSE
-	beauty = -50
+	beauty = -75
 
 /obj/effect/decal/cleanable/ash/Initialize()
 	. = ..()
@@ -26,7 +26,7 @@
 /obj/effect/decal/cleanable/ash/large
 	name = "large pile of ashes"
 	icon_state = "big_ash"
-	beauty = -100
+	beauty = -150
 
 /obj/effect/decal/cleanable/ash/large/Initialize()
 	. = ..()
@@ -37,7 +37,7 @@
 	desc = "Back to sand."
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "tiny"
-	beauty = -100
+	beauty = -175
 
 /obj/effect/decal/cleanable/glass/Initialize()
 	. = ..()
@@ -59,7 +59,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_CLEANABLE_DIRT)
 	canSmoothWith = list(SMOOTH_GROUP_CLEANABLE_DIRT, SMOOTH_GROUP_WALLS)
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	beauty = -75
+	beauty = -125
 
 /obj/effect/decal/cleanable/dirt/Initialize()
 	. = ..()
@@ -120,13 +120,13 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "molten"
 	mergeable_decal = FALSE
-	beauty = -150
+	beauty = -200
 	clean_type = CLEAN_TYPE_HARD_DECAL
 
 /obj/effect/decal/cleanable/molten_object/large
 	name = "big gooey grey mass"
 	icon_state = "big_molten"
-	beauty = -300
+	beauty = -350
 
 //Vomit (sorry)
 /obj/effect/decal/cleanable/vomit
@@ -135,7 +135,7 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
-	beauty = -150
+	beauty = -250
 
 /obj/effect/decal/cleanable/vomit/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -170,6 +170,7 @@
 	name = "chemical pile"
 	desc = "A pile of chemicals. You can't quite tell what's inside it."
 	gender = NEUTER
+	beauty = -25
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 
@@ -177,6 +178,7 @@
 	name = "shreds"
 	desc = "The shredded remains of what appears to be clothing."
 	icon_state = "shreds"
+	beauty = -25
 	gender = PLURAL
 	mergeable_decal = FALSE
 
@@ -197,6 +199,7 @@
 	icon = 'icons/effects/atmospherics.dmi'
 	icon_state = "plasma_old"
 	gender = NEUTER
+	beauty = -25
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/cleanable/glitter/pink
@@ -215,6 +218,7 @@
 	name = "stabilized plasma"
 	desc = "A puddle of stabilized plasma."
 	icon_state = "flour"
+	beauty = -25
 	icon = 'icons/effects/tomatodecal.dmi'
 	color = "#2D2D2D"
 
@@ -223,6 +227,7 @@
 	desc = "One bug squashed. Four more will rise in its place."
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "xfloor1"
+	beauty = -50
 	random_icon_states = list("xfloor1", "xfloor2", "xfloor3", "xfloor4", "xfloor5", "xfloor6", "xfloor7")
 
 /obj/effect/decal/cleanable/confetti
@@ -230,6 +235,7 @@
 	desc = "Tiny bits of colored paper thrown about for the janitor to enjoy!"
 	icon = 'icons/effects/confetti_and_decor.dmi'
 	icon_state = "confetti"
+	beauty = -25
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT //the confetti itself might be annoying enough
 
 /obj/effect/decal/cleanable/plastic
@@ -237,12 +243,14 @@
 	desc = "Bits of torn, broken, worthless plastic."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
+	beauty = -25
 	color = "#c6f4ff"
 
 /obj/effect/decal/cleanable/wrapping
 	name = "wrapping shreds"
 	desc = "Torn pieces of cardboard and paper, left over from a package."
 	icon = 'icons/obj/objects.dmi'
+	beauty = -25
 	icon_state = "paper_shreds"
 
 /obj/effect/decal/cleanable/garbage
@@ -251,7 +259,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "garbage"
 	layer = OBJ_LAYER //To display the decal over wires.
-	beauty = -150
+	beauty = -200
 	clean_type = CLEAN_TYPE_HARD_DECAL
 
 /obj/effect/decal/cleanable/garbage/Initialize()

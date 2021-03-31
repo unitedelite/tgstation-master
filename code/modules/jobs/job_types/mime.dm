@@ -40,6 +40,8 @@
 
 	backpack = /obj/item/storage/backpack/mime
 	satchel = /obj/item/storage/backpack/mime
+	
+	skillchips = list(/obj/item/skillchip/mime_grace)
 
 	chameleon_extras = /obj/item/stamp/mime
 
