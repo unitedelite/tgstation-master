@@ -137,14 +137,34 @@
 	mood_change = 12
 	timeout = 3 MINUTES
 
+/datum/mood_event/psy_comforted
+	description = "<span class='nicegreen'>Heard a soothing voice.</span>\n"
+	mood_change = 2
+	timeout = 5 MINUTES
+
 /datum/mood_event/religiously_comforted
+	description = "<span class='nicegreen'>I feel comforted by the presence of a holy person.</span>\n"
+	mood_change = 3
+	timeout = 5 MINUTES
+
+/datum/mood_event/clown_comforted
+	description = "<span class='nicegreen'>The clown is so funny.</span>\n"
+	mood_change = 4
+	timeout = 5 MINUTES
+
+/datum/mood_event/mime_comforted
+	description = "<span class='nicegreen'>Mimes are fun.</span>\n"
+	mood_change = 4
+	timeout = 5 MINUTES
+
+/datum/mood_event/chaplain_comforted
 	description = "<span class='nicegreen'>I feel comforted by the presence of a holy person.</span>\n"
 	mood_change = 3
 	timeout = 5 MINUTES
 
 /datum/mood_event/clownshoes
 	description = "<span class='nicegreen'>The shoes are a clown's legacy, I never want to take them off!</span>\n"
-	mood_change = 5
+	mood_change = 2
 
 /datum/mood_event/sacrifice_good
 	description ="<span class='nicegreen'>The gods are pleased with this offering!</span>\n"

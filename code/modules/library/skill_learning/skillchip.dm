@@ -457,3 +457,118 @@
 	skill_icon = "hand-holding"
 	activate_message = "<span class='notice'>Carrying people across your back feels like second nature to you.</span>"
 	deactivate_message = "<span class='notice'>Your expert knowledge in fireman carrying fades from your mind.</span>"
+
+/obj/item/skillchip/clown_joke
+	name = "FUN skillchip"
+	skill_name = "FUN"
+	chip_category = SKILLCHIP_CATEGORY_FUN_VOICE
+	incompatibility_list = list(SKILLCHIP_CATEGORY_FUN_VOICE)
+	skill_description = "Learn how to make great jokes!"
+	activate_message = "<span class='notice'>Your feel like you are ready to bring the fun to the crew.</span>"
+	deactivate_message = "<span class='notice'>Your pun expertise fades from your mind.</span>"
+
+/obj/item/skillchip/clown_joke/proc/handle_speech(datum/source, list/speech_args)
+	var/mob/living/carbon/user = holding_brain.owner
+	if (iscarbon(user))
+		var/list/candidates = get_hearers_in_view(6, user) - user
+
+		for(var/mob/living/candidate in candidates)
+			if(candidate.stat != DEAD && candidate.can_hear())
+				SEND_SIGNAL(candidate, COMSIG_ADD_MOOD_EVENT, "fun_speech", /datum/mood_event/clown_comforted)
+
+
+/obj/item/skillchip/clown_joke/on_activate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	RegisterSignal(user, COMSIG_MOB_SAY, .proc/handle_speech)
+
+
+/obj/item/skillchip/clown_joke/on_deactivate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	UnregisterSignal(user, COMSIG_MOB_SAY)
+
+
+/obj/item/skillchip/chaplain_plasm
+	name = "PROZ3LYT1Z3 skillchip"
+	skill_name = "PROZ3LYT1Z3"
+	chip_category = SKILLCHIP_CATEGORY_FUN_VOICE
+	incompatibility_list = list(SKILLCHIP_CATEGORY_FUN_VOICE)
+	skill_description = "Learn how to preach for hours!"
+	activate_message = "<span class='notice'>Your feel like you are ready to convert the crew.</span>"
+	deactivate_message = "<span class='notice'>Your voice techniques fades from your mind.</span>"
+
+/obj/item/skillchip/chaplain_plasm/proc/handle_speech(datum/source, list/speech_args)
+	var/mob/living/carbon/user = holding_brain.owner
+	if (iscarbon(user))
+		var/list/candidates = get_hearers_in_view(6, user) - user
+
+		for(var/mob/living/candidate in candidates)
+			if(candidate.stat != DEAD && candidate.can_hear())
+				SEND_SIGNAL(candidate, COMSIG_ADD_MOOD_EVENT, "fun_speech", /datum/mood_event/chaplain_comforted)
+
+
+/obj/item/skillchip/chaplain_plasm/on_activate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	RegisterSignal(user, COMSIG_MOB_SAY, .proc/handle_speech)
+
+
+/obj/item/skillchip/chaplain_plasm/on_deactivate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	UnregisterSignal(user, COMSIG_MOB_SAY)
+
+
+/obj/item/skillchip/psy_ramble
+	name = "1SAN1TY skillchip"
+	skill_name = "1SAN1TY"
+	chip_category = SKILLCHIP_CATEGORY_FUN_VOICE
+	incompatibility_list = list(SKILLCHIP_CATEGORY_FUN_VOICE)
+	skill_description = "Learn to talk with a soothing voice!"
+	activate_message = "<span class='notice'>Your feel like you are ready to calm the crew.</span>"
+	deactivate_message = "<span class='notice'>Your calming techniques fades from your mind.</span>"
+
+/obj/item/skillchip/psy_ramble/proc/handle_speech(datum/source, list/speech_args)
+	var/mob/living/carbon/user = holding_brain.owner
+	if (iscarbon(user))
+		var/list/candidates = get_hearers_in_view(6, user) - user
+
+		for(var/mob/living/candidate in candidates)
+			if(candidate.stat != DEAD && candidate.can_hear())
+				SEND_SIGNAL(candidate, COMSIG_ADD_MOOD_EVENT, "fun_speech", /datum/mood_event/psy_comforted)
+				candidate.adjustOrganLoss(ORGAN_SLOT_BRAIN, -4)
+
+
+/obj/item/skillchip/psy_ramble/on_activate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	RegisterSignal(user, COMSIG_MOB_SAY, .proc/handle_speech)
+
+
+/obj/item/skillchip/psy_ramble/on_deactivate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	UnregisterSignal(user, COMSIG_MOB_SAY)
+
+/obj/item/skillchip/mime_grace
+	name = "M1M3 GRAC3 skillchip"
+	skill_name = "M1M3 GRAC3"
+	chip_category = SKILLCHIP_CATEGORY_FUN_VOICE
+	incompatibility_list = list(SKILLCHIP_CATEGORY_FUN_VOICE)
+	skill_description = "Learn to mime with grace!"
+	activate_message = "<span class='notice'>Your feel like you are took acting classes.</span>"
+	deactivate_message = "<span class='notice'>Your acting skils fade.</span>"
+
+/obj/item/skillchip/mime_grace/proc/handle_emote(datum/source, list/speech_args)
+	var/mob/living/carbon/user = holding_brain.owner
+	if (iscarbon(user))
+		var/list/candidates = oview(6, user) - user
+
+		for(var/mob/living/candidate in candidates)
+			if(candidate.stat != DEAD && !candidate.is_blind())
+				SEND_SIGNAL(candidate, COMSIG_ADD_MOOD_EVENT, "fun_speech", /datum/mood_event/mime_comforted)
+
+
+/obj/item/skillchip/mime_grace/on_activate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	RegisterSignal(user, COMSIG_MOB_EMOTE, .proc/handle_emote)
+
+
+/obj/item/skillchip/mime_grace/on_deactivate(mob/living/carbon/user, silent=FALSE)
+	.=..(user, silent)
+	UnregisterSignal(user, COMSIG_MOB_EMOTE)

@@ -46,6 +46,8 @@
 	backpack = /obj/item/storage/backpack/clown
 	satchel = /obj/item/storage/backpack/clown
 	duffelbag = /obj/item/storage/backpack/duffelbag/clown //strangely has a duffel
+	
+	skillchips = list(/obj/item/skillchip/clown_joke)
 
 	box = /obj/item/storage/box/hug/survival
 
