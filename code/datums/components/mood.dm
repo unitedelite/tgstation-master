@@ -175,23 +175,37 @@
 
 ///Called on SSmood process
 /datum/component/mood/process(delta_time)
-	switch(mood_level)
+	var/rel_mood=mood
+	var/rel_mood_level=mood_level
+	var/mob/living/owner = parent
+	if(owner.stat == DEAD)
+		rel_mood=0
+		rel_mood_level=5
+	if(owner.IsSleeping() || owner.IsUnconscious())
+		rel_mood=rel_mood/2
+		rel_mood_level=5
+
+	if(IS_IN_STASIS(owner))
+		rel_mood=rel_mood/3
+		rel_mood_level=5
+
+	switch(rel_mood_level)
 		if(1)
 			setSanity(sanity-0.3*delta_time, SANITY_INSANE)
 		if(2)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(3)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(4)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(5)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
 		if(6)
-			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/70, SANITY_CRAZY)
 		if(7)
-			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/70, SANITY_CRAZY)
 		if(8)
-			setSanity(sanity+mood*delta_time/60, SANITY_UNSTABLE, SANITY_MAXIMUM)
+			setSanity(sanity+rel_mood*delta_time/60, SANITY_UNSTABLE, SANITY_MAXIMUM)
 		if(9)
 			setSanity(sanity+0.5*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
 	HandleNutrition()
