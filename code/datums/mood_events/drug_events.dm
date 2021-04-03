@@ -26,19 +26,19 @@
 	description = "<span class='warning'>I could use some [drug_name]...</span>\n"
 
 /datum/mood_event/withdrawal_medium
-	mood_change = -5
+	mood_change = -4
 
 /datum/mood_event/withdrawal_medium/add_effects(drug_name)
 	description = "<span class='warning'>I really need [drug_name].</span>\n"
 
 /datum/mood_event/withdrawal_severe
-	mood_change = -8
+	mood_change = -6
 
 /datum/mood_event/withdrawal_severe/add_effects(drug_name)
 	description = "<span class='boldwarning'>Oh god, I need some of that [drug_name]!</span>\n"
 
 /datum/mood_event/withdrawal_critical
-	mood_change = -10
+	mood_change = -8
 
 /datum/mood_event/withdrawal_critical/add_effects(drug_name)
 	description = "<span class='boldwarning'>[drug_name]! [drug_name]! [drug_name]!</span>\n"
@@ -71,18 +71,18 @@
 
 /datum/mood_event/stimulant_medium
 	description = "<span class='nicegreen'>I have so much energy! I feel like I could do anything!</span>\n"
-	mood_change = 6
+	mood_change = 5
 	timeout = 1 MINUTES
 
 /datum/mood_event/stimulant_heavy
 	description = "<span class='nicegreen'>Eh ah AAAAH! HA HA HA HA HAA! Uuuh.</span>\n"
-	mood_change = 8
+	mood_change = 9
 	timeout = 1 MINUTES
 
 /datum/mood_event/nicotine_withdrawal_moderate
 	description = "<span class='warning'>Haven't had a smoke in a while. Feeling a little on edge... </span>\n"
-	mood_change = -5
+	mood_change = -3
 
 /datum/mood_event/nicotine_withdrawal_severe
 	description = "<span class='boldwarning'>Head pounding. Cold sweating. Feeling anxious. Need a smoke to calm down!</span>\n"
-	mood_change = -8
+	mood_change = -6

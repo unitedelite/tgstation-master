@@ -12,7 +12,7 @@
 
 /datum/mood_event/suffocation
 	description = "<span class='boldwarning'>CAN'T... BREATHE...</span>\n"
-	mood_change = -12
+	mood_change = -10
 
 /datum/mood_event/burnt_thumb
 	description = "<span class='warning'>I shouldn't play with lighters...</span>\n"
@@ -49,22 +49,22 @@
 
 /datum/mood_event/depression_minimal
 	description = "<span class='warning'>I feel a bit down.</span>\n"
-	mood_change = -10
+	mood_change = -4
 	timeout = 2 MINUTES
 
 /datum/mood_event/depression_mild
 	description = "<span class='warning'>I feel sad for no particular reason.</span>\n"
-	mood_change = -12
+	mood_change = -6
 	timeout = 2 MINUTES
 
 /datum/mood_event/depression_moderate
 	description = "<span class='warning'>I feel miserable.</span>\n"
-	mood_change = -14
+	mood_change = -8
 	timeout = 2 MINUTES
 
 /datum/mood_event/depression_severe
 	description = "<span class='warning'>I've lost all hope.</span>\n"
-	mood_change = -16
+	mood_change = -10
 	timeout = 2 MINUTES
 
 /datum/mood_event/shameful_suicide //suicide_acts that return SHAME, like sord
@@ -84,7 +84,7 @@
 
 /datum/mood_event/embedded
 	description = "<span class='boldwarning'>Pull it out!</span>\n"
-	mood_change = -7
+	mood_change = -6
 
 /datum/mood_event/table
 	description = "<span class='warning'>Someone threw me on a table!</span>\n"
@@ -109,15 +109,15 @@
 		description = "<span class='warning'>My fucking [banged_limb.name], man that hurts...</span>\n"
 
 /datum/mood_event/brain_damage
-	mood_change = -3
+	mood_change = 0
 
 /datum/mood_event/brain_damage/add_effects()
 	var/damage_message = pick_list_replacements(BRAIN_DAMAGE_FILE, "brain_damage")
-	description = "<span class='warning'>Hurr durr... [damage_message]</span>\n"
+	description = "Hurr durr... [damage_message]\n"
 
 /datum/mood_event/hulk //Entire duration of having the hulk mutation
 	description = "<span class='warning'>HULK SMASH!</span>\n"
-	mood_change = -4
+	mood_change = -2
 
 /datum/mood_event/epilepsy //Only when the mutation causes a seizure
 	description = "<span class='warning'>I should have paid attention to the epilepsy warning.</span>\n"
@@ -130,7 +130,7 @@
 
 /datum/mood_event/bright_light
 	description = "<span class='boldwarning'>I hate it in the light...I need to find a darker place...</span>\n"
-	mood_change = -12
+	mood_change = -5
 
 /datum/mood_event/family_heirloom_missing
 	description = "<span class='warning'>I'm missing my family heirloom...</span>\n"
@@ -143,7 +143,7 @@
 
 /datum/mood_event/jittery
 	description = "<span class='warning'>I'm nervous and on edge and I can't stand still!!</span>\n"
-	mood_change = -2
+	mood_change = -1
 
 /datum/mood_event/vomit
 	description = "<span class='warning'>I just threw up. Gross.</span>\n"
@@ -172,13 +172,13 @@
 
 /datum/mood_event/notcreeping
 	description = "<span class='warning'>The voices are not happy, and they painfully contort my thoughts into getting back on task.</span>\n"
-	mood_change = -6
+	mood_change = -3
 	timeout = 3 SECONDS
 	hidden = TRUE
 
 /datum/mood_event/notcreepingsevere//not hidden since it's so severe
 	description = "<span class='boldwarning'>THEY NEEEEEEED OBSESSIONNNN!!</span>\n"
-	mood_change = -30
+	mood_change = -10
 	timeout = 3 SECONDS
 
 /datum/mood_event/notcreepingsevere/add_effects(name)
@@ -195,7 +195,7 @@
 
 /datum/mood_event/back_pain
 	description = "<span class='boldwarning'>Bags never sit right on my back, this hurts like hell!</span>\n"
-	mood_change = -15
+	mood_change = -10
 
 /datum/mood_event/sad_empath
 	description = "<span class='warning'>Someone seems upset...</span>\n"
@@ -222,7 +222,7 @@
 
 /datum/mood_event/deaths_door
 	description = "<span class='boldwarning'>This is it... I'm really going to die.</span>\n"
-	mood_change = -20
+	mood_change = -15
 
 /datum/mood_event/gunpoint
 	description = "<span class='boldwarning'>This guy is insane! I better be careful...</span>\n"
@@ -230,7 +230,7 @@
 
 /datum/mood_event/tripped
 	description = "<span class='boldwarning'>I can't believe I fell for the oldest trick in the book!</span>\n"
-	mood_change = -5
+	mood_change = -4
 	timeout = 2 MINUTES
 
 /datum/mood_event/untied
@@ -240,7 +240,7 @@
 
 /datum/mood_event/gates_of_mansus
 	description = "<span class='boldwarning'>I HAD A GLIMPSE OF THE HORROR BEYOND THIS WORLD. REALITY UNCOILED BEFORE MY EYES!</span>\n"
-	mood_change = -25
+	mood_change = -15
 	timeout = 4 MINUTES
 
 /datum/mood_event/high_five_alone
@@ -317,7 +317,7 @@
 
 /datum/mood_event/tail_lost
 	description = "<span class='boldwarning'>My tail!! Why?!</span>\n"
-	mood_change = -8
+	mood_change = -6
 	timeout = 10 MINUTES
 
 /datum/mood_event/tail_balance_lost
@@ -331,12 +331,12 @@
 
 /datum/mood_event/tail_regained_wrong
 	description = "<span class='boldwarning'>Is this some kind of sick joke?! This is NOT the right tail.</span>\n"
-	mood_change = -12 // -8 for tail still missing + -4 bonus for being frakenstein's monster
+	mood_change = -10 // -8 for tail still missing + -4 bonus for being frakenstein's monster
 	timeout = 5 MINUTES
 
 /datum/mood_event/burnt_wings
 	description = "<span class='boldwarning'>MY PRECIOUS WINGS!!</span>\n"
-	mood_change = -10
+	mood_change = -8
 	timeout = 10 MINUTES
 
 /datum/mood_event/hardsuit_body

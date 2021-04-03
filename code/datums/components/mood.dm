@@ -96,7 +96,7 @@
 
 ///Called after moodevent/s have been added/removed.
 /datum/component/mood/proc/update_mood()
-	mood = -sanity_level
+	mood = 1-sanity_level
 	shown_mood = 0
 	for(var/i in mood_events)
 		var/datum/mood_event/event = mood_events[i]
