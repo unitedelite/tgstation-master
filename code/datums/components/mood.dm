@@ -247,19 +247,18 @@
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.2, 90)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 50)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(0)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 20)
 			sanity_level = 4
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			setInsanityEffect(0)
