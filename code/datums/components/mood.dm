@@ -96,7 +96,7 @@
 
 ///Called after moodevent/s have been added/removed.
 /datum/component/mood/proc/update_mood()
-	mood = -sanity_level
+	mood = -sanity_level/2
 	shown_mood = 0
 	for(var/i in mood_events)
 		var/datum/mood_event/event = mood_events[i]
@@ -199,13 +199,13 @@
 		if(4)
 			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(5)
-			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
+			setSanity(sanity+rel_mood*delta_time/90, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
 		if(6)
-			setSanity(sanity+rel_mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/60, SANITY_CRAZY)
 		if(7)
-			setSanity(sanity+rel_mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/55, SANITY_CRAZY)
 		if(8)
-			setSanity(sanity+rel_mood*delta_time/60, SANITY_UNSTABLE, SANITY_MAXIMUM)
+			setSanity(sanity+rel_mood*delta_time/45, SANITY_UNSTABLE, SANITY_MAXIMUM)
 		if(9)
 			setSanity(sanity+0.5*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
 	HandleNutrition()
@@ -247,19 +247,18 @@
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(0)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 20)
 			sanity_level = 4
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			setInsanityEffect(0)
