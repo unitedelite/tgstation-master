@@ -181,9 +181,15 @@
 	if(owner.stat == DEAD)
 		rel_mood=0
 		rel_mood_level=5
-	if(owner.IsSleeping() || owner.IsUnconscious())
+	if(owner.IsUnconscious())
 		rel_mood=rel_mood/2
 		rel_mood_level=5
+	if(owner.IsSleeping())
+		rel_mood=rel_mood*0.6
+		rel_mood_level=5
+		if(owner.IsSleeping())
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dream_sleep", /datum/mood_event/slept)
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "is_sleep", /datum/mood_event/sleeping)
 
 	if(IS_IN_STASIS(owner))
 		rel_mood=rel_mood/3
@@ -235,25 +241,28 @@
 	if(amount == sanity) //Prevents stuff from flicking around.
 		switch(sanity)
 			if(SANITY_INSANE to SANITY_CRAZY)
-				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
 			if(SANITY_CRAZY to SANITY_UNSTABLE)
-				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
 			if(SANITY_GREAT+1 to INFINITY)
 				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 		return
-	sanity = amount
 	switch(sanity)
 		if(SANITY_INSANE to SANITY_CRAZY)
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
+			if(amount <= sanity) 
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
+			else
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 75)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
+			if(amount <= sanity) 
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(0)
@@ -276,6 +285,7 @@
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/high_sanity)
 			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 			sanity_level = 1
+	sanity = amount
 	update_mood_icon()
 
 /datum/component/mood/proc/setInsanityEffect(newval)
