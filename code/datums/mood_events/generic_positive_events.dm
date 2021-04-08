@@ -256,3 +256,13 @@
 /datum/mood_event/kiss/add_effects(mob/beau)
 	if(beau)
 		description = "<span class='nicegreen'>[beau.name] blew a kiss at me, I must be a real catch!</span>\n"
+
+/datum/mood_event/slept
+	description = "<span class='nicegreen'>I had a nice dream!</span>\n"
+	mood_change = 2
+	timeout = 8 MINUTES
+
+/datum/mood_event/sleeping
+	description = "<span class='nicegreen'>Dreaming.</span>\n"
+	mood_change = 6
+	timeout = 10 SECONDS

@@ -181,9 +181,15 @@
 	if(owner.stat == DEAD)
 		rel_mood=0
 		rel_mood_level=5
-	if(owner.IsSleeping() || owner.IsUnconscious())
+	if(owner.IsUnconscious())
 		rel_mood=rel_mood/2
 		rel_mood_level=5
+	if(owner.IsSleeping())
+		rel_mood=rel_mood*0.6
+		rel_mood_level=5
+		if(owner.IsSleeping())
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dream_sleep", /datum/mood_event/slept)
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "is_sleep", /datum/mood_event/sleeping)
 
 	if(IS_IN_STASIS(owner))
 		rel_mood=rel_mood/3
