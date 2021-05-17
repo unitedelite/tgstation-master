@@ -138,13 +138,15 @@
 	..()
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/process_atmos()
-	..()
 	if(welded || !is_operational)
 		return FALSE
 	if(!nodes[1] || !on)
 		on = FALSE
 		return FALSE
-	scrub(loc)
+	var/turf/open/us = loc
+	if(!istype(us))
+		return
+	scrub(us)
 	if(widenet)
 		for(var/turf/tile in adjacent_turfs)
 			scrub(tile)
@@ -188,7 +190,7 @@
 			//Remix the resulting gases
 			air_contents.merge(filtered_out)
 			tile.assume_air(removed)
-			tile.air_update_turf(FALSE, FALSE)
+			update_parents()
 
 	else //Just siphoning all air
 
@@ -197,9 +199,7 @@
 		var/datum/gas_mixture/removed = tile.remove_air(transfer_moles)
 
 		air_contents.merge(removed)
-		tile.air_update_turf(FALSE, FALSE)
-
-	update_parents()
+		update_parents()
 
 	return TRUE
 

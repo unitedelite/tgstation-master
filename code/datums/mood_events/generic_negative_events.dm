@@ -348,3 +348,13 @@
 	description = "<span class='warning'>I can't see anything with that helmet.</span>\n"
 	mood_change = -1
 	timeout = 2 SECONDS
+
+/datum/mood_event/holy_smite //punished
+	description = "<span class='warning'>I have been punished by my deity!</span>\n"
+	mood_change = -5
+	timeout = 5 MINUTES
+
+/datum/mood_event/banished //when the chaplain is sus! (and gets forcably de-holy'd)
+	description = "<span class='boldwarning'>I have been excommunicated!</span>\n"
+	mood_change = -10
+	timeout = 10 MINUTES
