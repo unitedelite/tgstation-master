@@ -93,7 +93,7 @@
 
 /datum/mood_event/creeping
 	description = "<span class='greentext'>The voices have released their hooks on my mind! I feel free again!</span>\n" //creeps get it when they are around their obsession
-	mood_change = 18
+	mood_change = 10
 	timeout = 3 SECONDS
 	hidden = TRUE
 
@@ -266,3 +266,14 @@
 /datum/mood_event/honorbound
 	description = "<span class='nicegreen'>Following my honorbound code is fulfilling!</span>\n"
 	mood_change = 4
+
+/datum/mood_event/slept
+	description = "<span class='nicegreen'>I had a nice dream!</span>\n"
+	mood_change = 2
+	timeout = 8 MINUTES
+
+/datum/mood_event/sleeping
+	description = "<span class='nicegreen'>Dreaming.</span>\n"
+	mood_change = 6
+	timeout = 10 SECONDS
+	

@@ -96,7 +96,7 @@
 
 ///Called after moodevent/s have been added/removed.
 /datum/component/mood/proc/update_mood()
-	mood = -sanity_level
+	mood = -sanity_level/2
 	shown_mood = 0
 	for(var/i in mood_events)
 		var/datum/mood_event/event = mood_events[i]
@@ -175,26 +175,44 @@
 
 ///Called on SSmood process
 /datum/component/mood/process(delta_time)
-	var/mob/living/moody_fellow = parent
-	if(moody_fellow.stat == DEAD)
-		return //updating sanity during death leads to people getting revived and being completely insane for simply being dead for a long time
-	switch(mood_level)
+	var/rel_mood=mood
+	var/rel_mood_level=mood_level
+	var/mob/living/owner = parent
+	if(owner.stat == DEAD)
+		rel_mood=0
+		rel_mood_level=5
+		//updating sanity during death leads to people getting revived and being completely insane for simply being dead for a long time
+	if(owner.IsUnconscious())
+		rel_mood=rel_mood/2
+		rel_mood_level=5
+	if(owner.IsSleeping())
+		rel_mood=rel_mood*0.6
+		rel_mood_level=5
+		if(owner.IsSleeping())
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dream_sleep", /datum/mood_event/slept)
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "is_sleep", /datum/mood_event/sleeping)
+
+	if(IS_IN_STASIS(owner))
+		rel_mood=rel_mood/3
+		rel_mood_level=5
+
+	switch(rel_mood_level)
 		if(1)
 			setSanity(sanity-0.3*delta_time, SANITY_INSANE)
 		if(2)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(3)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(4)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE)
+			setSanity(sanity+rel_mood*delta_time/100, SANITY_INSANE)
 		if(5)
-			setSanity(sanity+mood*delta_time/100, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
+			setSanity(sanity+rel_mood*delta_time/90, SANITY_INSANE) //This makes sure that mood gets increased should you be below the minimum.
 		if(6)
-			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/60, SANITY_CRAZY)
 		if(7)
-			setSanity(sanity+mood*delta_time/70, SANITY_CRAZY)
+			setSanity(sanity+rel_mood*delta_time/55, SANITY_CRAZY)
 		if(8)
-			setSanity(sanity+mood*delta_time/60, SANITY_UNSTABLE, SANITY_MAXIMUM)
+			setSanity(sanity+rel_mood*delta_time/45, SANITY_UNSTABLE, SANITY_MAXIMUM)
 		if(9)
 			setSanity(sanity+0.5*delta_time, SANITY_NEUTRAL, SANITY_MAXIMUM)
 	HandleNutrition()
@@ -224,31 +242,33 @@
 	if(amount == sanity) //Prevents stuff from flicking around.
 		switch(sanity)
 			if(SANITY_INSANE to SANITY_CRAZY)
-				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
 			if(SANITY_CRAZY to SANITY_UNSTABLE)
-				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
 			if(SANITY_GREAT+1 to INFINITY)
 				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 		return
-	sanity = amount
 	switch(sanity)
 		if(SANITY_INSANE to SANITY_CRAZY)
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25, 120)
+			if(amount <= sanity) 
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.15, 90)
+			else
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 75)
 			sanity_level = 6
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.1, 60)
+			if(amount <= sanity) 
+				master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 40)
 			sanity_level = 5
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(0)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
-			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.05, 20)
 			sanity_level = 4
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			setInsanityEffect(0)
@@ -266,6 +286,7 @@
 			master.add_actionspeed_modifier(/datum/actionspeed_modifier/high_sanity)
 			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 			sanity_level = 1
+	sanity = amount
 	update_mood_icon()
 
 /datum/component/mood/proc/setInsanityEffect(newval)

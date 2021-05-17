@@ -111,7 +111,7 @@
 	name = "Depression"
 	desc = "You sometimes just hate life."
 	mob_trait = TRAIT_DEPRESSION
-	value = -3
+	value = -4
 	gain_text = "<span class='danger'>You start feeling depressed.</span>"
 	lose_text = "<span class='notice'>You no longer feel depressed.</span>" //if only it were that easy!
 	medical_record_text = "Patient has a mild mood disorder causing them to experience acute episodes of depression."
@@ -385,7 +385,7 @@
 /datum/quirk/snob
 	name = "Snob"
 	desc = "You care about the finer things, if a room doesn't look nice its just not really worth it, is it?"
-	value = -1
+	value = -2
 	gain_text = "<span class='notice'>You feel like you understand what things should look like.</span>"
 	lose_text = "<span class='notice'>Well who cares about deco anyways?</span>"
 	medical_record_text = "Patient seems to be rather stuck up."
