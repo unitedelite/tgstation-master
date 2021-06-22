@@ -46,7 +46,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 	  * If it is seven the range is:
 	  * 0-6, 7-13, 14-20, 21-27, 28-34, 35-41, 42-48, 49-55, 56-62, 63+
 	  */
-	var/pop_per_requirement = 6
+	var/pop_per_requirement = 5
 	/// Number of players who were ready on roundstart.
 	var/roundstart_pop_ready = 0
 	/// List of candidates used on roundstart rulesets.
@@ -101,12 +101,12 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 	/// A number between -5 and +5.
 	/// A negative value will give a more peaceful round and
 	/// a positive value will give a round with higher threat.
-	var/threat_curve_centre = 0
+	var/threat_curve_centre = 0.5
 
 	/// A number between 0.5 and 4.
 	/// Higher value will favour extreme rounds and
 	/// lower value rounds closer to the average.
-	var/threat_curve_width = 1.8
+	var/threat_curve_width = 2
 
 	/// A number between -5 and +5.
 	/// Equivalent to threat_curve_centre, but for the budget split.
@@ -285,9 +285,12 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 	. += generate_station_trait_report()
 
 	print_command_report(., "Central Command Status Summary", announce=FALSE)
-	priority_announce("A summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT)
-	if(SSsecurity_level.current_level < SEC_LEVEL_BLUE)
-		set_security_level(SEC_LEVEL_BLUE)
+	if(shown_threat < 66)
+		priority_announce("A summary has been copied and printed to all communications consoles.", "Daily CCSS received.", ANNOUNCER_INTERCEPT)
+	else
+		priority_announce("A summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT)
+		if(SSsecurity_level.current_level < SEC_LEVEL_BLUE)
+			set_security_level(SEC_LEVEL_BLUE)
 
 /datum/game_mode/dynamic/proc/show_threatlog(mob/admin)
 	if(!SSticker.HasRoundStarted())
