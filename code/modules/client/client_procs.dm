@@ -261,27 +261,44 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	log_access("Login: [key_name(src)] from [address ? address : "localhost"]-[computer_id] || BYOND v[full_version]")
 
 	var/alert_mob_dupe_login = FALSE
+	var/alert_admin_multikey = FALSE
 	if(CONFIG_GET(flag/log_access))
-		for(var/I in GLOB.clients)
-			if(!I || I == src)
+		var/list/joined_players = list()
+		for(var/player_ckey in GLOB.joined_player_list)
+			joined_players[player_ckey] = 1
+			
+		for(var/joined_player_ckey in (GLOB.directory | joined_players))
+			if (!joined_player_ckey || joined_player_ckey == ckey)
 				continue
-			var/client/C = I
-			if(C.key && (C.key != key) )
-				var/matches
-				if( (C.address == address) )
-					matches += "IP ([address])"
-				if( (C.computer_id == computer_id) )
-					if(matches)
-						matches += " and "
-					matches += "ID ([computer_id])"
-					alert_mob_dupe_login = TRUE
+			
+			var/datum/preferences/joined_player_preferences = GLOB.preferences_datums[joined_player_ckey]
+			if(!joined_player_preferences)
+				continue //this shouldn't happen.
+				
+			var/client/C = GLOB.directory[joined_player_ckey]
+			var/in_round = ""
+			if (joined_players[joined_player_ckey])
+				in_round = " who has played in the current round"
+			var/message_type = "Notice"
+			
+			var/matches
+			if(joined_player_preferences.last_ip == address)
+				matches += "IP ([address])"
+			if(joined_player_preferences.last_id == computer_id)
 				if(matches)
-					if(C)
-						message_admins(span_danger("<B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)]."))
-						log_admin_private("Notice: [key_name(src)] has the same [matches] as [key_name(C)].")
-					else
-						message_admins(span_danger("<B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)] (no longer logged in). "))
-						log_admin_private("Notice: [key_name(src)] has the same [matches] as [key_name(C)] (no longer logged in).")
+					matches = "BOTH [matches] and "
+					alert_admin_multikey = TRUE
+					message_type = "MULTIKEY"
+				matches += "Computer ID ([computer_id])"
+				alert_mob_dupe_login = TRUE
+			
+			if(matches)
+				if(C)
+					message_admins(span_danger("<B>[message_type]: </B></span><span class='notice'>Connecting player [key_name_admin(src)] has the same [matches] as [key_name_admin(C)]<b>[in_round]</b>."))
+					log_admin_private("[message_type]: Connecting player [key_name(src)] has the same [matches] as [key_name(C)][in_round].")
+				else
+					message_admins(span_danger("<B>[message_type]: </B></span><span class='notice'>Connecting player [key_name_admin(src)] has the same [matches] as [joined_player_ckey](no longer logged in)<b>[in_round]</b>. "))
+					log_admin_private("[message_type]: Connecting player [key_name(src)] has the same [matches] as [joined_player_ckey](no longer logged in)[in_round].")
 	var/reconnecting = FALSE
 	if(GLOB.player_details[ckey])
 		reconnecting = TRUE
@@ -325,9 +342,16 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	addtimer(CALLBACK(src, .proc/check_panel_loaded), 30 SECONDS)
 	tgui_panel.initialize()
 
-	if(alert_mob_dupe_login)
-		spawn()
-			tgui_alert(mob, "You have logged in already with another key this round, please log out of this one NOW or risk being banned!")
+	if(alert_mob_dupe_login && !holder)
+		var/dupe_login_message = "Your ComputerID has already logged in with another key this round, please log out of this one NOW or risk being banned!"
+		if (alert_admin_multikey)
+			dupe_login_message += "\nAdmins have been informed."
+			message_admins(span_danger("<B>MULTIKEYING: </B></span><span class='notice'>[key_name_admin(src)] has a matching CID+IP with another player and is clearly multikeying. They have been warned to leave the server or risk getting banned."))
+			log_admin_private("MULTIKEYING: [key_name(src)] has a matching CID+IP with another player and is clearly multikeying. They have been warned to leave the server or risk getting banned.")
+		spawn(0.5 SECONDS) //needs to run during world init, do not convert to add timer
+			alert(mob, dupe_login_message) //players get banned if they don't see this message, do not convert to tgui_alert (or even tg_alert) please.
+			to_chat(mob, span_danger(dupe_login_message))
+			
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -378,7 +402,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	if(holder)
 		add_admin_verbs()
-		to_chat(src, get_message_output("memo"))
+		var/memo_message = get_message_output("memo")
+		if(memo_message)
+			to_chat(src, memo_message)
 		adminGreet()
 	if (mob && reconnecting)
 		var/stealth_admin = mob.client?.holder?.fakekey
@@ -426,7 +452,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	if(CONFIG_GET(flag/autoconvert_notes))
 		convert_notes_sql(ckey)
-	to_chat(src, get_message_output("message", ckey))
+	var/user_messages = get_message_output("message", ckey)
+	if(user_messages)
+		to_chat(src, user_messages)
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, span_warning("Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you."))
 
@@ -442,8 +470,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	view_size = new(src, getScreenSize(prefs.widescreenpref))
 	view_size.resetFormat()
 	view_size.setZoomMode()
-	fit_viewport()
 	Master.UpdateTickRate()
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CLIENT_CONNECT, src)
 
 //////////////
 //DISCONNECT//
@@ -547,13 +575,15 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		qdel(query_client_in_db)
 		return
 
+	var/client_is_in_db = query_client_in_db.NextRow()
 	//If we aren't an admin, and the flag is set
 	if(CONFIG_GET(flag/panic_bunker) && !holder && !GLOB.deadmins[ckey])
 		var/living_recs = CONFIG_GET(number/panic_bunker_living)
 		//Relies on pref existing, but this proc is only called after that occurs, so we're fine.
 		var/minutes = get_exp_living(pure_numeric = TRUE)
-		if(minutes <= living_recs && !CONFIG_GET(flag/panic_bunker_interview))
-			var/reject_message = "Failed Login: [key] - Account attempting to connect during panic bunker, but they do not have the required living time [minutes]/[living_recs]"
+		if((minutes < living_recs && !CONFIG_GET(flag/panic_bunker_interview)) || (!living_recs && !client_is_in_db))
+			var/reject_message = "Failed Login: [key] - [client_is_in_db ? "":"New "]Account attempting to connect during panic bunker, but\
+			[living_recs ? "they do not have the required living time [minutes]/[living_recs]": "was rejected"]"
 			log_access(reject_message)
 			message_admins(span_adminnotice("[reject_message]"))
 			var/message = CONFIG_GET(string/panic_bunker_message)
@@ -570,7 +600,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			qdel(src)
 			return
 
-	if(!query_client_in_db.NextRow())
+	if(!client_is_in_db)
 		new_player = 1
 		account_join_date = findJoinDate()
 		var/datum/db_query/query_add_player = SSdbcore.NewQuery({"

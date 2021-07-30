@@ -852,6 +852,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/engineering/atmos/upper
 	name = "Upper Atmospherics"
 
+/area/engineering/atmos/project
+	name = "Atmospherics Project Room"
+
+
 /area/engineering/atmospherics_engine
 	name = "Atmospherics Engine"
 	icon_state = "atmos_engine"
@@ -1412,10 +1416,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Abandoned Research Lab"
 	icon_state = "abandoned_sci"
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
-
-/area/science/nanite
-	name = "Nanite Lab"
-	icon_state = "nanite"
 
 // Telecommunications Satellite
 
