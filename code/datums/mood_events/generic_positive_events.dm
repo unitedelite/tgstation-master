@@ -220,7 +220,7 @@
 
 /datum/mood_event/holy_consumption
 	description = "<span class='nicegreen'>Truly, that was the food of the Divine!</span>\n"
-	mood_change = 5
+	mood_change = 1 // 1 + 5 from it being liked food makes it as good as jolly
 	timeout = 3 MINUTES
 
 /datum/mood_event/high_five
@@ -252,8 +252,12 @@
 	mood_change = 1.5
 	timeout = 3 MINUTES
 
-/datum/mood_event/kiss/add_effects(mob/beau)
-	if(beau)
+/datum/mood_event/kiss/add_effects(mob/beau, direct)
+	if(!beau)
+		return
+	if(direct)
+		description = "<span class='nicegreen'>[beau.name] gave me a kiss, ahh!!</span>\n"
+	else
 		description = "<span class='nicegreen'>[beau.name] blew a kiss at me, I must be a real catch!</span>\n"
 
 /datum/mood_event/honorbound

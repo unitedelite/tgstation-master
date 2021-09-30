@@ -433,22 +433,55 @@
 
 	return result
 
-/proc/pollCandidatesForMob(Question, jobbanType, be_special_flag = 0, poll_time = 300, mob/M, ignore_category = null)
-	var/list/L = pollGhostCandidates(Question, jobbanType, be_special_flag, poll_time, ignore_category)
-	if(!M || QDELETED(M) || !M.loc)
-		return list()
-	return L
+/**
+ * Returns a list of ghosts that are eligible to take over and wish to be considered for a mob.
+ *
+ * Arguments:
+ * * question - Question to show players as part of poll
+ * * jobban_type - Type of jobban to use to filter out potential candidates.
+ * * be_special_flag - Unknown/needs further documentation.
+ * * poll_time - Length of time in deciseconds that the poll input box exists before closing.
+ * * target_mob - The mob that is being polled for.
+ * * ignore_category - Unknown/needs further documentation.
+ */
+/proc/poll_candidates_for_mob(question, jobban_type, be_special_flag = 0, poll_time = 30 SECONDS, mob/target_mob, ignore_category = null)
+	var/static/list/mob/currently_polling_mobs = list()
 
-/proc/pollCandidatesForMobs(Question, jobbanType, be_special_flag = 0, poll_time = 300, list/mobs, ignore_category = null)
-	var/list/L = pollGhostCandidates(Question, jobbanType, be_special_flag, poll_time, ignore_category)
-	var/i=1
-	for(var/v in mobs)
-		var/atom/A = v
-		if(!A || QDELETED(A) || !A.loc)
-			mobs.Cut(i,i+1)
-		else
-			++i
-	return L
+	if(currently_polling_mobs.Find(target_mob))
+		return list()
+
+	currently_polling_mobs += target_mob
+
+	var/list/possible_candidates = pollGhostCandidates(question, jobban_type, be_special_flag, poll_time, ignore_category)
+
+	currently_polling_mobs -= target_mob
+	if(!target_mob || QDELETED(target_mob) || !target_mob.loc)
+		return list()
+
+	return possible_candidates
+
+/**
+ * Returns a list of ghosts that are eligible to take over and wish to be considered for a mob.
+ *
+ * Arguments:
+ * * question - Question to show players as part of poll
+ * * jobban_type - Type of jobban to use to filter out potential candidates.
+ * * be_special_flag - Unknown/needs further documentation.
+ * * poll_time - Length of time in deciseconds that the poll input box exists before closing.
+ * * mobs - The list of mobs being polled for. This list is mutated and invalid mobs are removed from it before the proc returns.
+ * * ignore_category - Unknown/needs further documentation.
+ */
+/proc/poll_candidates_for_mobs(question, jobban_type, be_special_flag = 0, poll_time = 30 SECONDS, list/mobs, ignore_category = null)
+	var/list/candidate_list = pollGhostCandidates(question, jobban_type, be_special_flag, poll_time, ignore_category)
+
+	for(var/mob/potential_mob as anything in mobs)
+		if(QDELETED(potential_mob) || !potential_mob.loc)
+			mobs -= potential_mob
+
+	if(!length(mobs))
+		return list()
+
+	return candidate_list
 
 /proc/makeBody(mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
 	if(!G_found || !G_found.key)
@@ -474,7 +507,7 @@
 		var/mob/M = C
 		if(M.client)
 			C = M.client
-	if(!C || (!C.prefs.windowflashing && !ignorepref))
+	if(!C || (!C.prefs.read_preference(/datum/preference/toggle/window_flashing) && !ignorepref))
 		return
 	winset(C, "mainwindow", "flash=5")
 
@@ -527,21 +560,16 @@
 
 // Find an obstruction free turf that's within the range of the center. Can also condition on if it is of a certain area type.
 /proc/find_obstruction_free_location(range, atom/center, area/specific_area)
-	var/list/turfs = RANGE_TURFS(range, center)
 	var/list/possible_loc = list()
 
-	for(var/turf/found_turf in turfs)
-		var/area/turf_area = get_area(found_turf)
-
+	for(var/turf/found_turf in RANGE_TURFS(range, center))
 		// We check if both the turf is a floor, and that it's actually in the area.
 		// We also want a location that's clear of any obstructions.
-		if (specific_area)
-			if (!istype(turf_area, specific_area))
-				continue
+		if (specific_area && !istype(get_area(found_turf), specific_area))
+			continue
 
-		if (!isspaceturf(found_turf))
-			if (!found_turf.is_blocked_turf())
-				possible_loc.Add(found_turf)
+		if (!isgroundlessturf(found_turf) && !found_turf.is_blocked_turf())
+			possible_loc.Add(found_turf)
 
 	// Need at least one free location.
 	if (possible_loc.len < 1)
@@ -558,3 +586,28 @@
 				continue
 
 			C.energy_fail(rand(duration_min,duration_max))
+
+/**
+ * Sends a round tip to a target. If selected_tip is null, a random tip will be sent instead (5% chance of it being silly).
+ * Tips that starts with the @ character won't be html encoded. That's necessary for any tip containing markup tags,
+ * just make sure they don't also have html characters like <, > and ' which will be garbled.
+ */
+/proc/send_tip_of_the_round(target, selected_tip)
+	var/message
+	if(selected_tip)
+		message = selected_tip
+	else
+		var/list/randomtips = world.file2list("strings/tips.txt")
+		var/list/memetips = world.file2list("strings/sillytips.txt")
+		if(randomtips.len && prob(95))
+			message = pick(randomtips)
+		else if(memetips.len)
+			message = pick(memetips)
+
+	if(!message)
+		return
+	if(message[1] != "@")
+		message = html_encode(message)
+	else
+		message = copytext(message, 2)
+	to_chat(target, span_purple("<span class='oocplain'><b>Tip of the round: </b>[message]</span>"))

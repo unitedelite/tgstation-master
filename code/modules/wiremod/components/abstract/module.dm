@@ -5,7 +5,7 @@
  */
 /obj/item/circuit_component/module
 	display_name = "Module"
-	display_desc = "A component that has other components within it, acting like a function. Use it in your hand to control the amount of input and output ports it has, as well as being able to access the integrated circuit contained inside."
+	desc = "A component that has other components within it, acting like a function. Use it in your hand to control the amount of input and output ports it has, as well as being able to access the integrated circuit contained inside."
 
 	var/obj/item/integrated_circuit/module/internal_circuit
 
@@ -17,17 +17,22 @@
 
 	var/port_limit = 10
 
+	ui_buttons = list(
+		"edit" = "action"
+	)
+
 /obj/item/integrated_circuit/module
 	var/obj/item/circuit_component/module/attached_module
 
 /obj/item/integrated_circuit/module/ui_host(mob/user)
-	. = ..()
-	if(. == src)
-		return attached_module
+	if(attached_module)
+		return attached_module.ui_host()
+	return ..()
 
 /obj/item/integrated_circuit/module/set_display_name(new_name)
 	. = ..()
 	attached_module.display_name = new_name
+	attached_module.name = "module ([new_name])"
 
 /obj/item/integrated_circuit/module/load_component(type)
 	if(!attached_module)
@@ -47,7 +52,7 @@
 
 /obj/item/circuit_component/module_input
 	display_name = "Input"
-	display_desc = "A component that receives data from the module it is attached to"
+	desc = "A component that receives data from the module it is attached to"
 
 	removable = FALSE
 
@@ -60,15 +65,14 @@
 
 /obj/item/circuit_component/module_output
 	display_name = "Output"
-	display_desc = "A component that outputs data to the module it is attached to."
+	desc = "A component that outputs data to the module it is attached to."
 
 	removable = FALSE
 
 	/// The currently attached module
 	var/obj/item/circuit_component/module/attached_module
 
-/obj/item/circuit_component/module_output/input_received(datum/port/input/port)
-	. = ..()
+/obj/item/circuit_component/module_output/pre_input_received(datum/port/input/port)
 	if(!port)
 		return
 	// We don't check the parent here because frankly, we don't care. We only sync our input with the module's output
@@ -76,23 +80,22 @@
 	if(!port_to_update)
 		CRASH("[port.type] doesn't have a linked port in [type]!")
 
-	port_to_update.set_output(port.input_value)
+	port_to_update.set_output(port.value)
 
-/obj/item/circuit_component/module/input_received(datum/port/input/port)
-	. = ..()
+/obj/item/circuit_component/module/pre_input_received(datum/port/input/port)
 	if(!port)
 		return
 	var/datum/port/output/port_to_update = linked_ports[port]
 	if(!port_to_update)
 		CRASH("[port.type] doesn't have a linked port in [type]!")
 
-	port_to_update.set_output(port.input_value)
+	port_to_update.set_output(port.value)
 
 /obj/item/circuit_component/module_output/Destroy()
 	attached_module = null
 	return ..()
 
-/obj/item/circuit_component/module/Initialize()
+/obj/item/circuit_component/module/Initialize(mapload)
 	. = ..()
 	internal_circuit = new(src)
 	internal_circuit.attached_module = src
@@ -210,7 +213,7 @@
 
 /obj/item/circuit_component/module/ui_static_data(mob/user)
 	. = list()
-	.["global_port_types"] = GLOB.wiremod_types
+	.["global_port_types"] = GLOB.wiremod_basic_types
 
 /obj/item/circuit_component/module/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/circuit_component))
@@ -279,7 +282,7 @@
 
 			if(action == "set_port_type")
 				var/type = params["port_type"]
-				if(!(type in GLOB.wiremod_types))
+				if(!(type in GLOB.wiremod_basic_types))
 					return
 				component_port.set_datatype(type)
 				internal_component_port.set_datatype(type)
@@ -296,6 +299,9 @@
 		SStgui.update_uis(internal_circuit)
 
 #undef WITHIN_RANGE
+
+/obj/item/circuit_component/module/ui_perform_action(mob/user, action)
+	interact(user)
 
 /obj/item/circuit_component/module/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)

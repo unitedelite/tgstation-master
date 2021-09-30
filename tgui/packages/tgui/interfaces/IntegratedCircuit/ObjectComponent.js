@@ -1,7 +1,7 @@
 import { useBackend } from '../../backend';
 import {
   Box,
-  Stack, Button, Dropdown,
+  Stack, Button,
 } from '../../components';
 import { Component } from 'inferno';
 import { shallowDiffers } from '../../../common/react';
@@ -95,9 +95,8 @@ export class ObjectComponent extends Component {
       y,
       index,
       color = 'blue',
-      options,
-      option,
       removable,
+      ui_buttons,
       locations,
       onPortUpdated,
       onPortLoaded,
@@ -142,21 +141,19 @@ export class ObjectComponent extends Component {
             <Stack.Item grow={1} unselectable="on">
               {name}
             </Stack.Item>
-            {!!options && (
-              <Stack.Item>
-                <Dropdown
-                  color={color}
-                  nochevron
-                  over
-                  options={options}
-                  displayText={option}
-                  noscroll
-                  onSelected={(selected) => act('set_component_option', {
+            {!!ui_buttons && Object.keys(ui_buttons).map(icon => (
+              <Stack.Item key={icon}>
+                <Button
+                  icon={icon}
+                  color="transparent"
+                  compact
+                  onClick={() => act('perform_action', {
                     component_id: index,
-                    option: selected,
-                  })} />
+                    action_name: ui_buttons[icon],
+                  })}
+                />
               </Stack.Item>
-            )}
+            ))}
             <Stack.Item>
               <Button
                 color="transparent"

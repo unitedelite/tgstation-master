@@ -47,7 +47,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	hit_reaction_chance = 50
 
-/obj/item/clothing/suit/armor/reactive/Initialize()
+/obj/item/clothing/suit/armor/reactive/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
@@ -63,7 +63,7 @@
 /obj/item/clothing/suit/armor/reactive/attack_self(mob/user)
 	active = !active
 	to_chat(user, span_notice("[src] is now [active ? "active" : "inactive"]."))
-	update_icon_state()
+	update_icon()
 	add_fingerprint(user)
 
 /obj/item/clothing/suit/armor/reactive/hit_reaction(owner, hitby, attack_text, final_block_chance, damage, attack_type)
