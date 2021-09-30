@@ -676,7 +676,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	airlock_wires = /datum/wires/airlock/service
 
 /area/service/cafeteria
-	name = \improper "Cafeteria"
+	name = "\improper Cafeteria"
 	mood_bonus = 2
 	mood_message = "<span class='nicegreen'>I like being in the cafeteria!</span>\n"
 	icon_state = "cafeteria"
