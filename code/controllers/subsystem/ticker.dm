@@ -114,6 +114,10 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
+	if(!GLOB.conspiracy)
+		GLOB.conspiracy = "Conspiracy : " + pick(strings(GIMMICK_CONSPI_FILE, "conspiracy"))
+		GLOB.conspiracy_proba = pick(0,0,0,75,100)
+
 
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase = generate_code_phrase(return_list=TRUE)
