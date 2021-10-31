@@ -57,6 +57,7 @@
 
 	if(give_objectives)
 		forge_traitor_objectives()
+		forge_gimmick_conspi_objective()
 		forge_ending_objective()
 
 	var/faction = prob(75) ? FACTION_SYNDICATE : FACTION_NANOTRASEN

@@ -448,6 +448,8 @@
 				identity_theft.update_explanation_text()
 				objectives += identity_theft
 				escape_objective_possible = FALSE
+	
+	forge_gimmick_conspi_objective()
 
 	if (!(locate(/datum/objective/escape) in objectives) && escape_objective_possible)
 		if(prob(50))

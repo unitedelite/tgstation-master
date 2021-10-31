@@ -79,7 +79,7 @@ const IntroductionSection = (props, context) => {
       fill
       title="Intro"
       scrollable={
-        !!objectives && objectives.length > 4
+        !!objectives && objectives.length > 6
       }>
       <Stack vertical fill>
         <Stack.Item fontSize="25px">
@@ -248,7 +248,7 @@ export const AntagInfoChangeling = (props, context) => {
           "backgroundImage": "none",
         }}>
         <Stack vertical fill>
-          <Stack.Item maxHeight={13.2}>
+          <Stack.Item maxHeight={15}>
             <IntroductionSection />
           </Stack.Item>
           <Stack.Item grow={4}>

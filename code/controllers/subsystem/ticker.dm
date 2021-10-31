@@ -58,6 +58,8 @@ SUBSYSTEM_DEF(ticker)
 	/// Why an emergency shuttle was called
 	var/emergency_reason
 
+GLOBAL_VAR(conspiracy) 
+GLOBAL_VAR(conspiracy_proba) 
 /datum/controller/subsystem/ticker/Initialize(timeofday)
 	var/list/byond_sound_formats = list(
 		"mid"  = TRUE,

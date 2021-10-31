@@ -422,6 +422,16 @@ GLOBAL_LIST_EMPTY(antagonists)
 		return
 	..()
 
+/// Gimmick objective assignation
+/datum/antagonist/proc/forge_gimmick_conspi_objective()
+	if(prob(GLOB.conspiracy_proba))
+		var/datum/objective/conspiracy/conspiracy_objective = new
+		objectives += conspiracy_objective
+	else
+		var/datum/objective/gimmick/gimmick_objective = new
+		objectives += gimmick_objective
+
+
 ///ANTAGONIST UI STUFF
 
 /datum/antagonist/ui_interact(mob/user, datum/tgui/ui)
