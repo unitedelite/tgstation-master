@@ -1,8 +1,8 @@
 /mob/living/carbon/alien/humanoid/royal/praetorian
 	name = "alien praetorian"
 	caste = "p"
-	maxHealth = 250
-	health = 250
+	maxHealth = 220
+	health = 220
 	icon_state = "alienp"
 
 /mob/living/carbon/alien/humanoid/royal/praetorian/Initialize(mapload)

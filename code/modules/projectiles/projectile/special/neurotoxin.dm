@@ -4,7 +4,7 @@
 	damage = 5
 	damage_type = TOX
 	nodamage = FALSE
-	paralyze = 100
+	paralyze = 70
 	flag = BIO
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/neurotoxin
 
