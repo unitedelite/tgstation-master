@@ -1,5 +1,3 @@
-#define SHADOW_REGEN_RATE 1.5
-
 /obj/effect/proc_holder/spell/targeted/shadowwalk
 	name = "Shadow Walk"
 	desc = "Grants unlimited movement in darkness."
@@ -34,7 +32,7 @@
 	else
 		var/turf/T = get_turf(user)
 		var/light_amount = T.get_lumcount()
-		if(light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD)
+		if(IS_OPAQUE_TURF(T) || light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD)
 			playsound(get_turf(user), 'sound/magic/ethereal_enter.ogg', 50, TRUE, -1)
 			visible_message(span_boldwarning("[user] melts into the shadows!"))
 			user.SetAllImmobility(0)
@@ -62,8 +60,11 @@
 	var/light_amount = T.get_lumcount()
 	if(!jaunter || jaunter.loc != src)
 		qdel(src)
-	if (light_amount < 0.2 && (!QDELETED(jaunter))) //heal in the dark
-		jaunter.heal_overall_damage((SHADOW_REGEN_RATE * delta_time), (SHADOW_REGEN_RATE * delta_time), 0, BODYPART_ORGANIC)
+	if(IS_OPAQUE_TURF(T))
+		jaunter.take_overall_damage(0.15 * delta_time, 0.45 * delta_time, 0, BODYPART_ORGANIC)
+	else
+		if (light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD && (!QDELETED(jaunter))) //heal in the dark
+			jaunter.heal_overall_damage((0.5 * delta_time), (1.2 * delta_time), 0, BODYPART_ORGANIC)
 	check_light_level()
 
 
@@ -82,7 +83,7 @@
 /obj/effect/dummy/phased_mob/shadow/proc/check_light_level()
 	var/turf/T = get_turf(src)
 	var/light_amount = T.get_lumcount()
-	if(light_amount > 0.2) // jaunt ends
+	if(!IS_OPAQUE_TURF(T) && light_amount > 0.2) // jaunt ends
 		end_jaunt(TRUE)
 
 /obj/effect/dummy/phased_mob/shadow/proc/end_jaunt(forced = FALSE)
@@ -90,6 +91,10 @@
 		if(forced)
 			visible_message(span_boldwarning("[jaunter] is revealed by the light!"))
 		else
+			var/turf/T = get_turf(src)
+			if(IS_OPAQUE_TURF(T))
+				jaunter.take_overall_damage(15, 0, 0, BODYPART_ORGANIC)
+				to_chat(jaunter, span_danger("You lost some of your essence while emerging in a wall."))
 			visible_message(span_boldwarning("[jaunter] emerges from the darkness!"))
 		playsound(loc, 'sound/magic/ethereal_exit.ogg', 50, TRUE, -1)
 	qdel(src)
