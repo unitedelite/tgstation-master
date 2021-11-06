@@ -286,6 +286,7 @@
 			master.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.1)
 			sanity_level = 1
 	sanity = amount
+	SEND_SIGNAL(master, COMSIG_CARBON_SANITY_UPDATE, amount)
 	update_mood_icon()
 
 /datum/component/mood/proc/setInsanityEffect(newval)
@@ -299,6 +300,8 @@
 	SIGNAL_HANDLER
 
 	var/datum/mood_event/the_event
+	if(!ispath(type, /datum/mood_event))
+		return
 	if(!istext(category))
 		category = REF(category)
 	if(mood_events[category])
