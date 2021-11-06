@@ -40,9 +40,9 @@
 	/// The maximum plasma this organ can store.
 	var/max_plasma = 250
 	/// The rate this organ regenerates its owners health at per damage type per second.
-	var/heal_rate = 2.5
+	var/heal_rate = 2
 	/// The rate this organ regenerates plasma at per second.
-	var/plasma_rate = 5
+	var/plasma_rate = 4
 
 /obj/item/organ/alien/plasmavessel/large
 	name = "large plasma vessel"
@@ -50,10 +50,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	storedPlasma = 200
 	max_plasma = 500
-	plasma_rate = 7.5
+	plasma_rate = 5
 
 /obj/item/organ/alien/plasmavessel/large/queen
-	plasma_rate = 10
+	plasma_rate = 6
 
 /obj/item/organ/alien/plasmavessel/small
 	name = "small plasma vessel"
@@ -61,7 +61,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	storedPlasma = 100
 	max_plasma = 150
-	plasma_rate = 2.5
+	plasma_rate = 2
 
 /obj/item/organ/alien/plasmavessel/small/tiny
 	name = "tiny plasma vessel"
