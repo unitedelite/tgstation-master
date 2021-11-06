@@ -288,7 +288,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 
 	print_command_report(., "Central Command Status Summary", announce=FALSE)
 	if(shown_threat < 66)
-		priority_announce("A summary has been copied and printed to all communications consoles.", "Daily CCSS received.", ANNOUNCER_INTERCEPT)
+		priority_announce("A summary has been copied and printed to all communications consoles.", "Daily CCSS received.", SSstation.announcer.get_rand_report_sound())
 	else
 		priority_announce("A summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT)
 		if(SSsecurity_level.current_level < SEC_LEVEL_BLUE)
