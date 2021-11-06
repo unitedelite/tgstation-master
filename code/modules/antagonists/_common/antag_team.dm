@@ -60,3 +60,16 @@ GLOBAL_LIST_EMPTY(antagonist_teams)
 
 
 	return "<div class='panel redborder'>[report.Join("<br>")]</div>"
+
+/// Gimmick objective assignation
+/datum/team/proc/forge_gimmick_conspi_objective()
+	if(prob(GLOB.conspiracy_proba))
+		var/datum/objective/conspiracy/conspiracy_objective = new
+		conspiracy_objective.team = src
+		objectives += conspiracy_objective
+	else
+		var/datum/objective/gimmick/gimmick_objective = new
+		gimmick_objective.team = src
+		objectives += gimmick_objective
+	
+

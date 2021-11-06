@@ -889,6 +889,21 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 				stolen_count++
 	return stolen_count >= 5
 
+// Gimmick/conspiracy objective
+/datum/objective/gimmick
+	name = "gimmick"
+	completed = TRUE
+	
+/datum/objective/gimmick/New()
+	..("Gimmick : " + pick(strings(GIMMICK_CONSPI_FILE, "gimmick")))
+
+/datum/objective/conspiracy
+	name = "conspiracy"
+	completed = TRUE
+
+/datum/objective/conspiracy/New()
+	..(GLOB.conspiracy)
+
 //Created by admin tools
 /datum/objective/custom
 	name = "custom"
@@ -918,6 +933,8 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 		/datum/objective/nuclear,
 		/datum/objective/capture,
 		/datum/objective/absorb,
+		/datum/objective/gimmick,
+		/datum/objective/conspiracy,
 		/datum/objective/custom
 	),/proc/cmp_typepaths_asc)
 

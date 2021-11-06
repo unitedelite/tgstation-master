@@ -58,6 +58,8 @@ SUBSYSTEM_DEF(ticker)
 	/// Why an emergency shuttle was called
 	var/emergency_reason
 
+GLOBAL_VAR(conspiracy) 
+GLOBAL_VAR(conspiracy_proba) 
 /datum/controller/subsystem/ticker/Initialize(timeofday)
 	var/list/byond_sound_formats = list(
 		"mid"  = TRUE,
@@ -113,6 +115,10 @@ SUBSYSTEM_DEF(ticker)
 		login_music = pick(music)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
+
+	if(!GLOB.conspiracy)
+		GLOB.conspiracy = "Conspiracy : " + pick(strings(GIMMICK_CONSPI_FILE, "conspiracy"))
+		GLOB.conspiracy_proba = pick(0,0,0,75,100)
 
 
 	if(!GLOB.syndicate_code_phrase)
