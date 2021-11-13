@@ -153,7 +153,8 @@
 		targets += caller
 	var/targ_len = length(targets)
 	var/smash_len = length(smashes)
-	var/number = max(targ_len * (4-(targ_len-1)) - smash_len,1)
+	var/number = max(2 + targ_len * (7 - targ_len) - smash_len,1) 
+	///7*x - x*x + 1 : 8 12 14 -> 8 4 2 1...
 
 	for(var/i in 0 to number)
 		var/turf/chosen_location = get_safe_random_station_turf()
@@ -200,7 +201,7 @@
 
 /obj/effect/broken_illusion/Initialize(mapload)
 	. = ..()
-	addtimer(CALLBACK(src,.proc/show_presence),15 SECONDS)
+	addtimer(CALLBACK(src,.proc/show_presence),rand(1200 SECONDS, 1800 SECONDS))
 
 	var/image/I = image('icons/effects/eldritch.dmi',src,null,OBJ_LAYER)
 	I.override = TRUE
