@@ -26,6 +26,7 @@ map deltastation
 endmap
 
 map kilostation
+	default
 	votable
 endmap
 

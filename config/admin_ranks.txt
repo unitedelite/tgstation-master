@@ -39,9 +39,14 @@ Include =
 Exclude = AUTOADMIN
 Edit =
 
+Name = MJ
+Include = FUN SERVER
+Excluse = AUTOADMIN
+Edit =
+
 Name = Moderator
-Include = ADMIN
-Exclude =
+Include = @ ADMIN
+Exclude = AUTOADMIN
 Edit =
 
 Name = Admin Candidate

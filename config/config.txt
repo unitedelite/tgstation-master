@@ -15,13 +15,13 @@ $include interviews.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME tgstation
+ SERVERNAME [FR] Complexe alpha - tgstation
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
-# SERVERSQLNAME tgstation
+ SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Space Station 13
+STATIONNAME Complexe alpha
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -55,15 +55,15 @@ ENABLE_LOCALHOST_RANK
 ## REQUIRES the database set up to work. Keep it hashed if you don't have a database set up.
 ## NOTE: If you have just set-up the database keep this DISABLED, as player age is determined from the first time they connect to the server with the database up. If you just set it up, it means
 ## you have noone older than 0 days, since noone has been logged yet. Only turn this on once you have had the database up for 30 days.
-#USE_AGE_RESTRICTION_FOR_JOBS
+USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
 
 ## Unhash this to track player playtime in the database. Requires database to be enabled.
-#USE_EXP_TRACKING
+USE_EXP_TRACKING
 ## Unhash this to enable playtime requirements for head jobs.
-#USE_EXP_RESTRICTIONS_HEADS
+USE_EXP_RESTRICTIONS_HEADS
 ## Unhash this to override head jobs' playtime requirements with this number of hours.
 ## Leave this commented out to use the values defined in the job datums. Values in the datums are stored as minutes.
 #USE_EXP_RESTRICTIONS_HEADS_HOURS 3
@@ -72,7 +72,7 @@ ENABLE_LOCALHOST_RANK
 ## Unhash this to enable playtime requirements for certain non-head jobs, like Engineer and Scientist.
 #USE_EXP_RESTRICTIONS_OTHER
 ## Allows admins to bypass job playtime requirements.
-#USE_EXP_RESTRICTIONS_ADMIN_BYPASS
+USE_EXP_RESTRICTIONS_ADMIN_BYPASS
 ## Unhash this to have intern tags automatically added to ID cards for station roles depending on the living hours of the player holding them.
 #USE_LOW_LIVING_HOUR_INTERN
 ## If USE_LOW_LIVING_HOUR_INTERN is unhashed, players under this number of living hours have [Intern] added to their ID card. If this isn't set, uses USE_EXP_RESTRICTIONS_HEADS_HOURS instead. If that isn't set, it finally defaults to a hardcoded fallback of 15 hours.
@@ -146,7 +146,7 @@ LOG_MANIFEST
 # LOG_TWITTER
 
 ## Enable logging pictures
-LOG_PICTURES
+# LOG_PICTURES
 
 ## log mecha actions
 # LOG_MECHA
@@ -182,16 +182,16 @@ ALLOW_ADMIN_OOCCOLOR
 ALLOW_ADMIN_ASAYCOLOR
 
 ## Job slot open/close by identification consoles delay in seconds
-ID_CONSOLE_JOBSLOT_DELAY 30
+ID_CONSOLE_JOBSLOT_DELAY 10
 
 ## allow players to initiate a restart vote
-#ALLOW_VOTE_RESTART
+ALLOW_VOTE_RESTART
 
 ## allow players to initiate a mode-change vote
-#ALLOW_VOTE_MODE
+ALLOW_VOTE_MODE
 
 ## allow players to initiate a map-change vote
-#ALLOW_VOTE_MAP
+ALLOW_VOTE_MAP
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
 VOTE_DELAY 6000
@@ -203,13 +203,13 @@ VOTE_PERIOD 600
 # NO_DEAD_VOTE
 
 ## players' votes default to "No vote" (otherwise,  default to "No change")
-# DEFAULT_NO_VOTE
+DEFAULT_NO_VOTE
 
 ## disable abandon mob
 NORESPAWN
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Yournamehere
+HOSTEDBY Complexe alpha
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
@@ -246,16 +246,16 @@ CHECK_RANDOMIZER
 # SERVER ss13.example.com:2506
 
 ## forum address
-# FORUMURL http://tgstation13.org/phpBB/index.php
+ FORUMURL https://discord.gg/DuChVuV
 
 ## Wiki address
-# WIKIURL http://www.tgstation13.org/wiki
+WIKIURL http://www.tgstation13.org/wiki
 
 ## Rules address
 # RULESURL http://www.tgstation13.org/wiki/Rules
 
 ## Github address
-# GITHUBURL https://www.github.com/tgstation/tgstation
+GITHUBURL https://github.com/unitedelite/tgstation-master
 
 ## Discord bot command prefix, if the discord bot is used
 # DISCORDBOTCOMMANDPREFIX ?
@@ -396,7 +396,7 @@ ANNOUNCE_ADMIN_LOGOUT
 
 ## Map rotation
 ## You should edit maps.txt to match your configuration when you enable this.
-MAPROTATION
+#MAPROTATION
 
 ## Map voting
 ## Allows players to vote with their preffered map setting
@@ -441,9 +441,9 @@ CLIENT_ERROR_BUILD 1421
 ## Admins are exempt from these limits.
 ## Hitting the minute limit notifies admins.
 ## Set to 0 or comment out to disable.
-SECOND_TOPIC_LIMIT 10
+#SECOND_TOPIC_LIMIT 10
 
-MINUTE_TOPIC_LIMIT 100
+#MINUTE_TOPIC_LIMIT 100
 
 
 ## CLICK RATE LIMITING
@@ -480,7 +480,7 @@ MINUTE_CLICK_LIMIT 400
 #CHAT_NEW_GAME_NOTIFICATIONS
 
 ## Allow admin hrefs that don't use the new token system, will eventually be removed
-#DEBUG_ADMIN_HREFS
+DEBUG_ADMIN_HREFS
 
 ###Master Controller High Pop Mode###
 
@@ -514,7 +514,7 @@ DISABLE_HIGH_POP_MC_MODE_AMOUNT 60
 ##  15x15 would be the standard square view. 21x15 is what goonstation uses for widescreen.
 ##  Setting this to something different from DEFAULT_VIEW_SQUARE will enable widescreen toggles
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
-DEFAULT_VIEW 19x15
+DEFAULT_VIEW 17x15
 
 ##Default view size, in tiles. Should *always* be square.
 ## The alternative square viewport size if you're using a widescreen view size
@@ -539,19 +539,19 @@ DEFAULT_VIEW_SQUARE 15x15
 
 #### DISCORD STUFFS ####
 ## MAKE SURE ALL SECTIONS OF THIS ARE FILLED OUT BEFORE ENABLING
-## Discord IDs can be obtained by following this guide: https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
+## Discord IDs can be obtained by following this guide: https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
 
 ## Uncomment to enable discord auto-roling when users link their BYOND and Discord accounts
-#ENABLE_DISCORD_AUTOROLE
+ENABLE_DISCORD_AUTOROLE
 
 ## Add your discord bot token here. Make sure it has the ability to manage roles
-#DISCORD_TOKEN someDiscordToken
+#DISCORD_TOKEN ODM0ODQ4MzIzMDkzMzk3NTg1.YIG3Fg.w6rXC872YOc5TJd_QTOgAyH9svo
 
 ## Add the ID of your guild (server) here
-#DISCORD_GUILDID 000000000000000000
+DISCORD_GUILDID 461493393474715658
 
 ## Add the ID of the role you want assigning here
-#DISCORD_ROLEID 000000000000000000
+DISCORD_ROLEID 834846971549188147
 
 ## How long in seconds after which a hard delete is treated as causing lag. This can be a float and supports a precision as low as nanoseconds.
 #HARD_DELETES_OVERRUN_THRESHOLD 0.5

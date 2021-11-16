@@ -13,37 +13,37 @@ Assistant=-1,-1
 Prisoner=0,2
 
 Quartermaster=1,1
-Cargo Technician=3,2
-Shaft Miner=3,3
+Cargo Technician=2,1
+Shaft Miner=2,1
 
 Bartender=1,1
 Cook=2,1
-Botanist=3,2
+Botanist=2,1
 Janitor=2,1
 
 Clown=1,1
 Mime=1,1
 Curator=1,1
-Lawyer=2,2
+Lawyer=2,1
 
 Chaplain=1,1
 
-Station Engineer=5,5
-Atmospheric Technician=3,2
+Station Engineer=3,2
+Atmospheric Technician=2,1
 
-Medical Doctor=5,3
-Paramedic=2,2
-Chemist=2,2
-Geneticist=2,2
+Medical Doctor=4,2
+Paramedic=2,1
+Chemist=2,1
+Geneticist=2,1
 Virologist=1,1
 Psychologist=1,1
 
-Scientist=5,3
-Roboticist=2,2
+Scientist=4,2
+Roboticist=2,1
 
 Warden=1,1
 Detective=1,1
-Security Officer=5,5
+Security Officer=4,2
 
-AI=0,1
-Cyborg=0,1
+AI=1,1
+Cyborg=1,1

@@ -1,7 +1,7 @@
 ## HEALTH ###
 
 ##Damage multiplier, effects both weapons and healing on all mobs. For example, 1.25 would result in 25% higher damage.
-DAMAGE_MULTIPLIER 1
+DAMAGE_MULTIPLIER 1.25
 
 ## REVIVAL ###
 
@@ -20,7 +20,7 @@ OOC_DURING_ROUND
 EMOJIS
 
 ## HEART COMMENDATIONS ###
-## Uncomment this if you'd like to enable commendation pollings for this percentage of players near the end of the round (5% suggested)
+## Uncomment this if you'd like to enable commendation pollings for this percentage of players near the end of the round (5% default)
 COMMENDATION_PERCENT_POLL 0.05
 
 ## MOB MOVEMENT ###
@@ -70,12 +70,12 @@ HUMANS_NEED_SURNAMES
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
-ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised. Additionally, access requirements on some doors have been lifted.
-ALERT_RED_DOWNTO The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
+ALERT_GREEN Toutes les menaces sur la station sont passées. La securité ne dois pas avoir ses armes visible, les lois sur la vie privée sont de nouveau en vigeur.
+ALERT_BLUE_UPTO La station à reçu des informations viables à propos d'une activitée hostile sur la station. Les agents de securité peuvent avoir leurs armes visibles, les fouilles aleatoires sont permises.
+ALERT_BLUE_DOWNTO La menace immediate est passée. Les agents de securité ne doivent plus avoir leurs armes de sortie constemment. Les fouilles aleatoire sont toujours autorisées.
+ALERT_RED_UPTO Il y à une serieuse menace immediate sur la station. Les agents de securité peuvent avoir leurs armes sorties en permanence. Accessoirement, l'accès requis pour certaines portes a été augmenté.
+ALERT_RED_DOWNTO La destruction de la station a été evitée. Il y a cepandant toujours une mance serieuse sur la station. La securité peuvent avoir leurs armes sorties en permanance, les fouilles aleatoire sont autorisées et encouragées.
+ALERT_DELTA Destruction de la station imminante. Tout l'equipage doit obeir aux ordres des chefs de service. Toute violation à leurs ordres peut être puni de mort. Ceci n'est pas un exercice.
 
 
 
@@ -94,9 +94,9 @@ SHUTTLE_REFUEL_DELAY 12000
 ## Variables calculate how number of antagonists will scale to population.
 ## Used as (Antagonists = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
-TRAITOR_SCALING_COEFF 6
-BROTHER_SCALING_COEFF 6
-CHANGELING_SCALING_COEFF 6
+TRAITOR_SCALING_COEFF 4
+BROTHER_SCALING_COEFF 4
+CHANGELING_SCALING_COEFF 5
 
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
@@ -159,14 +159,14 @@ ALLOW_AI_MULTICAM
 ## AWAY MISSIONS ###
 
 ## Uncomment to load the virtual reality hub map
-#VIRTUAL_REALITY
+VIRTUAL_REALITY
 
 ## Uncomment to load one of the missions from awaymissionconfig.txt or away_missions/ at roundstart.
-#ROUNDSTART_AWAY
+ROUNDSTART_AWAY
 
 ## How long the delay is before the Away Mission gate opens. Default is half an hour.
 ## 600 is one minute.
-GATEWAY_DELAY 18000
+GATEWAY_DELAY 6000
 
 ## The probability of the gateway mission being a config one
 CONFIG_GATEWAY_CHANCE 0
@@ -176,7 +176,7 @@ CONFIG_GATEWAY_CHANCE 0
 ## If the number of players ready at round starts exceeds this threshold, JOBS_HAVE_MINIMAL_ACCESS will automatically be enabled. Otherwise, it will be disabled.
 ## This is useful for accomodating both low and high population rounds on the same server.
 ## Comment this out or set to 0 to disable this automatic toggle.
-MINIMAL_ACCESS_THRESHOLD 20
+MINIMAL_ACCESS_THRESHOLD 15
 
 ## Comment this out this if you wish to use the setup where jobs have more access.
 ## This is intended for servers with low populations - where there are not enough
@@ -223,7 +223,7 @@ NEAR_DEATH_EXPERIENCE
 ## Set to 1 for "custom", silicons will start with the custom laws defined in silicon_laws.txt. (If silicon_laws.txt is empty, the AI will spawn with asimov and Custom boards will auto-delete.)
 ## Set to 2 for "random", silicons will start with a random lawset picked from random laws specified below.
 ## Set to 3 for "weighted random", using values in "silicon_weights.txt", a law will be selected, with weights specifed in that file.
-DEFAULT_LAWS 0
+DEFAULT_LAWS 3
 
 ## RANDOM LAWS ##
 ## ------------------------------------------------------------------------------------------
@@ -262,29 +262,38 @@ RANDOM_LAWS corporate
 
 LAW_WEIGHT custom,0
 
-## standard-ish laws. These are fairly ok to run
-LAW_WEIGHT asimov,32
-LAW_WEIGHT asimovpp,12
-LAW_WEIGHT paladin,12
-LAW_WEIGHT robocop,12
+LAW_WEIGHT asimov,20
+LAW_WEIGHT asimovpp,10
+LAW_WEIGHT paladin,4
+LAW_WEIGHT paladin5,4
+LAW_WEIGHT robocop,5
 LAW_WEIGHT corporate,12
 
-## Quirky laws. Shouldn't cause too much harm
+
+## Quirky laws. Safe
 LAW_WEIGHT hippocratic,3
-LAW_WEIGHT maintain,4
-LAW_WEIGHT drone,3
+LAW_WEIGHT maintain,8
+LAW_WEIGHT drone,0
 LAW_WEIGHT liveandletlive,3
 LAW_WEIGHT peacekeeper,3
-LAW_WEIGHT reporter,4
+LAW_WEIGHT reporter,5
+LAW_WEIGHT balance,2
+
+## standard-ish laws. Unsafe but low risk.
+LAW_WEIGHT tyrant,6
+
+## Quirky laws. Unsafe but low risk.
 LAW_WEIGHT hulkamania,4
 
-## Bad idea laws. Probably shouldn't enable these
+## Quirky laws. Very unsafe but not kill everyone.
+LAW_WEIGHT buildawall,1
+LAW_WEIGHT overlord,1
+
+## Antag laws. Just no.
 LAW_WEIGHT syndie,0
 LAW_WEIGHT ninja,0
 LAW_WEIGHT antimov,0
 LAW_WEIGHT thermodynamic,0
-LAW_WEIGHT buildawall,0
-
 ##------------------------------------------------
 
 ## SILICON LAW MAX AMOUNT ###
@@ -320,9 +329,9 @@ ROUNDSTART_RACES plasmaman
 
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal
-#ROUNDSTART_RACES jelly
+ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES abductor
-#ROUNDSTART_RACES synth
+ROUNDSTART_RACES synth
 
 ## Including all the various golem subtypes that are better than humans in some ways, but worse in others
 #ROUNDSTART_RACES iron_golem
@@ -366,6 +375,9 @@ ROUNDSTART_RACES ethereal
 ## Races defined here will not cause existing characters to be reset to human if they currently have a non-roundstart species defined.
 #ROUNDSTART_NO_HARD_CHECK felinid
 
+## Uncomment to give players the choice of joining as a human with mutant bodyparts before they join the game
+JOIN_WITH_MUTANT_HUMANS
+
 ##Overflow job. Default is assistant
 OVERFLOW_JOB Assistant
 
@@ -374,7 +386,7 @@ OVERFLOW_CAP -1
 
 ## Starlight for exterior walls and breaches. Uncomment for starlight!
 ## This is disabled by default to make testing quicker, should be enabled on production servers or testing servers messing with lighting
-#STARLIGHT
+STARLIGHT
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
 #GREY_ASSISTANTS
