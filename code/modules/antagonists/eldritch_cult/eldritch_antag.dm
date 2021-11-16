@@ -147,10 +147,10 @@
 	forge_objective(pck1,assasination,protection)
 	forge_objective(pck2,assasination,protection)
 
-	var/datum/objective/sacrifice_ecult/sac_objective = new
-	sac_objective.owner = owner
-	sac_objective.update_explanation_text()
-	objectives += sac_objective
+	var/datum/objective/knowledge_ecult/know_objective = new
+	know_objective.owner = owner
+	know_objective.update_explanation_text()
+	objectives += know_objective
 
 /datum/antagonist/heretic/proc/forge_objective(string,assasination,protection)
 	switch(string)
@@ -268,21 +268,21 @@
 // Objectives //
 ////////////////
 
-/datum/objective/sacrifice_ecult
-	name = "sacrifice"
+/datum/objective/knowledge_ecult
+	name = "eldritch knowledges"
 
-/datum/objective/sacrifice_ecult/update_explanation_text()
+/datum/objective/knowledge_ecult/update_explanation_text()
 	. = ..()
-	target_amount = rand(2,6)
-	explanation_text = "Sacrifice at least [target_amount] people."
+	target_amount = rand(9,16)
+	explanation_text = "Research at least [target_amount] eldritch knowledges (you start with 3)."
 
-/datum/objective/sacrifice_ecult/check_completion()
+/datum/objective/knowledge_ecult/check_completion()
 	if(!owner)
 		return FALSE
 	var/datum/antagonist/heretic/cultie = owner.has_antag_datum(/datum/antagonist/heretic)
 	if(!cultie)
 		return FALSE
-	return cultie.total_sacrifices >= target_amount
+	return length(cultie.researched_knowledge) >= target_amount
 
 /datum/outfit/heretic
 	name = "Heretic (Preview only)"
