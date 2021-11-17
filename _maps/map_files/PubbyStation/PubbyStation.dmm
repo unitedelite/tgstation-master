@@ -24296,7 +24296,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/mixingchamber{
-	dir = 1;
+	dir = 2;
 	pixel_y = -24
 	},
 /obj/machinery/computer/atmos_control/ordnancemix{
@@ -52675,7 +52675,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/unlocked{
-	dir = 4;
+	dir = 8;
 	pixel_x = -23
 	},
 /turf/open/floor/iron/white,
