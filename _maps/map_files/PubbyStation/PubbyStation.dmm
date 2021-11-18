@@ -6678,11 +6678,6 @@
 /area/command/gateway)
 "ave" = (
 /obj/structure/bed,
-/obj/machinery/button/door{
-	id = "Dorm3Shutters";
-	name = "Privacy Shutters Control";
-	pixel_y = 26
-	},
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
 /area/commons/dorms)
@@ -53066,12 +53061,9 @@
 "ulV" = (
 /obj/effect/landmark/event_spawn,
 /mob/living/simple_animal/bot/secbot{
-	!INVALID_VAR! = 1;
 	health = 45;
 	icon_state = "secbot1";
-	!INVALID_VAR! = 1;
-	name = "Sergeant-at-Armsky";
-	!INVALID_VAR! = 1
+	name = "Sergeant-at-Armsky"
 	},
 /turf/open/floor/iron/dark,
 /area/ai_monitored/security/armory)
