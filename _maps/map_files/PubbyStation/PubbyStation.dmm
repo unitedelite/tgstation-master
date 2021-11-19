@@ -23922,7 +23922,8 @@
 	dir = 4
 	},
 /obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver/longrange{
-	pixel_x = 24
+	pixel_x = 24;
+	range = 12
 	},
 /turf/open/floor/iron,
 /area/science/mixing)
