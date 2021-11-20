@@ -6301,6 +6301,7 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/item/clothing/head/bearpelt,
 /obj/item/skub,
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/command/nuke_storage)
 "aub" = (
@@ -7110,6 +7111,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "awj" = (
@@ -16808,6 +16810,7 @@
 	pixel_x = -32;
 	pixel_y = 40
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bgE" = (
@@ -17288,6 +17291,8 @@
 	c_tag = "Central Primary Hallway Robotics"
 	},
 /obj/effect/turf_decal/tile/purple,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bis" = (
@@ -27915,6 +27920,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/security/checkpoint/engineering)
 "bUj" = (
@@ -28916,6 +28922,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/west,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/command/heads_quarters/ce)
 "bXg" = (
@@ -35148,6 +35155,7 @@
 	},
 /obj/effect/landmark/start/hangover,
 /obj/machinery/firealarm/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "djh" = (
@@ -42047,6 +42055,13 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
+"jBW" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/hallway/primary/central)
 "jCr" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -42717,6 +42732,11 @@
 	},
 /turf/open/floor/iron,
 /area/science/mixing)
+"kmH" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/hallway/primary/central)
 "kmV" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
@@ -46174,6 +46194,10 @@
 	},
 /turf/open/floor/iron,
 /area/science/xenobiology)
+"nyk" = (
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/hallway/primary/central)
 "nyl" = (
 /obj/machinery/light_switch{
 	pixel_y = -24
@@ -47098,6 +47122,16 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/tcommsat/computer)
+"oql" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/hallway/primary/central)
 "oqz" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
@@ -48637,6 +48671,7 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 32
 	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
 "pJT" = (
@@ -51193,6 +51228,14 @@
 	},
 /turf/open/floor/plating,
 /area/cargo/sorting)
+"rMI" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/turf/open/floor/iron,
+/area/hallway/primary/starboard)
 "rMN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible,
 /turf/open/floor/engine,
@@ -54183,8 +54226,7 @@
 /obj/effect/landmark/event_spawn,
 /mob/living/simple_animal/bot/secbot{
 	health = 45;
-	icon_state = "secbot1";
-	!INVALID_VAR! = 1
+	icon_state = "secbot1"
 	},
 /turf/open/floor/iron/dark,
 /area/ai_monitored/security/armory)
@@ -58071,6 +58113,11 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
+"xiS" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/turf/open/floor/iron,
+/area/hallway/primary/port)
 "xja" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -83111,7 +83158,7 @@ ptL
 wtZ
 ptL
 rvS
-ptL
+xiS
 pel
 ptL
 clO
@@ -94685,7 +94732,7 @@ lYE
 rpB
 aUi
 aVo
-iXe
+rMI
 iXe
 iXe
 lYE
@@ -94694,11 +94741,11 @@ ydu
 ydu
 ydu
 diM
-dhy
+jBW
 bgA
-jcT
-xPQ
-bis
+nyk
+oql
+kmH
 bKM
 bkr
 blC
