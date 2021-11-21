@@ -48,6 +48,8 @@
 
 
 /datum/antagonist/brother/proc/drop_pod()
+	if(!src)
+		return
 	for(var/datum/round_event_control/stray_cargo/syndicate/E in SSevents.control)
 		E.runEvent(random = TRUE)
 
