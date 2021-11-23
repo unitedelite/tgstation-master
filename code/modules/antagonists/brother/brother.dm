@@ -23,7 +23,36 @@
 	objectives += team.objectives
 	owner.special_role = special_role
 	finalize_brother()
+
+
+	addtimer(CALLBACK(src,.proc/drop_pod),rand(600 SECONDS, 3000 SECONDS))
+
+	/// Try to give them a syndicate encryption key
+	var/mob/living/carbon/C = owner.current
+	if(!ishuman(C))
+		return
+
+	var/obj/item/encryptionkey/syndicate/syndie_key = new(C)
+	var/list/slots = list (
+		"backpack" = ITEM_SLOT_BACKPACK,
+		"left pocket" = ITEM_SLOT_LPOCKET,
+		"right pocket" = ITEM_SLOT_RPOCKET
+	)
+	var/where = C.equip_in_one_of_slots(syndie_key, slots)
+	if (!where)
+		to_chat(C, "The Syndicate were unfortunately unable to get you a syndicate encryption key.")
+	else
+		to_chat(C, "The syndicate encryption key in your [where] will help you cooperate with your fellow syndicates agents.")
+
 	return ..()
+
+
+/datum/antagonist/brother/proc/drop_pod()
+	if(!src)
+		return
+	for(var/datum/round_event_control/stray_cargo/syndicate/E in SSevents.control)
+		E.runEvent(random = TRUE)
+
 
 /datum/antagonist/brother/on_removal()
 	if(owner.current)
