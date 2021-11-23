@@ -90,6 +90,7 @@
 	earliest_start = 30 MINUTES
 
 /datum/round_event/stray_cargo/syndicate
+	announceChance = 20
 	possible_pack_types = list(/datum/supply_pack/misc/syndicate)
 
 ///Apply the syndicate pod skin
