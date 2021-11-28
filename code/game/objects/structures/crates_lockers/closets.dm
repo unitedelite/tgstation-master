@@ -231,9 +231,10 @@
 /obj/structure/closet/dump_contents()
 	var/atom/L = drop_location()
 	for(var/atom/movable/AM in src)
-		AM.forceMove(L)
-		if(throwing) // you keep some momentum when getting out of a thrown closet
-			step(AM, dir)
+		if(!HAS_TRAIT(AM, TRAIT_NO_STORAGE_INSERT))
+			AM.forceMove(L)
+			if(throwing) // you keep some momentum when getting out of a thrown closet
+				step(AM, dir)
 	if(throwing)
 		throwing.finalize(FALSE)
 

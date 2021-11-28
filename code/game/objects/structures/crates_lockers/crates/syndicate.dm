@@ -13,6 +13,7 @@
 
 	radio = new/obj/item/radio(src)
 	radio.keyslot = new /obj/item/encryptionkey/syndicate
+	ADD_TRAIT(radio, TRAIT_NO_STORAGE_INSERT, ABSTRACT_ITEM_TRAIT)
 
 	RegisterSignal(src, COMSIG_MOVABLE_Z_CHANGED, .proc/ping_crate_pod_drop)
 
@@ -40,7 +41,7 @@
 	radio.talk_into(src, "Crate with frequency [frequency/10] Hz, ping code [ping_code] and detonation code [detonate_code] at [T.x],[T.y],[T.z] in [get_area(src)].", FREQ_SYNDICATE)
 
 /obj/structure/closet/crate/syndicate/proc/detonate_crate()
-	explosion(src, devastation_range = 0, heavy_impact_range = 1, light_impact_range = 3, flame_range = 3, flash_range = 3)
+	explosion(src, devastation_range = 1, heavy_impact_range = 1, light_impact_range = 3, flame_range = 3, flash_range = 3)
 
 
 /obj/structure/closet/crate/syndicate/after_open(mob/living/user, force)
