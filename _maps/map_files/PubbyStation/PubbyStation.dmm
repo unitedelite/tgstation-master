@@ -8156,9 +8156,7 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
 "azZ" = (
-/mob/living/simple_animal/bot/secbot/beepsky{
-	name = "Officer Beepsky"
-	},
+/mob/living/simple_animal/bot/secbot/beepsky/officer,
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
 "aAa" = (
@@ -43434,6 +43432,10 @@
 /obj/machinery/holopad/secure,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/hos)
+"kNL" = (
+/mob/living/simple_animal/bot/cleanbot/medbay,
+/turf/open/floor/plating,
+/area/medical/cryo)
 "kOF" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/chapel,
@@ -57632,6 +57634,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/service/library/artgallery)
+"wIZ" = (
+/mob/living/simple_animal/bot/medbot/autopatrol,
+/turf/open/floor/plating,
+/area/medical/cryo)
 "wJL" = (
 /obj/structure/sign/painting/library{
 	pixel_x = 32
@@ -59087,6 +59093,12 @@
 	},
 /turf/open/floor/iron/white/corner,
 /area/hallway/secondary/exit/departure_lounge)
+"xLn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/mob/living/simple_animal/bot/cleanbot/autopatrol,
+/turf/open/floor/iron,
+/area/service/janitor)
 "xLC" = (
 /obj/machinery/door/airlock{
 	name = "Law Office";
@@ -83947,7 +83959,7 @@ fXe
 sSj
 bjL
 bkY
-bmi
+kNL
 wns
 bjL
 mgW
@@ -84204,7 +84216,7 @@ rdu
 bij
 bjL
 bkZ
-bmi
+wIZ
 xyK
 bjL
 mgW
@@ -84705,7 +84717,7 @@ aKT
 aWN
 aXO
 aYM
-vOW
+xLn
 vOW
 oAk
 aZP
