@@ -5929,8 +5929,8 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/public/glass/incinerator/atmos_interior,
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_atmos{
-	pixel_x = -6;
-	pixel_y = -26
+	pixel_x = 0;
+	pixel_y = -22
 	},
 /obj/structure/cable,
 /turf/open/floor/engine,
@@ -24520,15 +24520,11 @@
 /turf/open/floor/iron/dark,
 /area/science/mixing)
 "bHA" = (
-/obj/machinery/embedded_controller/radio/airlock_controller/incinerator_ordmix{
-	pixel_x = 6;
-	pixel_y = -26
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /obj/machinery/button/ignition/incinerator/ordmix{
-	pixel_x = -6;
+	pixel_x = 6;
 	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible,
@@ -24784,6 +24780,9 @@
 /obj/machinery/door/airlock/research/glass/incinerator/ordmix_interior,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "sci-ordnance-passthrough"
+	},
+/obj/machinery/embedded_controller/radio/airlock_controller/incinerator_ordmix{
+	step_x = 22
 	},
 /turf/open/floor/engine,
 /area/science/mixing/chamber)
@@ -42627,12 +42626,6 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/service/chapel/dock)
-"kgY" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/warning/vacuum/external,
-/obj/machinery/atmospherics/pipe/layer_manifold/supply,
-/turf/open/floor/plating,
-/area/science/mixing)
 "khk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -52420,6 +52413,12 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
+"sOr" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/layer_manifold/supply,
+/obj/structure/sign/warning/vacuum/external,
+/turf/open/floor/plating,
+/area/science/mixing)
 "sOB" = (
 /turf/closed/wall,
 /area/medical/psychology)
@@ -100951,9 +100950,9 @@ bwm
 bwm
 bwm
 bwm
+bwm
 aaa
 aaa
-abI
 aaa
 aaa
 aaa
@@ -101206,9 +101205,9 @@ faq
 bwm
 bwm
 uXV
+izF
 meG
 bwm
-aaa
 aaa
 aaa
 aaa
@@ -101464,8 +101463,8 @@ izF
 izF
 izF
 izF
+izF
 bwm
-aaa
 aaa
 aaa
 aaa
@@ -101718,11 +101717,11 @@ iUX
 iUX
 iUX
 iUX
+iUX
 khL
 bwm
 wIB
 bwm
-aaa
 aaa
 aaa
 aaa
@@ -101974,12 +101973,12 @@ bJQ
 suz
 bMl
 bNp
+bNp
 bOt
 aaa
 wvi
 izF
 wvi
-aaa
 aaa
 aaa
 aaa
@@ -102231,12 +102230,12 @@ bJR
 bLf
 bMm
 dxo
+bNp
 bOt
 aaa
 wvi
 izF
 wvi
-aaa
 aaa
 aaa
 aaa
@@ -102488,12 +102487,12 @@ bJS
 nWX
 bMn
 bNp
+bNp
 bOt
 aaa
 wvi
 izF
 wvi
-aaa
 aaa
 aaa
 aaa
@@ -102746,11 +102745,11 @@ iUX
 iUX
 iUX
 iUX
+iUX
 kLr
 wnJ
 mTz
 wnJ
-aaa
 aaa
 aaa
 aaa
@@ -103004,12 +103003,12 @@ gcU
 qip
 qlO
 aHf
+qlO
 qip
 uUK
-kgY
+sOr
 bCV
 bCV
-aaa
 aaa
 aaa
 aaa
@@ -103261,12 +103260,12 @@ veM
 ksM
 veM
 veM
+veM
 qMr
 veM
 fqL
 wOS
 ndZ
-aaa
 aaa
 aaa
 aaa
@@ -103519,11 +103518,11 @@ qip
 qip
 qip
 qip
+qip
 veM
 bCV
 bCV
 bCV
-aaa
 aaa
 aaa
 aaa
@@ -103775,10 +103774,10 @@ ktK
 qip
 aaa
 aht
+aaa
 bCV
 wVs
 bCV
-abI
 abI
 abI
 abI
@@ -104032,10 +104031,10 @@ bLh
 bMq
 aht
 abI
+aaa
 dEb
 oqz
 dEb
-aaa
 aaa
 abI
 aaa
@@ -104289,10 +104288,10 @@ bCV
 qip
 bwm
 bwm
+bwm
 wnJ
 uRj
 wnJ
-abI
 abI
 abI
 abI
