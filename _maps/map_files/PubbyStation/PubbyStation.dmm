@@ -3445,6 +3445,7 @@
 /obj/structure/table,
 /obj/item/storage/fancy/cigarettes/cigars,
 /obj/item/stack/spacecash/c20,
+/obj/effect/spawner/random/contraband,
 /turf/open/floor/plating,
 /area/service/abandoned_gambling_den)
 "ale" = (
@@ -7607,15 +7608,16 @@
 	departmentType = 5;
 	name = "Captain's Requests Console"
 	},
+/obj/effect/spawner/random/bureaucracy,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "axU" = (
-/obj/machinery/modular_computer/console/preset/id,
 /obj/machinery/newscaster/security_unit/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "axV" = (
-/obj/machinery/computer/communications,
+/obj/structure/filingcabinet,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "axX" = (
@@ -7900,7 +7902,6 @@
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "azb" = (
-/obj/structure/chair/comfy/black,
 /obj/effect/landmark/start/captain,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
@@ -7910,6 +7911,9 @@
 	pixel_y = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 8
+	},
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "azd" = (
@@ -8276,8 +8280,11 @@
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
 "aAv" = (
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp/green,
+/obj/machinery/door/window{
+	dir = 2;
+	name = "Captain's Desk";
+	req_access_txt = "20"
+	},
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "aAw" = (
@@ -8293,8 +8300,6 @@
 /area/command/heads_quarters/captain)
 "aAy" = (
 /obj/structure/table/wood,
-/obj/item/folder/blue,
-/obj/item/stamp/captain,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -8305,6 +8310,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/item/melee/chainofcommand,
+/obj/effect/spawner/random/bureaucracy,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "aAz" = (
@@ -8547,12 +8554,6 @@
 "aBm" = (
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/captain)
-"aBo" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/iron/dark,
-/area/command/heads_quarters/captain)
 "aBs" = (
 /obj/machinery/porta_turret/ai{
 	dir = 8
@@ -8627,6 +8628,7 @@
 /obj/item/pen{
 	layer = 4
 	},
+/obj/effect/spawner/random/bureaucracy,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
 "aBA" = (
@@ -11257,9 +11259,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/obj/structure/filingcabinet{
-	step_x = 10;
-	density = 0
+/obj/machinery/computer/communications{
+	dir = 8
 	},
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
@@ -15108,6 +15109,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/spawner/random/food_or_drink,
 /turf/open/floor/iron/dark,
 /area/service/kitchen)
 "bae" = (
@@ -34987,6 +34989,18 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
+"dcl" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/random/food_or_drink,
+/turf/open/floor/iron/dark,
+/area/service/bar)
 "dcn" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -42213,6 +42227,12 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
+"jLz" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/command/heads_quarters/captain)
 "jMl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/yellow/visible,
 /turf/open/floor/iron,
@@ -42597,12 +42617,11 @@
 /turf/open/floor/plating,
 /area/engineering/supermatter/room)
 "kfZ" = (
-/obj/machinery/door/window{
-	dir = 8;
-	name = "Captain's Desk";
-	req_access_txt = "20"
+/obj/structure/table/wood,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/item/flashlight/lamp/green,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "kgR" = (
@@ -44153,6 +44172,12 @@
 "lvq" = (
 /turf/closed/wall,
 /area/security/prison/toilet)
+"lwf" = (
+/obj/effect/spawner/random/structure,
+/turf/open/floor/plating{
+	luminosity = 2
+	},
+/area/maintenance/department/science)
 "lwT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -47324,6 +47349,22 @@
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/wood,
 /area/service/abandoned_gambling_den)
+"otX" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "kitchenshutters";
+	name = "kitchen shutters"
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/random/food_or_drink,
+/turf/open/floor/iron/dark,
+/area/service/kitchen)
 "ous" = (
 /obj/machinery/button/door{
 	desc = "A remote control-switch for secure storage.";
@@ -50367,6 +50408,7 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 32
 	},
+/obj/effect/spawner/random/structure,
 /turf/open/floor/plating,
 /area/maintenance/department/crew_quarters/dorms)
 "raP" = (
@@ -54481,6 +54523,8 @@
 	dir = 4
 	},
 /obj/structure/table/wood,
+/obj/item/stamp/captain,
+/obj/item/folder/blue,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "uok" = (
@@ -55060,6 +55104,15 @@
 	dir = 1
 	},
 /area/hallway/secondary/exit/departure_lounge)
+"uMe" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/command/heads_quarters/captain)
 "uMo" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -58107,6 +58160,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+"wZU" = (
+/obj/effect/spawner/random/structure,
+/turf/open/floor/plating,
+/area/maintenance/department/science)
 "xan" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -59034,6 +59091,10 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/port)
+"xIi" = (
+/obj/effect/spawner/random/contraband,
+/turf/open/floor/plating,
+/area/maintenance/department/crew_quarters/dorms)
 "xIM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -87534,8 +87595,8 @@ aaZ
 vOO
 sxv
 pJK
-aza
-aza
+jLz
+jLz
 aza
 iea
 aDE
@@ -88048,10 +88109,10 @@ hmL
 dDZ
 awR
 axU
-aza
+uMe
 azb
 aAv
-aBo
+aBm
 aDF
 aAt
 aFy
@@ -90132,7 +90193,7 @@ aRN
 aYX
 bad
 bbl
-bbl
+otX
 blS
 sbI
 aRN
@@ -91927,7 +91988,7 @@ aKT
 aVh
 tDz
 beB
-aYg
+dcl
 qmm
 aBH
 jos
@@ -92441,7 +92502,7 @@ aKT
 cpb
 wzu
 beB
-aYg
+dcl
 aZd
 liQ
 lTf
@@ -97290,7 +97351,7 @@ uGx
 sFK
 cBA
 ajv
-ajv
+xIi
 aiS
 aiS
 asc
@@ -101219,7 +101280,7 @@ faq
 bwm
 bwm
 uXV
-izF
+lwf
 meG
 bwm
 aaa
@@ -105582,7 +105643,7 @@ bwm
 svN
 lWy
 lWy
-lWy
+wZU
 bwm
 qnT
 lJr
