@@ -68,5 +68,5 @@
 		owner.manual_emote("clicks with [owner.p_their()] tongue.")
 		owner.say("Noice.")
 	if(DT_PROB(2.0, delta_time))
-		owner.say(pick("Ah! That was a mistake!", "Horrible.", "Watch out everybody, the potato is really hot.", "When I was six I ate a bag of plums.", "And if there is one thing I can't stand it's tomatoes.", "And if there is one thing I love it's tomatoes.", "We had a captain who was so strict, you weren't allowed to breathe in their station.", "The unrobust ones just used to keel over and die, you'd hear them going down behind you."), forced = /datum/reagent/impurity/rosenol)
+		owner.say(pick("Ah! C'était une erreur!", "Horrible.", "Attention tout le monde, la pomme de terre est vraiment chaude.", "Quand j'avais six ans, j'ai mangé un sac de prunes.", "Et s'il y a une chose que je ne supporte pas, ce sont les tomates.", "Et s'il y a une chose que j'aime, ce sont les tomates.", "Nous avions un capitaine qui était si strict, nous n'avions pas le droit de respirer dans la station.", "Les non-robustes avaient tendance de s'agenouiller et mourir, vous les entendiez périr derrière vous."), forced = /datum/reagent/impurity/rosenol)
 	..()
