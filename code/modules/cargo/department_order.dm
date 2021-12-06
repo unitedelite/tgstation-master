@@ -21,16 +21,10 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 	var/list/department_delivery_areas = list()
 	///which groups this computer can order from
 	var/list/dep_groups = list()
+	var/department_destination_name = NONE
 
 /obj/machinery/computer/department_orders/Initialize(mapload, obj/item/circuitboard/board)
 	. = ..()
-	if(mapload) //check for mapping errors
-		for(var/delivery_area_type in department_delivery_areas)
-			if(GLOB.areas_by_type[delivery_area_type])
-				break
-		//every area fallback didn't exist on this map so throw a mapping error and set some generic area that uuuh please exist okay
-		log_mapping("[src] has no valid areas to deliver to on this map, add some more fallback areas to its \"department_delivery_areas\" var.")
-		department_delivery_areas = list(/area/hallway/primary/central) //if this doesn't exist like honestly fuck your map man
 
 /obj/machinery/computer/department_orders/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -130,12 +124,7 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 		rank = "Silicon"
 	//already have a signal to finalize the order
 	var/already_signalled = department_order ? TRUE : FALSE
-	var/chosen_delivery_area
-	for(var/delivery_area_type in department_delivery_areas)
-		if(GLOB.areas_by_type[delivery_area_type])
-			chosen_delivery_area = delivery_area_type
-			break
-	department_order = new(pack, name, rank, ckey, "", null, chosen_delivery_area, null)
+	department_order = new(pack, name, rank, ckey, "", null, department_delivery_areas, null, department_destination_name=department_destination_name)
 	SSshuttle.shoppinglist += department_order
 	if(!already_signalled)
 		RegisterSignal(SSshuttle, COMSIG_SUPPLY_SHUTTLE_BUY, .proc/finalize_department_order)
@@ -162,7 +151,41 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 /obj/machinery/computer/department_orders/service
 	name = "service order console"
 	circuit = /obj/item/circuitboard/computer/service_orders
-	department_delivery_areas = list(/area/hallway/secondary/service, /area/service/bar/atrium)
+	department_delivery_areas = list(
+		/area/hallway/secondary/service, 
+		/area/service,
+		/area/service/kitchen,
+		/area/service/kitchen/coldroom,
+		/area/service/kitchen/diner,
+		/area/service/kitchen/abandoned,
+		/area/service/bar,
+		/area/service/bar/atrium,
+		/area/service/electronic_marketing_den,
+		/area/service/abandoned_gambling_den,
+		/area/service/abandoned_gambling_den/secondary,
+		/area/service/abandoned_gambling_den/gaming,
+		/area/service/theater,
+		/area/service/library,
+		/area/service/library/lounge,
+		/area/service/library/artgallery,
+		/area/service/library/private,
+		/area/service/library/upper,
+		/area/service/library/printer,
+		/area/service/chapel,
+		/area/service/chapel/monastery,
+		/area/service/chapel/office,
+		/area/service/chapel/asteroid,
+		/area/service/chapel/asteroid/monastery,
+		/area/service/chapel/dock,
+		/area/service/janitor,
+		/area/service/hydroponics,
+		/area/service/hydroponics/upper,
+		/area/service/hydroponics/garden,
+		/area/service/hydroponics/garden/abandoned,
+		/area/service/hydroponics/garden/monastery,
+		/area/command/heads_quarters/hop
+	)
+	department_destination_name = "Service"
 	override_access = ACCESS_HOP
 	req_one_access = list(ACCESS_KITCHEN, ACCESS_BAR, ACCESS_HYDROPONICS, ACCESS_JANITOR, ACCESS_THEATRE)
 	dep_groups = list("Service", "Food & Hydroponics", "Livestock", "Costumes & Toys")
@@ -170,7 +193,25 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 /obj/machinery/computer/department_orders/engineering
 	name = "engineering order console"
 	circuit = /obj/item/circuitboard/computer/engineering_orders
-	department_delivery_areas = list(/area/engineering/main)
+	department_delivery_areas = list(
+		/area/engineering,
+		/area/engineering/engine_smes,
+		/area/engineering/main,
+		/area/engineering/atmos,
+		/area/engineering/atmos/upper,
+		/area/engineering/atmos/project,
+		/area/engineering/atmospherics_engine,
+		/area/engineering/supermatter,
+		/area/engineering/supermatter/room,
+		/area/engineering/gravity_generator,
+		/area/engineering/storage,
+		/area/engineering/storage_shared,
+		/area/engineering/transit_tube,
+		/area/engineering/storage/tech,
+		/area/engineering/storage/tcomms,
+		/area/command/heads_quarters/ce
+	)
+	department_destination_name = "Engineering"
 	override_access = ACCESS_CE
 	req_one_access = REGION_ACCESS_ENGINEERING
 	dep_groups = list("Engineering", "Engine Construction", "Canisters & Materials")
@@ -178,7 +219,25 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 /obj/machinery/computer/department_orders/science
 	name = "science order console"
 	circuit = /obj/item/circuitboard/computer/science_orders
-	department_delivery_areas = list(/area/science/research)
+	department_delivery_areas = list(/area/science,
+		/area/science/lab,
+		/area/science/xenobiology,
+		/area/science/cytology,
+		/area/science/storage,
+		/area/science/test_area,
+		/area/science/mixing,
+		/area/science/mixing/chamber,
+		/area/science/genetics,
+		/area/science/misc_lab,
+		/area/science/misc_lab/range,
+		/area/science/server,
+		/area/science/explab,
+		/area/science/robotics,
+		/area/science/robotics/lab,
+		/area/science/research,
+		/area/command/heads_quarters/rd
+	)
+	department_destination_name = "Science"
 	override_access = ACCESS_RD
 	req_one_access = REGION_ACCESS_RESEARCH
 	dep_groups = list("Science", "Livestock")
@@ -186,7 +245,23 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 /obj/machinery/computer/department_orders/security
 	name = "security order console"
 	circuit = /obj/item/circuitboard/computer/security_orders
-	department_delivery_areas = list(/area/security/brig)
+	department_delivery_areas = list(/area/security,
+		/area/security/office,
+		/area/security/brig,
+		/area/security/brig/upper,
+		/area/security/processing/cremation,
+		/area/security/interrogation,
+		/area/security/warden,
+		/area/security/detectives_office,
+		/area/security/range,
+		/area/security/execution,
+		/area/security/execution/transfer,
+		/area/security/execution/education,
+		/area/ai_monitored/security/armory,
+		/area/ai_monitored/security/armory/upper,
+		/area/command/heads_quarters/hos
+	)
+	department_destination_name = "Security"
 	override_access = ACCESS_HOS
 	req_one_access = REGION_ACCESS_SECURITY
 	dep_groups = list("Security", "Armory")
@@ -194,7 +269,30 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 /obj/machinery/computer/department_orders/medical
 	name = "medical order console"
 	circuit = /obj/item/circuitboard/computer/medical_orders
-	department_delivery_areas = list(/area/medical/medbay/central)
+	department_delivery_areas = list(/area/medical,
+		/area/medical/abandoned,
+		/area/medical/medbay/central,
+		/area/medical/medbay/zone2,
+		/area/medical/medbay/aft,
+		/area/medical/storage,
+		/area/medical/paramedic,
+		/area/medical/office,
+		/area/medical/surgery/room_c,
+		/area/medical/surgery/room_d,
+		/area/medical/coldroom,
+		/area/medical/virology,
+		/area/medical/morgue,
+		/area/medical/chemistry,
+		/area/medical/pharmacy,
+		/area/medical/surgery,
+		/area/medical/surgery/room_b,
+		/area/medical/cryo,
+		/area/medical/exam_room,
+		/area/medical/treatment_center,
+		/area/medical/psychology,
+		/area/command/heads_quarters/cmo
+	)
+	department_destination_name = "Medbay"
 	override_access = ACCESS_CMO
 	req_one_access = REGION_ACCESS_MEDBAY
 	dep_groups = list("Medical")
