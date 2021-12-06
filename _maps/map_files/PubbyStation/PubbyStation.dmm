@@ -23960,10 +23960,6 @@
 	},
 /turf/open/floor/iron,
 /area/science/mixing)
-"bFB" = (
-/obj/item/newspaper,
-/turf/open/floor/plating,
-/area/maintenance/department/science)
 "bFC" = (
 /obj/item/wallframe/camera,
 /obj/machinery/button/door{
@@ -23974,6 +23970,7 @@
 	pixel_y = 4;
 	specialfunctions = 4
 	},
+/obj/item/newspaper,
 /turf/open/floor/plating,
 /area/maintenance/department/science)
 "bFD" = (
@@ -24769,7 +24766,7 @@
 	cycle_id = "sci-ordnance-passthrough"
 	},
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_ordmix{
-	step_x = 22
+	pixel_x = 22
 	},
 /turf/open/floor/engine,
 /area/science/mixing/chamber)
@@ -43310,9 +43307,7 @@
 /area/maintenance/disposal/incinerator)
 "kIe" = (
 /obj/structure/table,
-/obj/item/flashlight/lamp/green{
-	step_x = 0
-	},
+/obj/item/flashlight/lamp/green,
 /turf/open/floor/plating,
 /area/maintenance/department/bridge)
 "kIo" = (
@@ -56380,8 +56375,8 @@
 	dir = 8;
 	name = "Test Chamber Monitor";
 	network = list("xeno");
-	pixel_y = 2;
-	step_x = 32
+	pixel_x = 32;
+	pixel_y = 2
 	},
 /turf/open/floor/iron/dark,
 /area/science/mixing)
@@ -104871,7 +104866,7 @@ mJm
 gOV
 bGB
 bwm
-rBh
+lWy
 bwm
 bwm
 bwm
@@ -105638,7 +105633,7 @@ blX
 blX
 gjN
 kgR
-bFB
+rBh
 bwm
 svN
 lWy
