@@ -3499,7 +3499,7 @@
 /area/maintenance/department/security/brig)
 "alk" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/open/floor/plating,
@@ -3667,8 +3667,10 @@
 /turf/open/floor/wood,
 /area/service/abandoned_gambling_den)
 "alT" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
+/obj/machinery/atmospherics/components/binary/pump/off{
+	dir = 1;
+	name = "Distro to Security"
+	},
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
 "alY" = (
@@ -4178,16 +4180,6 @@
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
-"ans" = (
-/obj/item/wirecutters,
-/obj/effect/spawner/random/maintenance,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/turf/open/floor/plating,
-/area/maintenance/department/security/brig)
 "anw" = (
 /obj/structure/plasticflaps/opaque,
 /turf/open/floor/iron/dark,
@@ -4420,16 +4412,6 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/break_room)
-"aof" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/maintenance/department/security/brig)
 "aoj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
@@ -7450,6 +7432,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
@@ -39508,6 +39493,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
+"gWX" = (
+/obj/machinery/atmospherics/pipe/layer_manifold/supply/visible,
+/turf/closed/wall,
+/area/maintenance/department/security/brig)
 "gXg" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -44877,6 +44866,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/engineering/storage_shared)
+"mmx" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
+/obj/machinery/space_heater,
+/turf/open/floor/plating,
+/area/maintenance/department/security/brig)
 "mnw" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -47801,6 +47795,15 @@
 	},
 /turf/open/floor/plating,
 /area/cargo/miningdock)
+"oPR" = (
+/obj/item/wirecutters,
+/obj/effect/spawner/random/maintenance,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/department/security/brig)
 "oPV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -48100,6 +48103,11 @@
 	},
 /turf/closed/wall/r_wall,
 /area/maintenance/department/cargo)
+"pdm" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
+/obj/machinery/meter,
+/turf/open/floor/plating,
+/area/maintenance/department/security/brig)
 "pdq" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
@@ -52079,6 +52087,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -53621,6 +53632,10 @@
 /obj/machinery/holopad,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
+"tFa" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply,
+/turf/open/floor/plating,
+/area/maintenance/department/security/brig)
 "tFt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/painting/library_private{
@@ -53839,6 +53854,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
@@ -55693,6 +55711,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
@@ -59277,13 +59298,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
-"xTe" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/maintenance/department/security/brig)
 "xTf" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -76458,11 +76472,11 @@ aiu
 ait
 ait
 aiu
-xTe
-xTe
-xTe
-xTe
-xTe
+tlB
+tlB
+tlB
+tlB
+tlB
 tSq
 axg
 viq
@@ -76715,7 +76729,7 @@ aiu
 aaa
 aaa
 aiu
-xTe
+tlB
 aiu
 aiu
 aiu
@@ -76972,7 +76986,7 @@ aiu
 aiu
 aiu
 aiu
-xTe
+tlB
 aiu
 coG
 cIt
@@ -77227,9 +77241,9 @@ ajG
 akv
 alj
 alT
-skw
-ueU
-aof
+tFa
+gWX
+tlB
 aiu
 aqh
 lqc
@@ -77237,15 +77251,15 @@ ajD
 atq
 aut
 aiu
-xTe
-xTe
-xTe
-xTe
-xTe
-xTe
-xTe
-xTe
-xTe
+tlB
+tlB
+tlB
+tlB
+tlB
+tlB
+tlB
+tlB
+tlB
 syn
 wUz
 ait
@@ -77484,9 +77498,9 @@ ajG
 akv
 alk
 ajD
+ajD
 amH
-ans
-aiu
+oPR
 aiu
 aqi
 ard
@@ -77739,11 +77753,11 @@ aiv
 aiu
 ajG
 akw
-ajD
-aiH
-aiu
+akv
+pdm
+mmx
+skw
 ueU
-apB
 aiu
 aiu
 aiu
@@ -77760,7 +77774,7 @@ aiu
 aiu
 aiu
 aiu
-xTe
+tlB
 aiu
 aiu
 aiu
@@ -77999,8 +78013,8 @@ aiu
 aiu
 aiu
 aiu
-ueU
 aiu
+ueU
 aiu
 aaa
 aaa
@@ -78017,7 +78031,7 @@ aiu
 aCd
 hHr
 hHr
-xTe
+tlB
 ezF
 aod
 aqg
@@ -104547,8 +104561,8 @@ cDB
 cDB
 ntI
 cDB
+cDB
 bwm
-aht
 aaa
 aaa
 aaa
@@ -104805,7 +104819,7 @@ bwm
 bwm
 bwm
 bwm
-aby
+bwm
 aaa
 aaa
 aaa
