@@ -30,11 +30,12 @@
 	var/discounted_pct
 	///area this order wants to reach, if not null then it will come with the deliver_first component set to this area
 	var/department_destination
+	var/department_destination_name
 	var/datum/supply_pack/pack
 	var/datum/bank_account/paying_account
 	var/obj/item/coupon/applied_coupon
 
-/datum/supply_order/New(datum/supply_pack/pack, orderer, orderer_rank, orderer_ckey, reason, paying_account, department_destination, coupon)
+/datum/supply_order/New(datum/supply_pack/pack, orderer, orderer_rank, orderer_ckey, reason, paying_account, department_destination, coupon, department_destination_name=NONE)
 	id = SSshuttle.ordernum++
 	src.pack = pack
 	src.orderer = orderer
@@ -43,6 +44,7 @@
 	src.reason = reason
 	src.paying_account = paying_account
 	src.department_destination = department_destination
+	src.department_destination_name = department_destination_name
 	src.applied_coupon = coupon
 
 /datum/supply_order/proc/generateRequisition(turf/T)
@@ -119,7 +121,7 @@
 		account_holder = "Cargo"
 	var/obj/structure/closet/crate/crate = pack.generate(A, paying_account)
 	if(department_destination)
-		crate.AddElement(/datum/element/deliver_first, department_destination, pack.cost)
+		crate.AddElement(/datum/element/deliver_first, department_destination, pack.cost, goal_area_type_name=department_destination_name)
 	generateManifest(crate, account_holder, pack, pack.cost)
 	return crate
 
