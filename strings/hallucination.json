@@ -1,43 +1,43 @@
 {
 	"suspicion": [
-		"@pick(add_name)i'm watching you...",
-		"@pick(add_name)i know what you're doing",
-		"@pick(add_name)what are you hiding?",
-		"I saw that"
+		"@pick(add_name)je te regarde...",
+		"@pick(add_name)je sais ce que tu fais...",
+		"@pick(add_name)qu'est-ce que tu caches?",
+		"J'ai vu ça"
 	],
 
 	"conversation": [
-		"Yes",
-		"Yeah",
+		"Oui",
+		"Ouais",
 		"Yup",
-		"No",
-		"Nah",
-		"I doubt it",
-		"Uh...",
-		"Why?",
-		"But...",
-		"Hold on",
+		"Non",
+		"Nan",
+		"J'en doute",
+		"Heu...",
+		"Pourquoi?",
+		"Mais...",
+		"Attends",
 		"Hmm",
-		"Yeah, i know",
-		"Weird"
+		"Ouais, je sais",
+		"Etrange"
 	],
 
 	"greetings": [
 		"",
 		"Hey, ",
-		"Hi ",
-		"Hello ",
-		"Wait, ",
-		"It's "
+		"Salut ",
+		"Bonjour ",
+		"Attends, ",
+		"C'est "
 	],
 
 	"getout": [
-		"@pick(add_name)get out",
-		"@pick(add_name)get out!",
-		"@pick(add_name)go away",
-		"@pick(add_name)fuck off",
-		"OUT!",
-		"@pick(add_name)out!"
+		"@pick(add_name)sortez",
+		"@pick(add_name)sortez!",
+		"@pick(add_name)degage!",
+		"@pick(add_name)fout moi le camp!",
+		"SORT!",
+		"@pick(add_name)dehors!"
 	],
 
 	"weird": [
@@ -46,14 +46,14 @@
 		"EEEeeeeEEEE",
 		"khhhhh",
 		"#@§*&£",
-		"H**p m*",
+		"A*de* m*i",
 		"H-hhhhh..."
 	],
 
 	"didyouhearthat": [
-		"Did you hear that?",
-		"Did you see that?",
-		"What was that?"
+		"Vous avez entendu ça?",
+		"Vous avez vu ça?",
+		"C'etait quoi ça?"
 	],
 
 	"add_name": [
@@ -63,162 +63,159 @@
 	],
 
 	"doubt": [
-		"Why?",
-		"What?",
-		"Wait, what?",
-		"@pick(add_name)wait",
-		"@pick(add_name)hold on",
-		"Uh..."
+		"Pourquoi?",
+		"Quoi?",
+		"Attends, quoi?",
+		"@pick(add_name)attends",
+		"@pick(add_name)attendez",
+		"Heu..."
 	],
 
 	"aggressive": [
-		"@pick(add_name)give me that!",
-		"@pick(add_name)stop it!",
-		"@pick(add_name)i'm going to kill you!",
-		"@pick(add_name)fuck you!"
+		"@pick(add_name)donne moi ça!",
+		"@pick(add_name)arrête!",
+		"@pick(add_name)je vais te tuer!",
+		"@pick(add_name)va chier!"
 	],
 
 	"help": [
-		"HELP",
-		"HELP",
-		"HELP",
-		"HELP",
-		"HELP",
-		"HELP ME",
-		"HELP HIM",
-		"HELP HER",
-		"HELP THEM",
-		"HELP US",
-		"HELP YOURSELF"
+		"A L'AIDE",
+		"A L'AIDE",
+		"A L'AIDE",
+		"A L'AIDE",
+		"A L'AIDE",
+		"AIDEZ MOI",
+		"AIDEZ LE",
+		"AIDEZ LA",
+		"AIDEZ LES",
+		"AIDEZ NOUS",
+		"AIDE TOI"
 	],
 
 	"escape": [
-		"@pick(add_name)RUN!!",
-		"They're behind me!",
-		"It's here!",
-		"@pick(add_name)follow me!",
-		"@pick(add_name)follow me"
+		"@pick(add_name)COURS!!",
+		"Ils sont derrière moi!",
+		"Il est la!",
+		"@pick(add_name)suis moi!",
+		"@pick(add_name)suis moi"
 	],
 
 	"infection_advice": [
-		"@pick(add_name)stay away",
-		"@pick(add_name)don't get close",
-		"@pick(add_name)be careful",
-		"@pick(add_name)help me",
-		"@pick(add_name)kill me"
+		"@pick(add_name)reste loin",
+		"@pick(add_name)ne t'approche pas",
+		"@pick(add_name)fais attention",
+		"@pick(add_name)aide moi",
+		"@pick(add_name)tue moi"
 	],
 
 	"people": [
-		"Captain",
-		"Hos",
-		"Cmo",
-		"Rd",
-		"Ce",
-		"Hop",
+		"Captaine",
+		"HoS",
+		"CMO",
+		"RD",
+		"CE",
+		"HoP",
 		"Janitor",
-		"AI",
+		"IA",
 		"Viro",
-		"Qm",
+		"QM",
 		"%TARGETNAME%"
 	],
 
 	"accusations": [
-		"dead",
+		"mort",
 		"rogue",
-		"cult",
-		"a cultist",
-		"clockcult",
-		"a clock cultist",
-		"a revhead",
-		"a rev",
-		"a gang leader",
-		"a gangster",
-		"a traitor",
-		"a tator",
-		"a ling",
-		"a changeling"
+		"culte",
+		"un cultiste",
+		"un revhead",
+		"un rev",
+		"un gang leader",
+		"un gangster",
+		"un traitor",
+		"un traitre",
+		"un ling",
+		"un changeling"
 	],
 
 	"threat": [
-		"Cult",
+		"Culte",
 		"Wizard",
 		"Blob",
 		"Ling",
 		"Ops",
+		"Araignées",
 		"Swarmers",
-		"Spiders",
 		"Xenos",
 		"Revenant",
 		"Traitor",
 		"Harm",
-		"Blue APC",
-		"I hear flashing",
-		"Help",
+		"APC bleu",
+		"J'entends une flash",
 		"%TARGETNAME%"
 	],
 
 	"location": [
-		"space near @pick(sublocation)",
-		"the bridge",
-		"the armory",
-		"sec",
-		"security",
-		"science",
-		"xenobio",
-		"engineering",
-		"cargo",
-		"medbay",
-		"atmos",
+		"l'espace proche @pick(sublocation)",
+		"le bridge",
+		"l'armurie",
+		"la sec",
+		"le brig",
+		"la science",
+		"la xenobio",
+		"l'engineering",
+		"le cargo",
+		"la medbay",
+		"l'atmos",
 		"maint",
 		"@pick(sublocation) maint",
-		"virology",
-		"morgue",
-		"hops office",
-		"captains office",
-		"the chapel",
-		"the library",
-		"tool storage",
-		"botany",
-		"the kitchen",
-		"the ai sat"
+		"la virologie",
+		"la morgue",
+		"le bureau du HoP",
+		"le bureau du Captaine",
+		"la chapelle",
+		"la bibliothèque",
+		"le tool storage",
+		"la botanie",
+		"la cuisine",
+		"l'IA satellite"
 	],
 
 	"sublocation": [
-		"the bridge",
-		"the armory",
-		"sec",
-		"security",
-		"science",
-		"xenobio",
-		"engineering",
-		"cargo",
-		"medbay",
-		"atmos",
-		"maint",
-		"virology",
-		"morgue",
-		"hops office",
-		"captains office",
-		"the chapel",
-		"the library",
-		"tool storage",
-		"botany",
-		"the kitchen",
-		"the ai sat"
+		"du bridge",
+		"de l'armurie",
+		"de la sec",
+		"du brig",
+		"de la science",
+		"de la xenobio",
+		"de l'engineering",
+		"du cargo",
+		"de la medbay",
+		"de l'atmos",
+		"de maint",
+		"de la virologie",
+		"de la morgue",
+		"du bureau HoP",
+		"du bureau Captaine",
+		"de la chapelle",
+		"de la bibliothèque",
+		"du tool storage",
+		"de la botanie",
+		"de la cuisine",
+		"de l'IA satellite"
 	],
 
 	"advice": [
-		"Hmm...not sure about that.",
-		"Yes. You're doing the right thing.",
-		"No. Stop what you're doing.",
-		"You should be wary of that person.",
-		"Trust that person.",
-		"That person wants to kill you.",
-		"Kill that person. You know who.",
-		"You should go somewhere else. Quickly.",
-		"Good luck. You'll need it.",
-		"You have my permission. Do it.",
-		"Just do it."
+		"Hmm... Pas sûr de ça.",
+		"Oui. Tu fais la bonne chose.",
+		"Non. Arrête ce que tu fais.",
+		"Vous devriez vous méfier de cette personne.",
+		"Faites confiance à cette personne.",
+		"Cette personne veut vous tuer.",
+		"Tue cette personne. Tu sais qui.",
+		"Tu devrais aller ailleurs. Vite.",
+		"Bonne chance. Tu en aura besoin.",
+		"Vous avez ma permission. Fais le.",
+		"Fais le."
 	],
 
 	"chemicals": [
