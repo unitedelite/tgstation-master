@@ -34946,7 +34946,7 @@
 "cWo" = (
 /obj/docking_port/stationary/random{
 	dir = 8;
-	id = "pod_3_lavaland";
+	id = "pod_lavaland";
 	name = "lavaland"
 	},
 /turf/open/space,
