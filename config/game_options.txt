@@ -70,12 +70,12 @@ HUMANS_NEED_SURNAMES
 
 
 ## ALERT LEVELS ###
-ALERT_GREEN Toutes les menaces sur la station sont passées. La securité ne dois pas avoir ses armes visible, les lois sur la vie privée sont de nouveau en vigeur.
-ALERT_BLUE_UPTO La station à reçu des informations viables à propos d'une activitée hostile sur la station. Les agents de securité peuvent avoir leurs armes visibles, les fouilles aleatoires sont permises.
-ALERT_BLUE_DOWNTO La menace immediate est passée. Les agents de securité ne doivent plus avoir leurs armes de sortie constemment. Les fouilles aleatoire sont toujours autorisées.
-ALERT_RED_UPTO Il y à une serieuse menace immediate sur la station. Les agents de securité peuvent avoir leurs armes sorties en permanence. Accessoirement, l'accès requis pour certaines portes a été augmenté.
-ALERT_RED_DOWNTO La destruction de la station a été evitée. Il y a cepandant toujours une mance serieuse sur la station. La securité peuvent avoir leurs armes sorties en permanance, les fouilles aleatoire sont autorisées et encouragées.
-ALERT_DELTA Destruction de la station imminante. Tout l'equipage doit obeir aux ordres des chefs de service. Toute violation à leurs ordres peut être puni de mort. Ceci n'est pas un exercice.
+ALERT_GREEN Toutes les menaces sur la station sont passÃ©es. La securitÃ© ne dois pas avoir ses armes visible, les lois sur la vie privÃ©e sont de nouveau en vigeur.
+ALERT_BLUE_UPTO La station Ã  reÃ§u des informations viables Ã  propos d'une activitÃ©e hostile sur la station. Les agents de securitÃ© peuvent avoir leurs armes visibles, les fouilles aleatoires sont permises.
+ALERT_BLUE_DOWNTO La menace immediate est passÃ©e. Les agents de securitÃ© ne doivent plus avoir leurs armes de sortie constemment. Les fouilles aleatoire sont toujours autorisÃ©es.
+ALERT_RED_UPTO Il y Ã  une serieuse menace immediate sur la station. Les agents de securitÃ© peuvent avoir leurs armes sorties en permanence. Accessoirement, l'accÃ¨s requis pour certaines portes a Ã©tÃ© augmentÃ©.
+ALERT_RED_DOWNTO La destruction de la station a Ã©tÃ© evitÃ©e. Il y a cepandant toujours une mance serieuse sur la station. La securitÃ© peuvent avoir leurs armes sorties en permanance, les fouilles aleatoire sont autorisÃ©es et encouragÃ©es.
+ALERT_DELTA Destruction de la station imminante. Tout l'equipage doit obeir aux ordres des chefs de service. Toute violation Ã  leurs ordres peut Ãªtre puni de mort. Ceci n'est pas un exercice.
 
 
 
@@ -150,7 +150,7 @@ ALLOW_AI_MULTICAM
 
 ## Secborg ###
 ## Uncomment to prevent the security cyborg model from being chosen
-#DISABLE_SECBORG
+DISABLE_SECBORG
 
 ## Peacekeeper Borg ###
 ## Uncomment to prevent the peacekeeper cyborg model from being chosen
