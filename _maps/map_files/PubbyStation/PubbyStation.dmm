@@ -35554,9 +35554,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/security/prison)
-"dDE" = (
-/turf/open/floor/catwalk_floor/titanium,
-/area/space)
 "dDZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -42714,9 +42711,6 @@
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/hallway/secondary/command)
-"kdY" = (
-/turf/open/floor/catwalk_floor,
-/area/space)
 "keN" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
@@ -51088,9 +51082,6 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/disposal)
-"rtZ" = (
-/turf/open/floor/catwalk_floor/iron_white,
-/area/space)
 "rud" = (
 /obj/structure/rack,
 /obj/item/clothing/mask/gas{
@@ -52007,9 +51998,6 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
-"sfr" = (
-/turf/open/floor/catwalk_floor/flat_white,
-/area/space)
 "sgc" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/iron/dark,
@@ -52693,9 +52681,6 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
-"sOq" = (
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/space)
 "sOr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/layer_manifold/supply,
@@ -54513,9 +54498,6 @@
 "ufo" = (
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
-"ugl" = (
-/turf/open/floor/catwalk_floor/iron,
-/area/space)
 "ugv" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -58459,9 +58441,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/crew_quarters/bar)
-"wZn" = (
-/turf/open/floor/catwalk_floor/iron_smooth,
-/area/space)
 "wZB" = (
 /obj/structure/chair/comfy/black,
 /obj/structure/cable,
@@ -105236,7 +105215,7 @@ aaa
 aaa
 aaa
 aaa
-kdY
+aaa
 aaa
 aaa
 aaa
@@ -105493,7 +105472,7 @@ aby
 aaa
 aaa
 aaa
-sfr
+aaa
 aaa
 aaa
 aaa
@@ -105750,7 +105729,7 @@ aed
 aaa
 aaa
 aaa
-ugl
+aaa
 aaa
 aaa
 aaa
@@ -106006,8 +105985,8 @@ aht
 aby
 aaa
 aaa
-sOq
-ugl
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -106264,7 +106243,7 @@ aaa
 aaa
 aaa
 aaa
-wZn
+aaa
 aaa
 aaa
 aaa
@@ -106521,7 +106500,7 @@ aby
 aaa
 aaa
 aaa
-rtZ
+aaa
 aaa
 aaa
 aaa
@@ -106778,7 +106757,7 @@ aby
 aaa
 aaa
 aaa
-dDE
+aaa
 aaa
 aaa
 aaa
