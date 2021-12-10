@@ -687,7 +687,7 @@
 
 #undef CONSTRUCTION_PANEL_OPEN //Maintenance panel is open, still functioning
 #undef CONSTRUCTION_NO_CIRCUIT //Circuit board removed, can safely weld apart
-#undef DEFAULT_STEP_TIME /// default time for each step
+#undef DEFAULT_STEP_TIME // default time for each step
 #undef FIREDOOR_MAX_TEMP // °C
 #undef FIREDOOR_MIN_TEMP
 #undef FIREDOOR_MAX_PRES
