@@ -495,7 +495,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	icon_state = "rune_large"
 	pixel_x = -32 //So the big ol' 96x96 sprite shows up right
 	pixel_y = -32
-	scribe_delay = 500 //how long the rune takes to create
+	scribe_delay = 750 //how long the rune takes to create
 	scribe_damage = 40.1 //how much damage you take doing it
 	log_when_erased = TRUE
 	no_scribe_boost = TRUE
@@ -657,7 +657,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	cultist_name = "Summon Cultist"
 	cultist_desc = "summons a single cultist to the rune. Requires 2 invokers."
 	invocation = "N'ath reth sh'yro eth d'rekkathnor!"
-	req_cultists = 2
+	req_cultists = 1
 	invoke_damage = 10
 	icon_state = "3"
 	color = RUNE_COLOR_SUMMON
@@ -711,7 +711,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	icon_state = "4"
 	color = RUNE_COLOR_BURNTORANGE
 	light_color = LIGHT_COLOR_LAVA
-	req_cultists = 3
+	req_cultists = 2
 	invoke_damage = 10
 	construct_invoke = FALSE
 	var/tick_damage = 25

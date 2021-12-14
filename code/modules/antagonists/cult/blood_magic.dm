@@ -446,14 +446,14 @@
 
 		else
 			to_chat(user, span_cultitalic("In a brilliant flash of red, [L] falls to the ground!"))
-			L.Paralyze(4 SECONDS)
+			L.Paralyze(6 SECONDS)
 			L.flash_act(1,TRUE)
 			if(issilicon(target))
 				var/mob/living/silicon/S = L
 				S.emp_act(EMP_HEAVY)
 			else if(iscarbon(target))
 				var/mob/living/carbon/C = L
-				C.silent += 3
+				C.silent += 2
 				C.stuttering += 15
 				C.cultslurring += 15
 				C.Jitter(1.5 SECONDS)
@@ -747,7 +747,7 @@
 					H.blood_volume -= 100
 					uses += 100
 					user.Beam(H, icon_state="drainbeam", time = 1 SECONDS)
-					playsound(get_turf(H), 'sound/magic/enter_blood.ogg', 100)
+					playsound(get_turf(H), 'sound/magic/enter_blood.ogg', 50)
 					H.visible_message(span_danger("[user] drains some of [H]'s blood!"))
 					to_chat(user,span_cultitalic("Your blood rite gains 100 charges from draining [H]'s blood."))
 					new /obj/effect/temp_visual/cult/sparks(get_turf(H))
@@ -796,55 +796,54 @@
 /obj/item/melee/blood_magic/manipulator/attack_self(mob/living/user)
 	if(IS_CULTIST(user))
 		var/static/list/spells = list(
-			"Bloody Halberd (75)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "occultpoleaxe0"),
-			"Blood Bolt Barrage (150)" = image(icon = 'icons/obj/guns/ballistic.dmi', icon_state = "arcane_barrage"),
-			"Blood Beam (250)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "disintegrate")
+			"Bloody Halberd (" + BLOOD_HALBERD_COST + ")" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "occultpoleaxe0"),
+			"Bloody Barrage (" + BLOOD_BARRAGE_COST + ")" = image(icon = 'icons/obj/guns/ballistic.dmi', icon_state = "arcane_barrage"),
+			"Bloody Beam (" + BLOOD_BEAM_COST + ")" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "disintegrate")
 			)
 		var/choice = show_radial_menu(user, src, spells, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
 		if(!check_menu(user))
 			to_chat(user, span_cultitalic("You decide against conducting a greater blood rite."))
 			return
-		switch(choice)
-			if("Bloody Halberd (75)")
-				if(uses < BLOOD_HALBERD_COST)
-					to_chat(user, span_cultitalic("You need [BLOOD_HALBERD_COST] charges to perform this rite."))
+		if(choice == "Bloody Halberd (" + BLOOD_HALBERD_COST + ")")
+			if(uses < BLOOD_HALBERD_COST)
+				to_chat(user, span_cultitalic("You need [BLOOD_HALBERD_COST] charges to perform this rite."))
+			else
+				uses -= BLOOD_HALBERD_COST
+				var/turf/current_position = get_turf(user)
+				qdel(src)
+				var/datum/action/innate/cult/halberd/halberd_act_granted = new(user)
+				var/obj/item/melee/cultblade/halberd/rite = new(current_position)
+				halberd_act_granted.Grant(user, rite)
+				rite.halberd_act = halberd_act_granted
+				if(user.put_in_hands(rite))
+					to_chat(user, span_cultitalic("A [rite.name] appears in your hand!"))
 				else
-					uses -= BLOOD_HALBERD_COST
-					var/turf/current_position = get_turf(user)
-					qdel(src)
-					var/datum/action/innate/cult/halberd/halberd_act_granted = new(user)
-					var/obj/item/melee/cultblade/halberd/rite = new(current_position)
-					halberd_act_granted.Grant(user, rite)
-					rite.halberd_act = halberd_act_granted
-					if(user.put_in_hands(rite))
-						to_chat(user, span_cultitalic("A [rite.name] appears in your hand!"))
-					else
-						user.visible_message(span_warning("A [rite.name] appears at [user]'s feet!"), \
-							span_cultitalic("A [rite.name] materializes at your feet."))
-			if("Blood Bolt Barrage (150)")
-				if(uses < BLOOD_BARRAGE_COST)
-					to_chat(user, span_cultitalic("You need [BLOOD_BARRAGE_COST] charges to perform this rite."))
+					user.visible_message(span_warning("A [rite.name] appears at [user]'s feet!"), \
+						span_cultitalic("A [rite.name] materializes at your feet."))
+		if(choice == "Bloody Barrage (" + BLOOD_BARRAGE_COST + ")")
+			if(uses < BLOOD_BARRAGE_COST)
+				to_chat(user, span_cultitalic("You need [BLOOD_BARRAGE_COST] charges to perform this rite."))
+			else
+				var/obj/rite = new /obj/item/gun/ballistic/rifle/enchanted/arcane_barrage/blood()
+				uses -= BLOOD_BARRAGE_COST
+				qdel(src)
+				if(user.put_in_hands(rite))
+					to_chat(user, span_cult("<b>Your hands glow with power!</b>"))
 				else
-					var/obj/rite = new /obj/item/gun/ballistic/rifle/enchanted/arcane_barrage/blood()
-					uses -= BLOOD_BARRAGE_COST
-					qdel(src)
-					if(user.put_in_hands(rite))
-						to_chat(user, span_cult("<b>Your hands glow with power!</b>"))
-					else
-						to_chat(user, span_cultitalic("You need a free hand for this rite!"))
-						qdel(rite)
-			if("Blood Beam (250)")
-				if(uses < BLOOD_BEAM_COST)
-					to_chat(user, span_cultitalic("You need [BLOOD_BEAM_COST] charges to perform this rite."))
+					to_chat(user, span_cultitalic("You need a free hand for this rite!"))
+					qdel(rite)
+		if(choice == "Bloody Beam (" + BLOOD_BEAM_COST + ")")
+			if(uses < BLOOD_BEAM_COST)
+				to_chat(user, span_cultitalic("You need [BLOOD_BEAM_COST] charges to perform this rite."))
+			else
+				var/obj/rite = new /obj/item/blood_beam()
+				uses -= BLOOD_BEAM_COST
+				qdel(src)
+				if(user.put_in_hands(rite))
+					to_chat(user, span_cultlarge("<b>Your hands glow with POWER OVERWHELMING!!!</b>"))
 				else
-					var/obj/rite = new /obj/item/blood_beam()
-					uses -= BLOOD_BEAM_COST
-					qdel(src)
-					if(user.put_in_hands(rite))
-						to_chat(user, span_cultlarge("<b>Your hands glow with POWER OVERWHELMING!!!</b>"))
-					else
-						to_chat(user, span_cultitalic("You need a free hand for this rite!"))
-						qdel(rite)
+					to_chat(user, span_cultitalic("You need a free hand for this rite!"))
+					qdel(rite)
 
 /obj/item/melee/blood_magic/manipulator/proc/check_menu(mob/living/user)
 	if(!istype(user))

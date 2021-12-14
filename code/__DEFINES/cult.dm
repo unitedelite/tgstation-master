@@ -16,9 +16,9 @@
 #define CULT_RISEN 0.2
 /// percent before ascend
 #define CULT_ASCENDENT 0.3
-#define BLOOD_HALBERD_COST 75
-#define BLOOD_BARRAGE_COST 150
-#define BLOOD_BEAM_COST 250
+#define BLOOD_HALBERD_COST 150
+#define BLOOD_BARRAGE_COST 300
+#define BLOOD_BEAM_COST 500
 #define IRON_TO_CONSTRUCT_SHELL_CONVERSION 25
 //screen locations
 #define DEFAULT_BLOODSPELLS "6:-29,4:-2"
