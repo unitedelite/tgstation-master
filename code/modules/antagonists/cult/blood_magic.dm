@@ -453,7 +453,7 @@
 				S.emp_act(EMP_HEAVY)
 			else if(iscarbon(target))
 				var/mob/living/carbon/C = L
-				C.silent += 2
+				C.silent += 3
 				C.stuttering += 15
 				C.cultslurring += 15
 				C.Jitter(1.5 SECONDS)
@@ -530,7 +530,7 @@
 			if(!C.handcuffed)
 				C.set_handcuffed(new /obj/item/restraints/handcuffs/energy/cult/used(C))
 				C.update_handcuffed()
-				C.silent += 3
+				C.silent += 4
 				to_chat(user, span_notice("You shackle [C]."))
 				log_combat(user, C, "shackled")
 				uses--
