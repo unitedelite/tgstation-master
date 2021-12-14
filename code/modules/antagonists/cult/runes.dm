@@ -489,7 +489,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	cultist_name = "Nar'Sie"
 	cultist_desc = "tears apart dimensional barriers, calling forth the Geometer. Requires 9 invokers."
 	invocation = "TOK-LYR RQA-NAP G'OLT-ULOFT!!"
-	req_cultists = 9
+	req_cultists = 4
 	icon = 'icons/effects/96x96.dmi'
 	color = RUNE_COLOR_DARKRED
 	icon_state = "rune_large"
@@ -899,7 +899,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	pixel_x = -32
 	pixel_y = -32
 	color = RUNE_COLOR_DARKRED
-	req_cultists = 3
+	req_cultists = 2
 	scribe_delay = 100
 
 /obj/effect/rune/apocalypse/invoke(list/invokers)

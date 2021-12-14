@@ -446,14 +446,14 @@
 
 		else
 			to_chat(user, span_cultitalic("In a brilliant flash of red, [L] falls to the ground!"))
-			L.Paralyze(16 SECONDS)
+			L.Paralyze(4 SECONDS)
 			L.flash_act(1,TRUE)
 			if(issilicon(target))
 				var/mob/living/silicon/S = L
 				S.emp_act(EMP_HEAVY)
 			else if(iscarbon(target))
 				var/mob/living/carbon/C = L
-				C.silent += 6
+				C.silent += 3
 				C.stuttering += 15
 				C.cultslurring += 15
 				C.Jitter(1.5 SECONDS)
@@ -530,7 +530,7 @@
 			if(!C.handcuffed)
 				C.set_handcuffed(new /obj/item/restraints/handcuffs/energy/cult/used(C))
 				C.update_handcuffed()
-				C.silent += 5
+				C.silent += 3
 				to_chat(user, span_notice("You shackle [C]."))
 				log_combat(user, C, "shackled")
 				uses--
@@ -745,11 +745,11 @@
 					return
 				if(H.blood_volume > BLOOD_VOLUME_SAFE)
 					H.blood_volume -= 100
-					uses += 50
+					uses += 100
 					user.Beam(H, icon_state="drainbeam", time = 1 SECONDS)
-					playsound(get_turf(H), 'sound/magic/enter_blood.ogg', 50)
+					playsound(get_turf(H), 'sound/magic/enter_blood.ogg', 100)
 					H.visible_message(span_danger("[user] drains some of [H]'s blood!"))
-					to_chat(user,span_cultitalic("Your blood rite gains 50 charges from draining [H]'s blood."))
+					to_chat(user,span_cultitalic("Your blood rite gains 100 charges from draining [H]'s blood."))
 					new /obj/effect/temp_visual/cult/sparks(get_turf(H))
 				else
 					to_chat(user,span_warning("[H.p_theyre(TRUE)] missing too much blood - you cannot drain [H.p_them()] further!"))
@@ -779,9 +779,9 @@
 		for(var/obj/effect/decal/cleanable/blood/B in view(T, 2))
 			if(B.blood_state == BLOOD_STATE_HUMAN)
 				if(B.bloodiness == 100) //Bonus for "pristine" bloodpools, also to prevent cheese with footprint spam
-					temp += 30
+					temp += 60
 				else
-					temp += max((B.bloodiness**2)/800,1)
+					temp += max((B.bloodiness**2)/400,1)
 				new /obj/effect/temp_visual/cult/turf/floor(get_turf(B))
 				qdel(B)
 		for(var/obj/effect/decal/cleanable/trail_holder/TH in view(T, 2))
@@ -796,16 +796,16 @@
 /obj/item/melee/blood_magic/manipulator/attack_self(mob/living/user)
 	if(IS_CULTIST(user))
 		var/static/list/spells = list(
-			"Bloody Halberd (150)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "occultpoleaxe0"),
-			"Blood Bolt Barrage (300)" = image(icon = 'icons/obj/guns/ballistic.dmi', icon_state = "arcane_barrage"),
-			"Blood Beam (500)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "disintegrate")
+			"Bloody Halberd (75)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "occultpoleaxe0"),
+			"Blood Bolt Barrage (150)" = image(icon = 'icons/obj/guns/ballistic.dmi', icon_state = "arcane_barrage"),
+			"Blood Beam (250)" = image(icon = 'icons/obj/items_and_weapons.dmi', icon_state = "disintegrate")
 			)
 		var/choice = show_radial_menu(user, src, spells, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
 		if(!check_menu(user))
 			to_chat(user, span_cultitalic("You decide against conducting a greater blood rite."))
 			return
 		switch(choice)
-			if("Bloody Halberd (150)")
+			if("Bloody Halberd (75)")
 				if(uses < BLOOD_HALBERD_COST)
 					to_chat(user, span_cultitalic("You need [BLOOD_HALBERD_COST] charges to perform this rite."))
 				else
@@ -821,7 +821,7 @@
 					else
 						user.visible_message(span_warning("A [rite.name] appears at [user]'s feet!"), \
 							span_cultitalic("A [rite.name] materializes at your feet."))
-			if("Blood Bolt Barrage (300)")
+			if("Blood Bolt Barrage (150)")
 				if(uses < BLOOD_BARRAGE_COST)
 					to_chat(user, span_cultitalic("You need [BLOOD_BARRAGE_COST] charges to perform this rite."))
 				else
@@ -833,7 +833,7 @@
 					else
 						to_chat(user, span_cultitalic("You need a free hand for this rite!"))
 						qdel(rite)
-			if("Blood Beam (500)")
+			if("Blood Beam (250)")
 				if(uses < BLOOD_BEAM_COST)
 					to_chat(user, span_cultitalic("You need [BLOOD_BEAM_COST] charges to perform this rite."))
 				else
