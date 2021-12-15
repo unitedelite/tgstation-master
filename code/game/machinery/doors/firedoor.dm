@@ -1,7 +1,7 @@
 #define CONSTRUCTION_PANEL_OPEN 1 //Maintenance panel is open, still functioning
 #define CONSTRUCTION_NO_CIRCUIT 2 //Circuit board removed, can safely weld apart
 #define DEFAULT_STEP_TIME 20 /// default time for each step
-#define FIREDOOR_MAX_TEMP 60 // Â°C
+#define FIREDOOR_MAX_TEMP 60 // °C
 #define FIREDOOR_MIN_TEMP 0
 #define FIREDOOR_MAX_PRES WARNING_HIGH_PRESSURE 
 #define FIREDOOR_MIN_PRES WARNING_LOW_PRESSURE 
@@ -37,6 +37,8 @@
 	var/boltslocked = TRUE
 	var/list/affecting_areas
 	var/being_held_open = FALSE
+	var/knock_sound = 'sound/effects/glassknock.ogg'
+	var/bash_sound = 'sound/effects/glassbash.ogg'
 
 	dir = SOUTH
 	var/enable_smart_generation = TRUE
@@ -177,7 +179,7 @@
 	. = ..()
 	INVOKE_ASYNC(src, .proc/latetoggle)
 
-/obj/machinery/door/firedoor/attack_hand(mob/user, list/modifiers)
+/obj/machinery/door/firedoor/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
 	if(.)
 		return
@@ -514,7 +516,7 @@
 		leaving.Bump(src)
 		return COMPONENT_ATOM_BLOCK_EXIT
 
-/obj/machinery/door/firedoor/border_only/can_atmos_pass(turf/T)
+/obj/machinery/door/firedoor/border_only/can_atmos_pass(turf/T, vertical = FALSE)
 	if(get_dir(loc, T) == dir)
 		return !density
 	else
@@ -688,7 +690,7 @@
 #undef CONSTRUCTION_PANEL_OPEN //Maintenance panel is open, still functioning
 #undef CONSTRUCTION_NO_CIRCUIT //Circuit board removed, can safely weld apart
 #undef DEFAULT_STEP_TIME // default time for each step
-#undef FIREDOOR_MAX_TEMP // Â°C
+#undef FIREDOOR_MAX_TEMP // °C
 #undef FIREDOOR_MIN_TEMP
 #undef FIREDOOR_MAX_PRES
 #undef FIREDOOR_MIN_PRES
