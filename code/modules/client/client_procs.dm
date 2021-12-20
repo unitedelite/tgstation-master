@@ -1024,8 +1024,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				//From SKYRAT BEGIN
 				if("LOOC")
 					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=looc")
-				if("Whisper")
-					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=whisper")
 				//SKYRAT END
 
 /client/proc/change_view(new_size)
