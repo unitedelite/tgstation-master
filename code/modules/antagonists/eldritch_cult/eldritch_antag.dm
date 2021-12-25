@@ -270,7 +270,7 @@
 
 /datum/objective/knowledge_ecult/update_explanation_text()
 	. = ..()
-	target_amount = rand(9,16)
+	target_amount = rand(8,13)
 	explanation_text = "Research at least [target_amount] eldritch knowledges (you start with 3)."
 
 /datum/objective/knowledge_ecult/check_completion()
