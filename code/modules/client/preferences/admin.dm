@@ -50,3 +50,11 @@
 		return FALSE
 
 	return is_admin(preferences.parent)
+
+//From Skyrat-tg/modular_skyrat/master_files/code/modules/client/preferences/looc.dm  BEGIN 
+/datum/preference/toggle/admin/see_looc 
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	default_value = TRUE
+	savefile_key = "looc_admin_pref"
+	savefile_identifier = PREFERENCE_PLAYER
+//SKYRAT END
