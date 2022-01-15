@@ -39,7 +39,7 @@
 	name = "Medical Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/medical
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
+	gloves = /obj/item/clothing/gloves/color/plasmaman/latex
 	head = /obj/item/clothing/head/helmet/space/plasmaman/medical
 
 /datum/outfit/plasmaman/paramedic
@@ -53,14 +53,14 @@
 	name = "Virology Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/viro
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
+	gloves = /obj/item/clothing/gloves/color/plasmaman/latex
 	head = /obj/item/clothing/head/helmet/space/plasmaman/viro
 
 /datum/outfit/plasmaman/chemist
 	name = "Chemist Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/chemist
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
+	gloves = /obj/item/clothing/gloves/color/plasmaman/latex
 	head = /obj/item/clothing/head/helmet/space/plasmaman/chemist
 
 /datum/outfit/plasmaman/science

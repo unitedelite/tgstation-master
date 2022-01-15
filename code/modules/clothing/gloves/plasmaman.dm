@@ -24,6 +24,13 @@
 	clothing_traits = list(TRAIT_QUICKER_CARRY, TRAIT_FASTMED)
 	transfer_prints = FALSE
 
+/obj/item/clothing/gloves/color/plasmaman/latex
+	name = "latex envirogloves"
+	desc = "Somewhat cheap sterile gloves made for plasmamen from latex. Provides quicker carrying from a good grip."
+	icon_state = "whiteplasma"
+	inhand_icon_state = "whiteplasma"
+	clothing_traits = list(TRAIT_QUICK_CARRY)
+
 /obj/item/clothing/gloves/color/plasmaman/white
 	name = "white envirogloves"
 	icon_state = "whiteplasma"
