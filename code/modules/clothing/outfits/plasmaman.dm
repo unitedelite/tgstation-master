@@ -209,7 +209,7 @@
 	name = "Chief Medical Officer Plasmaman"
 
 	uniform = /obj/item/clothing/under/plasmaman/chief_medical_officer
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
+	gloves = /obj/item/clothing/gloves/color/plasmaman/plasmanitrile
 	head = /obj/item/clothing/head/helmet/space/plasmaman/chief_medical_officer
 
 /datum/outfit/plasmaman/research_director
