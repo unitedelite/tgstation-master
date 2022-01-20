@@ -3622,6 +3622,7 @@
 /turf/open/floor/iron,
 /area/security)
 "alH" = (
+/obj/machinery/recharge_station,
 /turf/open/floor/iron/dark,
 /area/security)
 "alJ" = (
@@ -6540,11 +6541,7 @@
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "auK" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "bridgespace";
-	name = "bridge external shutters"
-	},
-/obj/effect/turf_decal/delivery,
+/obj/machinery/recharge_station,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
 "auL" = (
@@ -17921,6 +17918,8 @@
 /obj/item/clothing/gloves/color/latex/nitrile,
 /obj/item/clothing/gloves/color/latex/nitrile,
 /obj/item/reagent_containers/spray/cleaner,
+/obj/item/mod/module/plasma_stabilizer,
+/obj/item/mod/module/thermal_regulator,
 /turf/open/floor/plating,
 /area/medical/cryo)
 "bkY" = (
@@ -19041,6 +19040,12 @@
 /obj/machinery/ecto_sniffer{
 	pixel_x = 4;
 	pixel_y = 4
+	},
+/obj/item/mod/core/standard{
+	pixel_x = 4
+	},
+/obj/item/mod/core/standard{
+	pixel_x = -4
 	},
 /turf/open/floor/iron/dark,
 /area/science/robotics)
@@ -36669,6 +36674,8 @@
 	layer = 4
 	},
 /obj/structure/cable,
+/obj/item/mod/module/plasma_stabilizer,
+/obj/item/mod/module/thermal_regulator,
 /turf/open/floor/iron/dark,
 /area/engineering/engine_smes)
 "eDR" = (
@@ -40145,6 +40152,7 @@
 	dir = 1
 	},
 /obj/machinery/newscaster/directional/north,
+/obj/machinery/recharge_station,
 /turf/open/floor/iron/dark,
 /area/engineering/engine_smes)
 "hBY" = (
@@ -45594,6 +45602,13 @@
 "mKE" = (
 /turf/closed/wall,
 /area/medical/medbay/lobby)
+"mKO" = (
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 1
+	},
+/obj/machinery/recharge_station,
+/turf/open/floor/iron,
+/area/cargo/storage)
 "mLY" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 10
@@ -46465,6 +46480,7 @@
 /obj/machinery/light_switch{
 	pixel_y = -24
 	},
+/obj/machinery/recharge_station,
 /turf/open/floor/plating,
 /area/medical/cryo)
 "nyB" = (
@@ -55258,6 +55274,7 @@
 /area/medical/medbay/central)
 "uFi" = (
 /obj/item/radio/intercom/directional/east,
+/obj/machinery/recharge_station,
 /turf/open/floor/iron,
 /area/commons/dorms)
 "uFo" = (
@@ -92806,7 +92823,7 @@ atY
 auU
 atY
 iNH
-bpN
+fRJ
 auK
 aAH
 aBz
@@ -93062,7 +93079,7 @@ ahi
 atZ
 auV
 awc
-fRJ
+bpN
 fRJ
 azp
 aAH
@@ -103623,7 +103640,7 @@ tpC
 cDa
 mZS
 myc
-sAD
+mKO
 aEj
 uAh
 lQr
