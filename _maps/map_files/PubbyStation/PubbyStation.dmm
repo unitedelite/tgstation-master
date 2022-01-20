@@ -52887,7 +52887,7 @@
 	name = "Virologie Maintenance";
 	req_access_txt = "39"
 	},
-/turf/closed/wall/r_wall,
+/turf/open/floor/plating,
 /area/maintenance/department/engine)
 "sWj" = (
 /obj/effect/turf_decal/stripes/line,
@@ -102121,7 +102121,7 @@ iUX
 iUX
 iUX
 iUX
-iUX
+gjN
 khL
 bwm
 wIB
@@ -102377,8 +102377,8 @@ bJQ
 suz
 bMl
 bNp
-bNp
 bOt
+aaa
 aaa
 wvi
 aMJ
@@ -102634,8 +102634,8 @@ bJR
 bLf
 bMm
 dxo
-bNp
 bOt
+aaa
 aaa
 wvi
 aMJ
@@ -102891,8 +102891,8 @@ bJS
 nWX
 bMn
 bNp
-bNp
 bOt
+aaa
 aaa
 wvi
 aMJ
@@ -103149,7 +103149,7 @@ iUX
 iUX
 iUX
 iUX
-iUX
+bHy
 kLr
 wnJ
 mTz
