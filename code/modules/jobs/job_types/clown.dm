@@ -1,7 +1,7 @@
 /datum/job/clown
-	title = "Clown"
+	title = JOB_CLOWN
 	description = "Entertain the crew, make bad jokes, go on a holy quest to find bananium, HONK!"
-	department_head = list("Head of Personnel")
+	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
@@ -69,6 +69,12 @@
 	box = /obj/item/storage/box/hug/survival
 	chameleon_extras = /obj/item/stamp/clown
 	implants = list(/obj/item/implant/sad_trombone)
+
+/datum/outfit/job/clown/mod
+	name = "Clown (MODsuit)"
+
+	suit_store = /obj/item/tank/internals/oxygen
+	back = /obj/item/mod/control/pre_equipped/cosmohonk
 
 /datum/outfit/job/clown/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()

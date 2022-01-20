@@ -182,8 +182,8 @@
 	balloon_alert(src, "turned off")
 	update_appearance()
 
-/mob/living/simple_animal/bot/proc/get_bot_flag(checked_flag)
-	if(bot_mode_flags & checked_flag)
+/mob/living/simple_animal/bot/proc/get_bot_flag(checked_mode, checked_flag)
+	if(checked_mode & checked_flag)
 		return TRUE
 	return FALSE
 
@@ -233,6 +233,8 @@
 	if(user.has_unlimited_silicon_privilege || isAdminGhostAI(user)) // Silicon and Admins always have access.
 		return TRUE
 	if(!maints_access_required) // No requirements to access it.
+		return TRUE
+	if(!(bot_cover_flags & BOT_COVER_LOCKED)) // Unlocked.
 		return TRUE
 
 	var/obj/item/card/id/id_card = user.get_idcard(TRUE)
@@ -421,9 +423,9 @@
 		else
 			if(attacking_item.force) //if force is non-zero
 				do_sparks(5, TRUE, src)
-			..()
+	..()
 
-/mob/living/simple_animal/bot/bullet_act(obj/projectile/Proj)
+/mob/living/simple_animal/bot/bullet_act(obj/projectile/Proj, def_zone, piercing_hit = FALSE)
 	if(Proj && (Proj.damage_type == BRUTE || Proj.damage_type == BURN))
 		if(prob(75) && Proj.damage > 0)
 			do_sparks(5, TRUE, src)
@@ -473,22 +475,24 @@
 		return REDUCE_RANGE
 
 /mob/living/simple_animal/bot/proc/drop_part(obj/item/drop_item, dropzone)
+	var/obj/item/item_to_drop
 	if(ispath(drop_item))
-		new drop_item(dropzone)
+		item_to_drop = new drop_item(dropzone)
 	else
-		drop_item.forceMove(dropzone)
+		item_to_drop = drop_item
+		item_to_drop.forceMove(dropzone)
 
-	if(istype(drop_item, /obj/item/stock_parts/cell))
-		var/obj/item/stock_parts/cell/dropped_cell = drop_item
+	if(istype(item_to_drop, /obj/item/stock_parts/cell))
+		var/obj/item/stock_parts/cell/dropped_cell = item_to_drop
 		dropped_cell.charge = 0
 		dropped_cell.update_appearance()
 
-	else if(istype(drop_item, /obj/item/storage))
-		var/obj/item/storage/S = drop_item
-		S.contents = list()
+	else if(istype(item_to_drop, /obj/item/storage))
+		var/obj/item/storage/storage_to_drop = item_to_drop
+		storage_to_drop.contents = list()
 
-	else if(istype(drop_item, /obj/item/gun/energy))
-		var/obj/item/gun/energy/dropped_gun = drop_item
+	else if(istype(item_to_drop, /obj/item/gun/energy))
+		var/obj/item/gun/energy/dropped_gun = item_to_drop
 		dropped_gun.cell.charge = 0
 		dropped_gun.update_appearance()
 
@@ -882,6 +886,7 @@ Pass a positive integer as an argument to override a bot's default speed.
 	data["can_hack"] = (issilicon(user) || isAdminGhostAI(user))
 	data["custom_controls"] = list()
 	data["emagged"] = bot_cover_flags & BOT_COVER_EMAGGED
+	data["has_access"] = check_access(user)
 	data["locked"] = bot_cover_flags & BOT_COVER_LOCKED
 	data["pai"] = list()
 	data["settings"] = list()
@@ -905,9 +910,6 @@ Pass a positive integer as an argument to override a bot's default speed.
 
 	if(action == "lock")
 		bot_cover_flags ^= BOT_COVER_LOCKED
-
-	if(bot_cover_flags & BOT_COVER_LOCKED && !(issilicon(usr) || isAdminGhostAI(usr)))
-		return
 
 	switch(action)
 		if("power")
@@ -942,10 +944,9 @@ Pass a positive integer as an argument to override a bot's default speed.
 			if(paicard)
 				to_chat(usr, span_notice("You eject [paicard] from [initial(src.name)]."))
 				ejectpai(usr)
-	return
 
 /mob/living/simple_animal/bot/update_icon_state()
-	icon_state = "[initial(icon_state)][get_bot_flag(BOT_MODE_ON)]"
+	icon_state = "[initial(icon_state)][get_bot_flag(bot_mode_flags, BOT_MODE_ON)]"
 	return ..()
 
 /mob/living/simple_animal/bot/proc/topic_denied(mob/user) //Access check proc for bot topics! Remember to place in a bot's individual Topic if desired.
@@ -963,11 +964,11 @@ Pass a positive integer as an argument to override a bot's default speed.
 	if(paicard)
 		to_chat(user, span_warning("A [paicard] is already inserted!"))
 		return
-	if(!(bot_mode_flags & BOT_MODE_PAI_CONTROLLABLE) || !key)
-		to_chat(user, span_warning("[src] is not compatible with [card]!"))
-		return
 	if(bot_cover_flags & BOT_COVER_LOCKED || !(bot_cover_flags & BOT_COVER_OPEN))
 		to_chat(user, span_warning("The personality slot is locked."))
+		return
+	if(!(bot_mode_flags & BOT_MODE_PAI_CONTROLLABLE) || key) //Not pAI controllable or is already player controlled.
+		to_chat(user, span_warning("[src] is not compatible with [card]!"))
 		return
 	if(!card.pai || !card.pai.mind)
 		to_chat(user, span_warning("[card] is inactive."))
