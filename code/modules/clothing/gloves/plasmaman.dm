@@ -27,8 +27,9 @@
 /obj/item/clothing/gloves/color/plasmaman/latex
 	name = "latex envirogloves"
 	desc = "Somewhat cheap sterile gloves made for plasmamen from latex. Provides quicker carrying from a good grip."
-	icon_state = "whiteplasma"
-	inhand_icon_state = "whiteplasma"
+	icon = 'icons/obj/clothing/customs.dmi'
+	icon_state = "latexplasma"
+	inhand_icon_state = "latexplasma"
 	clothing_traits = list(TRAIT_QUICK_CARRY)
 
 /obj/item/clothing/gloves/color/plasmaman/white
