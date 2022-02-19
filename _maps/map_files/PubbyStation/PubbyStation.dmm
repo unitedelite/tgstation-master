@@ -6279,7 +6279,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external{
 	name = "Bridge External Access";
-	req_access_txt = "13"
+	req_access_txt = "13;65"
 	},
 /turf/open/floor/plating,
 /area/command/bridge)
@@ -6935,7 +6935,8 @@
 "avM" = (
 /obj/machinery/door/airlock/command{
 	name = "Balcony";
-	req_access_txt = "20"
+	req_access_txt = "0";
+	req_one_access_txt = "20,57,58,65"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6966,7 +6967,8 @@
 "avQ" = (
 /obj/machinery/door/airlock/command{
 	name = "MiniSat Access";
-	req_access_txt = "65"
+	req_access_txt = "0";
+	req_one_access_txt = "20,57,58,65"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -7048,7 +7050,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Bridge External Access";
 	req_access_txt = "0";
-	req_one_access_txt = "19;65"
+	req_one_access_txt = "19"
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -7640,7 +7642,7 @@
 "aye" = (
 /obj/machinery/door/airlock/command{
 	name = "External Access";
-	req_one_access_txt = "19; 65"
+	req_one_access_txt = "19"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -35934,10 +35936,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "dTw" = (
-/obj/machinery/door/airlock/command/glass{
-	name = "Head of Security";
-	req_access_txt = "58"
-	},
 /obj/machinery/door/airlock/maintenance{
 	name = "HOS Maintenance";
 	req_access_txt = "58"
