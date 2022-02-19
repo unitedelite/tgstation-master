@@ -30737,7 +30737,6 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
-/obj/machinery/firealarm/directional/east,
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "cgb" = (
@@ -53985,6 +53984,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/machinery/meter,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "tLd" = (
