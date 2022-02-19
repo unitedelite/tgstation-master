@@ -615,7 +615,7 @@
 		return ..()
 	if(splat)
 		to_chat(user, span_notice("[src] doesn't seem to be able to go hard right now."))
-		return	
+		return
 	if(going_hard)
 		to_chat(user, span_notice("[src] is already going too hard!"))
 		return
@@ -696,3 +696,20 @@
 	attack_verb_continuous = list("slashes", "bites", "charges")
 	attack_verb_simple = list("slash", "bite", "charge")
 	squeak_override = list('sound/items/intents/Help.ogg' = 1)
+
+/obj/item/toy/plush/gnome
+	icon = 'icons/obj/gnome_plush.dmi'
+	lefthand_file = 'icons/mob/inhands/gnome_l.dmi'
+	righthand_file = 'icons/mob/inhands/gnome_r.dmi'
+	name = "gnome plushie"
+	desc = "A plushie depicting a gnome, be on the lookout for your shoes !"
+	icon_state = "plushie_gnome"
+	inhand_icon_state = "gnome_p"
+	attack_verb_continuous = list("thumps", "whomps", "bumps")
+	attack_verb_simple = list("thumps", "whomps", "bumps")
+	squeak_override = list('sound/items/couvax/ggiggle.ogg' = 1)
+	pickup_sound = 'sound/items/couvax/squeaktoy.ogg'
+	drop_sound = 'sound/items/couvax/squeaktoy02.ogg'
+	w_class = WEIGHT_CLASS_SMALL
+	resistance_flags = FLAMMABLE
+	stuffed = TRUE
