@@ -29,4 +29,6 @@
 				T.emp_act(EMP_LIGHT)
 		else if(distance <= light_range)
 			T.emp_act(EMP_LIGHT)
+	if (heavy_range > 3)
+		empulse(epicenter, heavy_range/3, 2*heavy_range/3, log=0)
 	return 1

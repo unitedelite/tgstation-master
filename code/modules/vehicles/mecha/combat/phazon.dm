@@ -16,6 +16,15 @@
 	max_equip = 3
 	phase_state = "phazon-phase"
 
+/obj/vehicle/sealed/mecha/combat/phazon/emp_act(severity)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
+	if(get_charge())
+		use_power((cell.charge/8 )/(severity))
+	addtimer(CALLBACK(src, /obj/vehicle/sealed/mecha/proc/restore_equipment), 5 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
+
+
 /obj/vehicle/sealed/mecha/combat/phazon/generate_actions()
 	. = ..()
 	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_phasing)
