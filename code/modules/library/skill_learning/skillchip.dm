@@ -1,3 +1,10 @@
+// Skillchip categories
+//Various skillchip categories. Use these when setting which categories a skillchip restricts being paired with
+//while using the SKILLCHIP_RESTRICTED_CATEGORIES flag
+/// General related skillchip category
+#define SKILLCHIP_CATEGORY_GENERAL "general"
+#define SKILLCHIP_CATEGORY_FUN_VOICE "fun voice"
+
 /obj/item/skillchip
 	name = "skillchip"
 	desc = "This biochip integrates with user's brain to enable mastery of specific skill. Consult certified Nanotrasen neurosurgeon before use."
@@ -566,3 +573,5 @@
 	to_chat(user, span_danger("You get a pounding headache as the chip sends corrupt memories into your head!"))
 	user.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 	. = ..()
+
+#undef SKILLCHIP_CATEGORY_GENERAL

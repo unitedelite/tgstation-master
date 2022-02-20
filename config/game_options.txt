@@ -77,7 +77,8 @@ ALERT_RED_UPTO Il y à une serieuse menace immediate sur la station. Les agents d
 ALERT_RED_DOWNTO La destruction de la station a été evitée. Il y a cepandant toujours une mance serieuse sur la station. La securité peuvent avoir leurs armes sorties en permanance, les fouilles aleatoire sont autorisées et encouragées.
 ALERT_DELTA Destruction de la station imminante. Tout l'equipage doit obeir aux ordres des chefs de service. Toute violation à leurs ordres peut être puni de mort. Ceci n'est pas un exercice.
 
-
+## The total weight of station goals possible for a round (allows multiple goals)
+STATION_GOAL_BUDGET 1
 
 ## GAME MODES ###
 

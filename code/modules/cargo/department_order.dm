@@ -162,7 +162,6 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 		/area/service/bar/atrium,
 		/area/service/electronic_marketing_den,
 		/area/service/abandoned_gambling_den,
-		/area/service/abandoned_gambling_den/secondary,
 		/area/service/abandoned_gambling_den/gaming,
 		/area/service/theater,
 		/area/service/library,
@@ -177,6 +176,7 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 		/area/service/chapel/asteroid,
 		/area/service/chapel/asteroid/monastery,
 		/area/service/chapel/dock,
+		/area/service/chapel/storage,
 		/area/service/janitor,
 		/area/service/hydroponics,
 		/area/service/hydroponics/upper,
@@ -195,9 +195,13 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 	circuit = /obj/item/circuitboard/computer/engineering_orders
 	department_delivery_areas = list(
 		/area/engineering,
+		/area/engineering/hallway,
 		/area/engineering/engine_smes,
 		/area/engineering/main,
 		/area/engineering/atmos,
+		/area/engineering/atmos/office,
+		/area/engineering/atmos/hfr_room,
+		/area/engineering/atmos/storage/gas,
 		/area/engineering/atmos/upper,
 		/area/engineering/atmos/project,
 		/area/engineering/atmospherics_engine,
@@ -220,6 +224,7 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 	name = "science order console"
 	circuit = /obj/item/circuitboard/computer/science_orders
 	department_delivery_areas = list(/area/science,
+		/area/science/lobby,
 		/area/science/lab,
 		/area/science/xenobiology,
 		/area/science/cytology,
@@ -272,7 +277,6 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 	department_delivery_areas = list(/area/medical,
 		/area/medical/abandoned,
 		/area/medical/medbay/central,
-		/area/medical/medbay/zone2,
 		/area/medical/medbay/aft,
 		/area/medical/storage,
 		/area/medical/paramedic,

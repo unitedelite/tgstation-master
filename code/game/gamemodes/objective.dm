@@ -167,7 +167,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	nonabstract_req = TRUE
 	phase_allowed = TRUE
 	antimagic_allowed = TRUE
-	invocation_type = "none"
+	invocation_type = INVOCATION_NONE
 
 /obj/effect/proc_holder/spell/self/special_equipment_fallback/cast(list/targets, mob/user)
 	var/datum/mind/mind = user.mind
@@ -823,9 +823,6 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 	else
 		to_chat(admin, span_boldwarning("No active AIs with minds."))
 	update_explanation_text()
-
-/datum/objective/destroy/internal
-	var/stolen = FALSE //Have we already eliminated this target?
 
 /datum/objective/steal_n_of_type
 	name = "steal five of"
