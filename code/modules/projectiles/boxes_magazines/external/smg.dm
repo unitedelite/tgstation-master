@@ -4,7 +4,8 @@
 	base_icon_state = "46x30mmt"
 	ammo_type = /obj/item/ammo_casing/c46x30mm
 	caliber = CALIBER_46X30MM
-	max_ammo = 20
+	max_ammo = 15
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/magazine/wt550m9/update_icon_state()
 	. = ..()
