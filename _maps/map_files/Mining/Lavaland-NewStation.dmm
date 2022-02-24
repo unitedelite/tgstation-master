@@ -2939,7 +2939,7 @@
 /area/mine/laborcamp/security)
 "hV" = (
 /turf/closed/wall,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "hW" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock,
@@ -2955,7 +2955,7 @@
 /area/mine/laborcamp/security/checkpoint)
 "hY" = (
 /turf/closed/wall/r_wall,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "hZ" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -5509,7 +5509,7 @@
 	pixel_x = 1
 	},
 /turf/closed/wall,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "oz" = (
 /obj/structure/sign/directions/medical{
 	icon_state = "direction_med";
@@ -5552,6 +5552,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/lobby/west)
 "oH" = (
@@ -5562,14 +5563,17 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "oI" = (
 /obj/machinery/shower,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "oJ" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/purple{
@@ -5589,7 +5593,7 @@
 	},
 /obj/structure/mirror/directional/north,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "oL" = (
 /obj/machinery/camera/directional/north,
 /obj/item/radio/intercom/directional/north,
@@ -5712,7 +5716,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "pd" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5721,7 +5725,7 @@
 	dir = 8
 	},
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "pe" = (
 /obj/machinery/shower{
 	icon_state = "shower";
@@ -5731,7 +5735,7 @@
 	dir = 1
 	},
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "pf" = (
 /obj/machinery/shower{
 	icon_state = "shower";
@@ -5741,14 +5745,14 @@
 	dir = 1
 	},
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "pg" = (
 /obj/machinery/shower{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "ph" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -6158,6 +6162,8 @@
 /obj/item/modular_computer/tablet/preset/science,
 /obj/item/clothing/glasses/regular/circle,
 /obj/item/radio/intercom/directional/north,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/mechbay/rd_aux)
 "ql" = (
@@ -6287,6 +6293,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/mechbay/rd_aux)
 "qD" = (
@@ -6306,6 +6313,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron,
 /area/mine/mechbay/rd_aux)
 "qF" = (
@@ -6416,6 +6424,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/mechbay/rd_aux)
 "qV" = (
@@ -6624,6 +6633,7 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /obj/machinery/keycard_auth/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/mechbay/rd_aux)
 "rp" = (
@@ -7769,7 +7779,7 @@
 /obj/item/radio/intercom/directional/north,
 /obj/machinery/light/dim/directional/north,
 /turf/open/floor/plastic,
-/area/mine/living_quarters)
+/area/mine/living_quarters/showers)
 "us" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -8137,6 +8147,10 @@
 "IE" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/eva)
+"IJ" = (
+/obj/structure/cable,
+/turf/closed/wall,
+/area/mine/living_quarters/showers)
 "IQ" = (
 /obj/structure/sign/warning/docking,
 /turf/closed/wall,
@@ -8157,6 +8171,9 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/hydroponics)
+"JN" = (
+/turf/closed/wall,
+/area/mine/explored)
 "JP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external,
@@ -8253,6 +8270,13 @@
 /obj/structure/sign/painting/library,
 /turf/closed/wall,
 /area/mine/living_quarters/dorm/a)
+"NA" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/iron,
+/area/mine/lobby/west)
 "NF" = (
 /obj/structure/lattice,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -8472,6 +8496,12 @@
 "WT" = (
 /turf/closed/wall,
 /area/mine/lobby/west)
+"WZ" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/plating,
+/area/mine/maintenance/east)
 "XW" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -8510,6 +8540,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/iron,
 /area/mine/hydroponics)
 
@@ -16187,7 +16218,7 @@ Pf
 Hm
 iS
 og
-og
+NA
 oG
 og
 og
@@ -16445,7 +16476,7 @@ nx
 Hm
 oh
 hV
-hV
+IJ
 pc
 Qp
 LH
@@ -16693,7 +16724,7 @@ bU
 bU
 cp
 cp
-WT
+JN
 CZ
 hL
 hc
@@ -17974,7 +18005,7 @@ bT
 bT
 bT
 bT
-vY
+JN
 vY
 vY
 kr
@@ -22104,7 +22135,7 @@ hP
 pB
 hP
 hP
-qG
+WZ
 hQ
 hP
 hP
