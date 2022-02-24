@@ -63,6 +63,9 @@
 /area/mine/maintenance
 	name = "Mining Station Communications"
 
+/area/mine/maintenance/actual
+	name = "Mining Station Maintenances"
+
 /area/mine/cafeteria
 	name = "Mining Station Cafeteria"
 	icon_state = "mining_labor_cafe"
