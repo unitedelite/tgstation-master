@@ -51,7 +51,7 @@
 
 /area/mine/lobby/west
 	name = "Mining Station Port Wing"
-	icon_state = "hallA"
+	icon_state = "hallP"
 
 /area/mine/storage
 	name = "Mining Station Storage"
