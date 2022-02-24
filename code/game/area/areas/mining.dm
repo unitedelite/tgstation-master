@@ -41,6 +41,18 @@
 	name = "Mining Station"
 	icon_state = "mining_lobby"
 
+/area/mine/lobby/north
+	name = "Mining Station Fore Wing"
+	icon_state = "hallF"
+
+/area/mine/lobby/south
+	name = "Mining Station Aft Wing"
+	icon_state = "hallA"
+
+/area/mine/lobby/west
+	name = "Mining Station Port Wing"
+	icon_state = "hallA"
+
 /area/mine/storage
 	name = "Mining Station Storage"
 	icon_state = "mining_storage"
@@ -49,12 +61,36 @@
 	name = "Mining Station Starboard Wing"
 	icon_state = "mining_production"
 
+/area/mine/production/smelting
+	name = "Mining Station Smelting Area"
+
 /area/mine/abandoned
 	name = "Abandoned Mining Station"
 
 /area/mine/living_quarters
 	name = "Mining Station Port Wing"
 	icon_state = "mining_living"
+
+/area/mine/living_quarters/central
+	name = "Mining Station Central Hallway"
+	icon_state = "hallC"
+
+/area/mine/living_quarters/showers
+	name = "Mining Station Shower room"
+	icon_state = "commons"
+
+/area/mine/living_quarters/dorm/a
+	name = "Mining Station Dorm A"
+	icon_state = "dorms_male"
+
+/area/mine/living_quarters/dorm/b
+	name = "Mining Station Dorm B"
+	icon_state = "dorms_female"
+
+/area/mine/living_quarters/sauna
+	name = "Mining Station Sauna"
+	icon = 'icons/turf/areas_downstream.dmi'
+	icon_state = "mining_sauna"
 
 /area/mine/eva
 	name = "Mining Station EVA"
@@ -63,23 +99,43 @@
 /area/mine/maintenance
 	name = "Mining Station Communications"
 
-/area/mine/maintenance/actual
-	name = "Mining Station Maintenances"
+/area/mine/maintenance/east
+	name = "Mining Station Starboard Maintenances"
+	icon_state = "maint_cargo"
+	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
 
 /area/mine/cafeteria
 	name = "Mining Station Cafeteria"
 	icon_state = "mining_labor_cafe"
 
+/area/mine/cafeteria/crew
+	name = "Mining Station Cafeteria (crew)"
+	icon_state = "cafeteria"
+
 /area/mine/hydroponics
 	name = "Mining Station Hydroponics"
 	icon_state = "mining_labor_hydro"
 
+/area/mine/hydroponics/crew
+	name = "Mining Station Hydroponics (crew)"
+	icon_state = "hydro"
+
 /area/mine/sleeper
 	name = "Mining Station Emergency Sleeper"
+
+/area/mine/sleeper/medbay
+	name = "Mining Station Medbay"
+	icon_state = "medbay"
 
 /area/mine/mechbay
 	name = "Mining Station Mech Bay"
 	icon_state = "mechbay"
+
+/area/mine/mechbay/rd_aux
+	name = "Auxiliary RD Office"
+	icon_state = "rd_office"
+	ambientsounds = list('sound/ambience/signal.ogg')
+	airlock_wires = /datum/wires/airlock/command
 
 /area/mine/laborcamp
 	name = "Labor Camp"
@@ -90,6 +146,9 @@
 	icon_state = "labor_camp_security"
 	ambience_index = AMBIENCE_DANGER
 
+/area/mine/laborcamp/security/checkpoint
+	name = "Labor Camp Security Hallway"
+	icon_state = "checkpoint"
 
 
 
