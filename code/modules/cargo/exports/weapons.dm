@@ -36,6 +36,10 @@
 	unit_name = "energy gun"
 	export_types = list(/obj/item/gun/energy/e_gun)
 
+/datum/export/weapon/wt550
+	unit_name = "WT-550 automatic rifle"
+	export_types = list(/obj/item/gun/ballistic/automatic/wt550)
+
 /datum/export/weapon/inferno
 	cost = CARGO_CRATE_VALUE * 1.5
 	unit_name = "inferno pistol"
