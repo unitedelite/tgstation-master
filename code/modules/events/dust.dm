@@ -23,9 +23,9 @@
 
 /datum/round_event/sandstorm
 	startWhen = 1
-	endWhen = 150 // ~5 min
+	endWhen = 75 // ~2.5 min
 	announceWhen = 0
 	fakeable = FALSE
 
 /datum/round_event/sandstorm/tick()
-	spawn_meteors(10, GLOB.meteorsC)
+	spawn_meteors(4, GLOB.meteorsC)
