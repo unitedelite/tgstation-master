@@ -3214,6 +3214,7 @@
 /obj/effect/decal/cleanable/blood/drip{
 	color = "gray"
 	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
 /area/mine/lobby/north)
 "iK" = (
@@ -3442,6 +3443,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/iron,
 /area/mine/living_quarters/central)
 "jp" = (
@@ -5864,11 +5866,6 @@
 /obj/structure/sign/plaques/kiddie/perfect_drone,
 /turf/closed/wall,
 /area/mine/living_quarters/dorm/a)
-"pv" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron,
-/area/mine/lobby/west)
 "pw" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -7058,6 +7055,8 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/structure/cable,
+/obj/structure/cable,
 /turf/open/floor/wood{
 	icon_state = "wood-broken3"
 	},
@@ -7066,6 +7065,7 @@
 /obj/structure/mineral_door/wood,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/living_quarters/sauna)
 "sp" = (
@@ -7073,18 +7073,21 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/lobby/west)
 "sq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/lobby/west)
 "sr" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/lobby/west)
 "ss" = (
@@ -7093,12 +7096,14 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/lobby/west)
 "st" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -7251,6 +7256,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/mine/living_quarters/sauna)
 "sN" = (
@@ -7385,6 +7391,8 @@
 /area/mine/living_quarters/sauna)
 "tm" = (
 /obj/structure/lattice/catwalk,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
 /turf/open/lava/smooth,
 /area/mine/living_quarters/sauna)
 "tn" = (
@@ -7531,6 +7539,7 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/structure/cable,
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/iron,
 /area/mine/hydroponics/crew)
 "tH" = (
@@ -8202,6 +8211,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/mine/laborcamp)
+"Lz" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron,
+/area/mine/laborcamp/security)
 "LC" = (
 /turf/closed/wall,
 /area/mine/laborcamp/security/checkpoint)
@@ -8520,6 +8536,13 @@
 "YX" = (
 /turf/closed/wall,
 /area/mine/maintenance/east)
+"Zr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron,
+/area/mine/living_quarters/central)
 "Zw" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -15972,7 +15995,7 @@ Hm
 kK
 iN
 hL
-pv
+og
 WT
 bU
 bU
@@ -18500,7 +18523,7 @@ eo
 hf
 fs
 fG
-fG
+Lz
 gh
 gI
 gI
@@ -19037,7 +19060,7 @@ bT
 VE
 jV
 wM
-Wp
+Zr
 vY
 Ct
 Ct
@@ -20579,7 +20602,7 @@ jj
 Fz
 jY
 wM
-Wp
+Zr
 vY
 lO
 Ct
