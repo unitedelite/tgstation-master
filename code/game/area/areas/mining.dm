@@ -77,15 +77,18 @@
 
 /area/mine/living_quarters/showers
 	name = "Mining Station Shower room"
-	icon_state = "commons"
+	icon = 'icons/turf/areas_downstream.dmi'
+	icon_state = "shower_room"
 
 /area/mine/living_quarters/dorm/a
 	name = "Mining Station Dorm A"
-	icon_state = "dorms_male"
+	icon = 'icons/turf/areas_downstream.dmi'
+	icon_state = "mining_dorm_A"
 
 /area/mine/living_quarters/dorm/b
 	name = "Mining Station Dorm B"
-	icon_state = "dorms_female"
+	icon = 'icons/turf/areas_downstream.dmi'
+	icon_state = "mining_dorm_B"
 
 /area/mine/living_quarters/sauna
 	name = "Mining Station Sauna"
@@ -101,7 +104,7 @@
 
 /area/mine/maintenance/east
 	name = "Mining Station Starboard Maintenances"
-	icon_state = "maint_cargo"
+	icon_state = "starboardmaint"
 	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
 
 /area/mine/cafeteria
