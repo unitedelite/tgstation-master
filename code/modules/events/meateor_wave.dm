@@ -3,6 +3,7 @@
 	typepath = /datum/round_event/meteor_wave/meaty
 	weight = 2
 	max_occurrences = 1
+	strength = 6
 
 /datum/round_event/meteor_wave/meaty
 	wave_name = "meaty"
@@ -16,7 +17,7 @@
 	min_players = 12
 
 /datum/round_event/meteor_wave/meaty/small
-	strength = 2
+	strength = 4
 
 
 /datum/round_event_control/meteor_wave/meaty/tiny
@@ -26,4 +27,4 @@
 
 
 /datum/round_event/meteor_wave/meaty/tiny
-	strength = 1
+	strength = 2
