@@ -2100,6 +2100,7 @@
 "fO" = (
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/camera/autoname/directional/south{
+	c_tag = "Labor Camp Overwatch";
 	network = list("labor")
 	},
 /turf/open/floor/iron,
@@ -4549,7 +4550,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/camera/directional/south{
-	c_tag = "Mech Bay";
+	c_tag = "Port Lobby";
 	network = list("mine")
 	},
 /obj/structure/cable,
@@ -6880,7 +6881,9 @@
 /area/mine/maintenance/east)
 "rO" = (
 /obj/structure/lattice/catwalk,
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera/autoname/directional/north{
+	c_tag = "Sauna"
+	},
 /turf/open/lava/smooth,
 /area/mine/living_quarters/sauna)
 "rP" = (
@@ -7005,7 +7008,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/directional/east{
-	c_tag = "Communications Relay";
+	c_tag = "Aft lobby";
 	network = list("mine")
 	},
 /turf/open/floor/iron,
