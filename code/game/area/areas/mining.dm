@@ -101,6 +101,7 @@
 
 /area/mine/maintenance
 	name = "Mining Station Communications"
+	icon_state = "tcomsatcham"
 
 /area/mine/maintenance/east
 	name = "Mining Station Starboard Maintenances"
