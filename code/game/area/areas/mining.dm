@@ -151,8 +151,9 @@
 	ambience_index = AMBIENCE_DANGER
 
 /area/mine/laborcamp/security/checkpoint
-	name = "Labor Camp Security Hallway"
-	icon_state = "checkpoint"
+	name = "Labor Camp Visitation Area"
+	icon = 'icons/turf/areas_downstream.dmi'
+	icon_state = "prison_visit"
 
 
 
