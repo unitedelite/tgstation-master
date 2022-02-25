@@ -4,14 +4,15 @@
 	name = "Meteor Wave: Normal"
 	typepath = /datum/round_event/meteor_wave
 	weight = 4
-	min_players = 15
-	max_occurrences = 3
+	min_players = 14
+	max_occurrences = 1
 	earliest_start = 25 MINUTES
 
 /datum/round_event/meteor_wave
-	startWhen = 6
-	endWhen = 66
+	startWhen = 15
+	endWhen = 45
 	announceWhen = 1
+	var/strength = 3
 	var/list/wave_type
 	var/wave_name = "normal"
 
@@ -47,18 +48,20 @@
 			kill()
 
 /datum/round_event/meteor_wave/announce(fake)
-	priority_announce("Meteors have been detected on collision course with the station.", "Meteor Alert", ANNOUNCER_METEORS)
+	priority_announce("A large number of meteors have been detected on collision course with the station. All personnel is required to help prevent life suport faillure. It is recommended to power down the SM.", "Meteor Alert", ANNOUNCER_METEORS)
+	if(SSsecurity_level.current_level < SEC_LEVEL_BLUE)
+		set_security_level(SEC_LEVEL_BLUE)
+	make_maint_all_access()
 
 /datum/round_event/meteor_wave/tick()
 	if(ISMULTIPLE(activeFor, 3))
-		spawn_meteors(5, wave_type) //meteor list types defined in gamemode/meteor/meteors.dm
+		spawn_meteors(strength, wave_type) //meteor list types defined in gamemode/meteor/meteors.dm
 
 /datum/round_event_control/meteor_wave/threatening
 	name = "Meteor Wave: Threatening"
 	typepath = /datum/round_event/meteor_wave/threatening
-	weight = 5
-	min_players = 20
-	max_occurrences = 3
+	min_players = 18
+	max_occurrences = 1
 	earliest_start = 35 MINUTES
 
 /datum/round_event/meteor_wave/threatening
@@ -67,10 +70,81 @@
 /datum/round_event_control/meteor_wave/catastrophic
 	name = "Meteor Wave: Catastrophic"
 	typepath = /datum/round_event/meteor_wave/catastrophic
-	weight = 7
-	min_players = 25
-	max_occurrences = 3
+	min_players = 22
+	max_occurrences = 1
 	earliest_start = 45 MINUTES
 
 /datum/round_event/meteor_wave/catastrophic
+	wave_name = "catastrophic"
+
+// Small strength
+
+/datum/round_event_control/meteor_wave/small
+	name = "Meteor Wave: Small Normal"
+	typepath = /datum/round_event/meteor_wave/small
+	weight = 5
+	min_players = 12
+	max_occurrences = 2
+	earliest_start = 20 MINUTES
+
+/datum/round_event/meteor_wave/small
+	wave_name = "normal"
+	strength = 2
+
+/datum/round_event/meteor_wave/small/announce(fake)
+	priority_announce("Meteors have been detected on collision course with the station. It is recommended to power down the SM.", "Meteor Alert", ANNOUNCER_METEORS)
+	if(SSsecurity_level.current_level < SEC_LEVEL_BLUE)
+		set_security_level(SEC_LEVEL_BLUE)
+
+/datum/round_event_control/meteor_wave/small/threatening
+	name = "Meteor Wave: Small Threatening"
+	typepath = /datum/round_event/meteor_wave/small/threatening
+	min_players = 14
+	earliest_start = 30 MINUTES
+
+/datum/round_event/meteor_wave/small/threatening
+	wave_name = "threatening"
+
+/datum/round_event_control/meteor_wave/small/catastrophic
+	name = "Meteor Wave: Small Catastrophic"
+	typepath = /datum/round_event/meteor_wave/small/catastrophic
+	min_players = 18
+	earliest_start = 40 MINUTES
+
+/datum/round_event/meteor_wave/small/catastrophic
+	wave_name = "catastrophic"
+
+// Tiny strength
+
+/datum/round_event_control/meteor_wave/tiny
+	name = "Meteor Wave: Tiny Normal"
+	typepath = /datum/round_event/meteor_wave/tiny
+	weight = 6
+	min_players = 9
+	max_occurrences = 3
+	earliest_start = 10 MINUTES
+
+/datum/round_event/meteor_wave/tiny
+	wave_name = "normal"
+	strength = 1
+
+/datum/round_event/meteor_wave/tiny/announce(fake)
+	priority_announce("A few stray meteors have been detected on collision course with the station.", "Meteor Alert", ANNOUNCER_METEORS)
+
+/datum/round_event_control/meteor_wave/tiny/threatening
+	name = "Meteor Wave: Tiny Threatening"
+	typepath = /datum/round_event/meteor_wave/tiny/threatening
+	min_players = 11
+	earliest_start = 20 MINUTES
+
+/datum/round_event/meteor_wave/tiny/threatening
+	wave_name = "threatening"
+
+/datum/round_event_control/meteor_wave/tiny/catastrophic
+	name = "Meteor Wave: Tiny Catastrophic"
+	typepath = /datum/round_event/meteor_wave/tiny/catastrophic
+	min_players = 13
+	earliest_start = 30 MINUTES
+
+/datum/round_event/meteor_wave/tiny/catastrophic
 	wave_name = "catastrophic"
