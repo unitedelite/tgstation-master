@@ -72,10 +72,10 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	abstract_type = /datum/traitor_objective/steal_item
 
 /datum/traitor_objective/steal_item/low_risk_cap
-	progression_minimum = 5 MINUTES
-	progression_maximum = 20 MINUTES
+	progression_minimum = 4 MINUTES
+	progression_maximum = 25 MINUTES
 
-	progression_reward = list(5 MINUTES, 10 MINUTES)
+	progression_reward = list(3 MINUTES, 7 MINUTES)
 	telecrystal_reward = 0
 	possible_items = list(
 		/datum/objective_item/steal/low_risk/techboard/borgupload,
@@ -84,9 +84,9 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	)
 
 /datum/traitor_objective/steal_item/low_risk
-	progression_minimum = 10 MINUTES
+	progression_minimum = 4 MINUTES
 	progression_maximum = 35 MINUTES
-	progression_reward = list(5 MINUTES, 10 MINUTES)
+	progression_reward = list(3 MINUTES, 7 MINUTES)
 	telecrystal_reward = 0
 
 	possible_items = list(
@@ -95,8 +95,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	)
 
 /datum/traitor_objective/steal_item/somewhat_risky
-	progression_minimum = 20 MINUTES
-	progression_reward = 5 MINUTES
+	progression_minimum = 15 MINUTES
+	progression_reward = list(3 MINUTES, 6 MINUTES)
 	telecrystal_reward = 1
 
 	possible_items = list(
@@ -108,9 +108,11 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	)
 
 /datum/traitor_objective/steal_item/risky
-	progression_minimum = 30 MINUTES
-	progression_reward = 13 MINUTES
-	telecrystal_reward = 2
+	hold_time_required = list(4, 12)
+	minutes_per_telecrystal = 2.5
+	progression_minimum = 25 MINUTES
+	progression_reward = list(10 MINUTES, 15 MINUTES)
+	telecrystal_reward = list(1, 2)
 
 	possible_items = list(
 		/datum/objective_item/steal/reflector,
@@ -120,9 +122,11 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	)
 
 /datum/traitor_objective/steal_item/very_risky
-	progression_minimum = 40 MINUTES
-	progression_reward = 17 MINUTES
-	telecrystal_reward = 3
+	hold_time_required = list(4, 10)
+	minutes_per_telecrystal = 2
+	progression_minimum = 35 MINUTES
+	progression_reward = list(13 MINUTES, 18 MINUTES)
+	telecrystal_reward = list(1, 3)
 
 	possible_items = list(
 		/datum/objective_item/steal/hoslaser,
@@ -132,9 +136,11 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	)
 
 /datum/traitor_objective/steal_item/most_risky
-	progression_minimum = 50 MINUTES
-	progression_reward = 25 MINUTES
-	telecrystal_reward = 5
+	hold_time_required = list(4, 10)
+	minutes_per_telecrystal = 2
+	progression_minimum = 45 MINUTES
+	progression_reward = list(18 MINUTES, 25 MINUTES)
+	telecrystal_reward = list(2, 5)
 
 	possible_items = list(
 		/datum/objective_item/steal/nukedisc,

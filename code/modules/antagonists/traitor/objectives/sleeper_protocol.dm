@@ -10,7 +10,7 @@
 	description = "Use the button below to materialize a surgery disk in your hand, where you'll then be able to perform the sleeper protocol on a crewmember. If the disk gets destroyed, the objective will fail. This will only work on living and sentient crewmembers."
 
 	progression_reward = list(8 MINUTES, 15 MINUTES)
-	telecrystal_reward = 0
+	telecrystal_reward = list(0, 1)
 
 	var/list/limited_to = list(
 		JOB_CHIEF_MEDICAL_OFFICER,
@@ -47,7 +47,8 @@
 /datum/traitor_objective/sleeper_protocol/generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	var/datum/job/job = generating_for.assigned_role
 	if(!(job.title in limited_to))
-		return FALSE
+		if(prob(90))
+			return FALSE
 	AddComponent(/datum/component/traitor_objective_mind_tracker, generating_for, \
 		signals = list(COMSIG_MOB_SURGERY_STEP_SUCCESS = .proc/on_surgery_success))
 	return TRUE

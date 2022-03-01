@@ -14,7 +14,7 @@
 		Remember, planting the bug may leave behind fibers and fingerprints - \
 		be sure to clean it off with soap (or similar) to be safe!"
 
-	progression_reward = list(2 MINUTES, 8 MINUTES)
+	progression_reward = list(2 MINUTES, 6 MINUTES)
 	telecrystal_reward = list(0, 1)
 
 	progression_maximum = 30 MINUTES
@@ -37,7 +37,7 @@
 	applicable_heads = list(
 		JOB_CAPTAIN = /area/command/heads_quarters/captain,
 	)
-	progression_reward = list(5 MINUTES, 10 MINUTES)
+	progression_reward = list(4 MINUTES, 8 MINUTES)
 	telecrystal_reward = list(1, 2)
 	requires_head_as_supervisor = FALSE
 
@@ -47,7 +47,7 @@
 	applicable_heads = list(
 		JOB_HEAD_OF_SECURITY = /area/command/heads_quarters/hos,
 	)
-	progression_reward = list(10 MINUTES, 15 MINUTES)
+	progression_reward = list(8 MINUTES, 12 MINUTES)
 	telecrystal_reward = list(2, 3)
 	requires_head_as_supervisor = FALSE
 

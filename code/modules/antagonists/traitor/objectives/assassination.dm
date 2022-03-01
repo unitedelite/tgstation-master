@@ -19,10 +19,10 @@
 
 	abstract_type = /datum/traitor_objective/assassinate
 
-	progression_minimum = 30 MINUTES
+	progression_minimum = 27 MINUTES
 
-	progression_reward = 2 MINUTES
-	telecrystal_reward = list(1, 2)
+	progression_reward = list(6 MINUTES, 12 MINUTES)
+	telecrystal_reward = list(2, 3)
 
 	// The code below is for limiting how often you can get this objective. You will get this objective at a maximum of maximum_objectives_in_period every objective_period
 	/// The objective period at which we consider if it is an 'objective'. Set to 0 to accept all objectives.
@@ -51,7 +51,7 @@
 	var/obj/item/paper/calling_card/card
 
 /datum/traitor_objective/assassinate/calling_card/heads_of_staff
-	progression_reward = 4 MINUTES
+	progression_reward = list(8 MINUTES, 15 MINUTES)
 	telecrystal_reward = list(3, 4)
 
 	heads_of_staff = TRUE
@@ -66,7 +66,7 @@
 	var/obj/item/bodypart/head/behead_goal
 
 /datum/traitor_objective/assassinate/behead/heads_of_staff
-	progression_reward = 4 MINUTES
+	progression_reward = list(8 MINUTES, 15 MINUTES)
 	telecrystal_reward = list(3, 4)
 
 	heads_of_staff = TRUE
@@ -170,13 +170,6 @@
 	)
 
 /datum/traitor_objective/assassinate/generate_objective(datum/mind/generating_for, list/possible_duplicates)
-
-	var/parent_type = type2parent(type)
-	//don't roll head of staff types if you haven't completed the normal version
-	if(heads_of_staff && !handler.get_completion_count(parent_type))
-		// Locked if they don't have any of the risky bug room objective completed
-		return FALSE
-
 	var/list/possible_targets = list()
 	var/try_target_late_joiners = FALSE
 	if(generating_for.late_joiner)
