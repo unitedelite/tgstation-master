@@ -4009,9 +4009,6 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/assault{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/iron/dark,
 /area/shuttle/sbc_starfury)
@@ -4724,6 +4721,13 @@
 	},
 /turf/open/floor/pod/dark,
 /area/shuttle/sbc_starfury)
+"qW" = (
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/shuttle/sbc_starfury)
 "rf" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -5099,9 +5103,6 @@
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
-	},
-/obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser{
-	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/sbc_starfury)
@@ -6570,13 +6571,13 @@ eO
 eR
 fe
 ae
-sh
-sh
+gO
+gO
 ae
 hh
 hG
 ae
-sh
+gO
 sh
 ae
 iV
@@ -6709,7 +6710,7 @@ eR
 wc
 ae
 ir
-ir
+hW
 ae
 hj
 hI
@@ -7192,7 +7193,7 @@ ST
 fl
 ae
 gx
-gx
+qW
 ae
 hq
 hP
