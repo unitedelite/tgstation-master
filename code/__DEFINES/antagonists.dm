@@ -206,6 +206,12 @@ GLOBAL_LIST_INIT(ai_employers, list(
 /// The dimensions of the antagonist preview icon. Will be scaled to this size.
 #define ANTAGONIST_PREVIEW_ICON_SIZE 96
 
+/// Defines for the various hack results.
+#define HACK_PIRATE "Pirates"
+#define HACK_FUGITIVES "Fugitives"
+#define HACK_SLEEPER "Sleeper Agents"
+#define HACK_THREAT "Threat Boost"
+
 // Defines for objective items to determine what they can appear in
 /// Can appear in everything
 #define OBJECTIVE_ITEM_TYPE_NORMAL "normal"

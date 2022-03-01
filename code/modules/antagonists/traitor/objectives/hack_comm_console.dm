@@ -5,12 +5,12 @@
 	)
 
 /datum/traitor_objective/hack_comm_console
-	name = "Hack a communication console to summon an unknown threat to the station"
+	name = "Hack a communication console to activate a syndicate sleeper cell in the station"
 	description = "Right click on a communication console to begin the hacking process. Once started, the AI will know that you are hacking a communication console, so be ready to run or have yourself disguised to prevent being caught. This objective will invalidate itself if another traitor completes it first."
 
 	progression_minimum = 60 MINUTES
-	progression_reward = list(30 MINUTES, 40 MINUTES)
-	telecrystal_reward = list(7, 12)
+	progression_reward = list(10 MINUTES, 20 MINUTES)
+	telecrystal_reward = list(3, 6)
 
 	var/progression_objectives_minimum = 20 MINUTES
 
@@ -45,4 +45,4 @@
 	if(!do_after(user, 30 SECONDS, target))
 		return
 	succeed_objective()
-	target.hack_console(user)
+	target.hack_console_custom(user, list(HACK_THREAT, HACK_SLEEPER))
