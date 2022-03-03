@@ -2,12 +2,20 @@
 
 /datum/traitor_objective/final/hack_comm_console_pirates
 	name = "Hack a communication console to send the station coordinates to a nearby pirate ship."
-	description = "Right click on a communication console to begin the hacking process. Once started, the AI will know that you are hacking a communication console, so be ready to run or have yourself disguised to prevent being caught. This objective will invalidate itself if another traitor completes it first."
+	description = "Right click on a communication console to begin the hacking process. Once started, \
+	the AI will know that you are hacking a communication console, so be ready to run or have yourself \
+	disguised to prevent being caught. The pirates are not aware of your presence on the station."
 
 /datum/traitor_objective/final/hack_comm_console_pirates/generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	if(!can_take_final_objective())
 		return
 	if(SStraitor.get_taken_count(/datum/traitor_objective/final/hack_comm_console_pirates) > 0)
+		return FALSE
+	// Check how many observers + ghosts (dead players) we have.
+	// If there's not a ton of observers and ghosts to populate the battlecruiser,
+	// We won't bother giving the objective out.
+	var/num_ghosts = length(GLOB.current_observers_list) + length(GLOB.dead_player_list)
+	if(num_ghosts < MIN_GHOSTS_FOR_PIRATES)
 		return FALSE
 	AddComponent(/datum/component/traitor_objective_mind_tracker, generating_for, \
 		signals = list(COMSIG_HUMAN_EARLY_UNARMED_ATTACK = .proc/on_unarmed_attack))
