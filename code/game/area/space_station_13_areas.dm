@@ -831,6 +831,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Chapel Storage"
 	icon_state = "chapelstorage"
 
+/area/service/chapel/funeral
+	name = "\improper Chapel Funeral Room"
+	icon_state = "chapelfuneral"
+
 /area/service/lawoffice
 	name = "\improper Law Office"
 	icon_state = "law"
@@ -953,7 +957,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/engineering/storage/tech
 	name = "Technical Storage"
-	icon_state = "aux_storage"
+	icon_state = "tech_storage"
 
 /area/engineering/storage/tcomms
 	name = "Telecomms Storage"
@@ -986,6 +990,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience_index = AMBIENCE_ENGI
 	airlock_wires = /datum/wires/airlock/engineering
 	sound_environment = SOUND_AREA_SPACE
+	base_lighting_alpha = 255
 
 /area/solars/fore
 	name = "\improper Fore Solar Array"
@@ -1105,14 +1110,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Medical Office"
 	icon_state = "med_office"
 
-/area/medical/surgery/room_c
-	name = "Surgery C"
-	icon_state = "surgery"
-
-/area/medical/surgery/room_d
-	name = "Surgery D"
-	icon_state = "surgery"
-
 /area/medical/break_room
 	name = "\improper Medical Break Room"
 	icon_state = "med_break"
@@ -1153,13 +1150,20 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "pharmacy"
 
 /area/medical/surgery
-	name = "Surgery"
+	name = "\improper Operating Room"
 	icon_state = "surgery"
 
-/area/medical/surgery/room_b
-	name = "Surgery B"
-	icon_state = "surgery"
+/area/medical/surgery/fore
+	name = "\improper Fore Operating Room"
+	icon_state = "foresurgery"
 
+/area/medical/surgery/aft
+	name = "\improper Aft Operating Room"
+	icon_state = "aftsurgery"
+
+/area/medical/surgery/theatre
+	name = "\improper Grand Surgery Theatre"
+	icon_state = "surgerytheatre"
 /area/medical/cryo
 	name = "Cryogenics"
 	icon_state = "cryo"
