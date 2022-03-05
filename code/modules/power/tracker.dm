@@ -83,6 +83,18 @@
 			new /obj/item/shard(src.loc)
 	qdel(src)
 
+/obj/machinery/power/tracker/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(obj_flags & EMAGGED)
+		return
+	if(istype(emag_card, /obj/item/card/emag/lone_ops_obj))
+		if(!user.mind?.has_antag_datum(/datum/antagonist/traitor))
+			to_chat(user, span_danger("You get the feeling this is a bad idea."))
+			return
+		var/obj/item/card/emag/lone_ops_obj/caller_card = emag_card
+		caller_card.use_charge(user)
+		obj_flags |= EMAGGED
+
+
 // Tracker Electronic
 
 /obj/item/electronics/tracker

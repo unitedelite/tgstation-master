@@ -763,20 +763,15 @@
 /obj/machinery/computer/communications/proc/add_message(datum/comm_message/new_message)
 	LAZYADD(messages, new_message)
 
-/// Defines for the various hack results.
-#define HACK_PIRATE "Pirates"
-#define HACK_FUGITIVES "Fugitives"
-#define HACK_SLEEPER "Sleeper Agents"
-#define HACK_THREAT "Threat Boost"
 
 /// The minimum number of ghosts / observers to have the chance of spawning pirates.
-#define MIN_GHOSTS_FOR_PIRATES 4
+#define MIN_GHOSTS_FOR_PIRATES 3
 /// The minimum number of ghosts / observers to have the chance of spawning fugitives.
-#define MIN_GHOSTS_FOR_FUGITIVES 6
+#define MIN_GHOSTS_FOR_FUGITIVES 4
 /// The maximum percentage of the population to be ghosts before we no longer have the chance of spawning Sleeper Agents.
-#define MAX_PERCENT_GHOSTS_FOR_SLEEPER 0.2
+#define MAX_PERCENT_GHOSTS_FOR_SLEEPER 0.3
 /// The amount of threat injected by a hack, if chosen.
-#define HACK_THREAT_INJECTION_AMOUNT 15
+#define HACK_THREAT_INJECTION_AMOUNT 25
 
 /*
  * The communications console hack,
@@ -802,7 +797,9 @@
 	// If less than a certain percent of the population is ghosts, consider sleeper agents
 	if(num_ghosts < (length(GLOB.clients) * MAX_PERCENT_GHOSTS_FOR_SLEEPER))
 		hack_options += HACK_SLEEPER
+	hack_console_custom(hacker, hack_options)
 
+/obj/machinery/computer/communications/proc/hack_console_custom(mob/living/hacker, var/list/hack_options)
 	var/picked_option = pick(hack_options)
 	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in: [picked_option]!")
 	hacker.log_message("hacked a communications console, resulting in: [picked_option].", LOG_GAME, log_globally = TRUE)
@@ -868,10 +865,6 @@
 					"[command_name()] High-Priority Update"
 					)
 
-#undef HACK_PIRATE
-#undef HACK_FUGITIVES
-#undef HACK_SLEEPER
-#undef HACK_THREAT
 
 #undef MIN_GHOSTS_FOR_PIRATES
 #undef MIN_GHOSTS_FOR_FUGITIVES

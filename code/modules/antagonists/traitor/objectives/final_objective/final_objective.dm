@@ -8,9 +8,9 @@
 
 /datum/traitor_objective/final
 	abstract_type = /datum/traitor_objective/final
-	progression_minimum = 140 MINUTES
+	progression_minimum = 125 MINUTES
 
-	var/progression_points_in_objectives = 20 MINUTES
+	var/progression_points_in_objectives = 25 MINUTES
 
 /// Determines if this final objective can be taken. Should be put into every final objective's generate function.
 /datum/traitor_objective/final/proc/can_take_final_objective()

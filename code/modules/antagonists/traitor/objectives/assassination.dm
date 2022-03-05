@@ -19,16 +19,16 @@
 
 	abstract_type = /datum/traitor_objective/assassinate
 
-	progression_minimum = 30 MINUTES
+	progression_minimum = 26 MINUTES
 
-	progression_reward = 2 MINUTES
-	telecrystal_reward = list(1, 2)
+	progression_reward = list(6 MINUTES, 14 MINUTES)
+	telecrystal_reward = list(2, 3)
 
 	// The code below is for limiting how often you can get this objective. You will get this objective at a maximum of maximum_objectives_in_period every objective_period
 	/// The objective period at which we consider if it is an 'objective'. Set to 0 to accept all objectives.
-	var/objective_period = 15 MINUTES
+	var/objective_period = 30 MINUTES
 	/// The maximum number of objectives we can get within this period.
-	var/maximum_objectives_in_period = 3
+	var/maximum_objectives_in_period = 2
 
 	/**
 	 * Makes the objective only set heads as targets when true, and block them from being targets when false.
@@ -51,7 +51,8 @@
 	var/obj/item/paper/calling_card/card
 
 /datum/traitor_objective/assassinate/calling_card/heads_of_staff
-	progression_reward = 4 MINUTES
+	progression_minimum = 40 MINUTES
+	progression_reward = list(8 MINUTES, 20 MINUTES)
 	telecrystal_reward = list(3, 4)
 
 	heads_of_staff = TRUE
@@ -66,7 +67,8 @@
 	var/obj/item/bodypart/head/behead_goal
 
 /datum/traitor_objective/assassinate/behead/heads_of_staff
-	progression_reward = 4 MINUTES
+	progression_minimum = 40 MINUTES
+	progression_reward = list(8 MINUTES, 20 MINUTES)
 	telecrystal_reward = list(3, 4)
 
 	heads_of_staff = TRUE
@@ -170,13 +172,6 @@
 	)
 
 /datum/traitor_objective/assassinate/generate_objective(datum/mind/generating_for, list/possible_duplicates)
-
-	var/parent_type = type2parent(type)
-	//don't roll head of staff types if you haven't completed the normal version
-	if(heads_of_staff && !handler.get_completion_count(parent_type))
-		// Locked if they don't have any of the risky bug room objective completed
-		return FALSE
-
 	var/list/possible_targets = list()
 	var/try_target_late_joiners = FALSE
 	if(generating_for.late_joiner)
@@ -196,10 +191,10 @@
 			continue
 		//removes heads of staff from being targets from non heads of staff assassinations, and vice versa
 		if(heads_of_staff)
-			if(!(possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
+			if(!(possible_target.assigned_role.departments_bitflags & (DEPARTMENT_BITFLAG_SECURITY|DEPARTMENT_BITFLAG_COMMAND)))
 				continue
 		else
-			if((possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
+			if((possible_target.assigned_role.departments_bitflags & (DEPARTMENT_BITFLAG_SECURITY|DEPARTMENT_BITFLAG_COMMAND)))
 				continue
 		possible_targets += possible_target
 	for(var/datum/traitor_objective/assassinate/objective as anything in possible_duplicates)

@@ -19,12 +19,12 @@ SUBSYSTEM_DEF(traitor)
 	var/configuration_data = list()
 
 	/// The coefficient multiplied by the current_global_progression for new joining traitors to calculate their progression
-	var/newjoin_progression_coeff = 0.6
+	var/newjoin_progression_coeff = 0.75
 	/// The current progression that all traitors should be at in the round
 	var/current_global_progression = 0
 	/// The amount of deviance from the current global progression before you start getting 2x the current scaling or no scaling at all
 	/// Also affects objectives, so -50% progress reduction or 50% progress boost.
-	var/progression_scaling_deviance = 20 MINUTES
+	var/progression_scaling_deviance = 30 MINUTES
 	/// The current uplink handlers being managed
 	var/list/datum/uplink_handler/uplink_handlers = list()
 	/// The current scaling per minute of progression. Has a maximum value of 1 MINUTES.
