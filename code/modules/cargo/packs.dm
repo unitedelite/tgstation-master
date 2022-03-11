@@ -641,6 +641,7 @@
 /datum/supply_pack/security/armory/wt550
 	name = "WT-550 Auto Rifle Crate"
 	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 9
 	contains = list(/obj/item/gun/ballistic/automatic/wt550,
 					/obj/item/gun/ballistic/automatic/wt550)
 	crate_name = "wt-550 auto rifle crate"
@@ -655,10 +656,19 @@
 					/obj/item/ammo_box/magazine/wt550m9)
 	crate_name = "wt-550 standard ammo crate"
 
+/datum/supply_pack/security/taser
+	name = "Taser Crate"
+	desc = "Three old-fashioned taser weapons. Requires Security access to open."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/gun/energy/taser,
+					/obj/item/gun/energy/taser,
+					/obj/item/gun/energy/taser)
+	crate_name = "taser crate"
+
 /datum/supply_pack/security/armory/thermal
 	name = "Thermal Pistol Crate"
 	desc = "Contains a pair of holsters each with two experimental thermal pistols, using nanites as the basis for their ammo. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 3.5
+	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/belt/holster/thermal,
 					/obj/item/storage/belt/holster/thermal)
 	crate_name = "thermal pistol crate"
