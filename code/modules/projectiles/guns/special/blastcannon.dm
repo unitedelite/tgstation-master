@@ -186,9 +186,9 @@
 /obj/item/gun/blastcannon/proc/fire_blastwave(atom/target, heavy, medium, light, modifiers, spread = 0)
 	var/turf/start_turf = get_turf(src)
 
-	var/capped_heavy = math.ceil(math.sqrt(heavy))
-	var/capped_medium = math.ceil(math.sqrt(medium))
-	var/capped_light = math.ceil(math.sqrt(light))
+	var/capped_heavy = math.ceil(6 * math.sqrt(heavy))
+	var/capped_medium = math.ceil(8 * math.sqrt(medium))
+	var/capped_light = math.ceil(10 * math.sqrt(light))
 	SSexplosions.shake_the_room(start_turf, max(heavy, medium, light, 0), (capped_heavy * 15) + (capped_medium * 20), capped_heavy, capped_medium)
 
 	var/obj/projectile/blastwave/blastwave = new(loc, capped_heavy, capped_medium, capped_light)
