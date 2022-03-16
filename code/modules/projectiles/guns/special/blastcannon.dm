@@ -186,14 +186,12 @@
 /obj/item/gun/blastcannon/proc/fire_blastwave(atom/target, heavy, medium, light, modifiers, spread = 0)
 	var/turf/start_turf = get_turf(src)
 
-	var/cap_multiplier = SSmapping.level_trait(start_turf.z, ZTRAIT_BOMBCAP_MULTIPLIER)
-	if(isnull(cap_multiplier))
-		cap_multiplier = 1
-	var/capped_heavy = min(GLOB.MAX_EX_DEVESTATION_RANGE * cap_multiplier, heavy)
-	var/capped_medium = min(GLOB.MAX_EX_HEAVY_RANGE * cap_multiplier, medium)
+	var/capped_heavy = math.ceil(math.sqrt(heavy))
+	var/capped_medium = math.ceil(math.sqrt(medium))
+	var/capped_light = math.ceil(math.sqrt(light))
 	SSexplosions.shake_the_room(start_turf, max(heavy, medium, light, 0), (capped_heavy * 15) + (capped_medium * 20), capped_heavy, capped_medium)
 
-	var/obj/projectile/blastwave/blastwave = new(loc, heavy, medium, light)
+	var/obj/projectile/blastwave/blastwave = new(loc, capped_heavy, capped_medium, capped_light)
 	blastwave.preparePixelProjectile(target, start_turf, params2list(modifiers), spread)
 	blastwave.fire()
 	cached_firer = null
