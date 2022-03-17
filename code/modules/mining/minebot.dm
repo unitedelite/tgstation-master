@@ -61,6 +61,8 @@
 	access_card = new /obj/item/card/id/advanced/gold(src)
 	SSid_access.apply_trim_to_card(access_card, /datum/id_trim/job/shaft_miner)
 
+	ADD_TRAIT(src, TRAIT_ASHSTORM_IMMUNE, ROUNDSTART_TRAIT)
+
 	SetCollectBehavior()
 
 /mob/living/simple_animal/hostile/mining_drone/Destroy()
