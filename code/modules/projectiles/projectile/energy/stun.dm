@@ -12,9 +12,10 @@
 	muzzle_type = /obj/effect/projectile/muzzle/stun
 	impact_type = /obj/effect/projectile/impact/stun
 
-/obj/projectile/energy/electrode/taser // Special stats for the taser itself 
+/obj/projectile/energy/electrode/taser // Special stats for the taser itself
 	damage = 20
 	damage_type = STAMINA
+	paralyze = 0
 	knockdown = 1
 	range = 5
 
