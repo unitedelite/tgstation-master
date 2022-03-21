@@ -24,3 +24,10 @@
 
 /obj/item/ammo_casing/energy/disabler/hos
 	e_cost = 60
+
+/obj/item/ammo_casing/energy/shock // Specific munition type created for the taser in order to not impede on other weapons
+	projectile_type = /obj/projectile/energy/electrode
+	select_name = "stun"
+	fire_sound = 'sound/weapons/taser.ogg'
+	e_cost = 250
+	harmful = FALSE

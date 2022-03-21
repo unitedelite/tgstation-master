@@ -77,6 +77,20 @@
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 	autolathe_exportable = FALSE
 
+/datum/design/buckshot/sec
+	id = "buckshot"
+	build_type = PROTOLATHE | AWAY_LATHE
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	autolathe_exportable = FALSE
+
+/datum/design/slug/sec
+	id = "slug"
+	build_type = PROTOLATHE | AWAY_LATHE
+	category = list("Ammo")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+	autolathe_exportable = FALSE
+
 /datum/design/pin_testing
 	name = "Test-Range Firing Pin"
 	desc = "This safety firing pin allows firearms to be operated within proximity to a firing range."
