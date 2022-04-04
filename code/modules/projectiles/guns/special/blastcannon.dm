@@ -27,6 +27,8 @@
 	item_flags = NONE
 	clumsy_check = FALSE
 	randomspread = FALSE
+	
+	var/uses
 
 	// Firing data.
 	/// The person who opened the valve on the TTV loaded into this.
@@ -51,6 +53,7 @@
 	. = ..()
 	if(!pin)
 		pin = new
+	uses=0
 	RegisterSignal(src, COMSIG_ATOM_INTERNAL_EXPLOSION, .proc/channel_blastwave)
 	AddElement(/datum/element/update_icon_updates_onmob)
 
@@ -185,15 +188,14 @@
  */
 /obj/item/gun/blastcannon/proc/fire_blastwave(atom/target, heavy, medium, light, modifiers, spread = 0)
 	var/turf/start_turf = get_turf(src)
-
-	var/cap_multiplier = SSmapping.level_trait(start_turf.z, ZTRAIT_BOMBCAP_MULTIPLIER)
-	if(isnull(cap_multiplier))
-		cap_multiplier = 1
-	var/capped_heavy = min(GLOB.MAX_EX_DEVESTATION_RANGE * cap_multiplier, heavy)
-	var/capped_medium = min(GLOB.MAX_EX_HEAVY_RANGE * cap_multiplier, medium)
+	if(uses < 5)
+		uses = uses + 1
+	var/capped_heavy = math.ceil((6-uses) * math.sqrt(heavy))
+	var/capped_medium = math.ceil((8-uses) * math.sqrt(medium))
+	var/capped_light = math.ceil((10-uses) * math.sqrt(light))
 	SSexplosions.shake_the_room(start_turf, max(heavy, medium, light, 0), (capped_heavy * 15) + (capped_medium * 20), capped_heavy, capped_medium)
 
-	var/obj/projectile/blastwave/blastwave = new(loc, heavy, medium, light)
+	var/obj/projectile/blastwave/blastwave = new(loc, capped_heavy, capped_medium, capped_light)
 	blastwave.preparePixelProjectile(target, start_turf, params2list(modifiers), spread)
 	blastwave.fire()
 	cached_firer = null
