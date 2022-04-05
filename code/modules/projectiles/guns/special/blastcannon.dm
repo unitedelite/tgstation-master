@@ -190,9 +190,9 @@
 	var/turf/start_turf = get_turf(src)
 	if(uses < 5)
 		uses = uses + 1
-	var/capped_heavy = math.ceil((6-uses) * math.sqrt(heavy))
-	var/capped_medium = math.ceil((8-uses) * math.sqrt(medium))
-	var/capped_light = math.ceil((10-uses) * math.sqrt(light))
+	var/capped_heavy = ceil((6-uses) * sqrt(heavy))
+	var/capped_medium = ceil((8-uses) * sqrt(medium))
+	var/capped_light = ceil((10-uses) * sqrt(light))
 	SSexplosions.shake_the_room(start_turf, max(heavy, medium, light, 0), (capped_heavy * 15) + (capped_medium * 20), capped_heavy, capped_medium)
 
 	var/obj/projectile/blastwave/blastwave = new(loc, capped_heavy, capped_medium, capped_light)
