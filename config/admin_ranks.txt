@@ -50,19 +50,14 @@ Exclude =
 Edit =
 
 Name = Badmin
-Include = @ BAN STEALTH +BUILD +DEBUG +POSSESS +SPAWN +VAREDIT
+Include = @ BAN STEALTH DEBUG
 Exclude =
 Edit =
 
 Name = Game Admin
-Include = @ +FUN +ADMIN 
+Include = EVERYTHING 
 Exclude =
 Edit =
-
-Name = Game Master
-Include = EVERYTHING
-Exclude =
-Edit = 
 
 Name = Host
 Include = EVERYTHING
