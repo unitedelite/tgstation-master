@@ -40,44 +40,29 @@ Exclude = AUTOADMIN
 Edit =
 
 Name = MJ
-Include = FUN SERVER
-Excluse = AUTOADMIN
+Include = ADMIN BUILD FUN POSSESS SPAWN VAREDIT
+Exclude = 
 Edit =
 
 Name = Moderator
-Include = @ ADMIN
-Exclude = AUTOADMIN
-Edit =
-
-Name = Admin Candidate
-Include = @
-Exclude =
-Edit =
-
-Name = Trial Admin
-Include = @ SPAWN VAREDIT BAN
+Include = @ POLL SERVER SOUND
 Exclude =
 Edit =
 
 Name = Badmin
-Include = @ POSSESS POLL BUILD SERVER FUN
+Include = @ BAN STEALTH +BUILD +DEBUG +POSSESS +SPAWN +VAREDIT
 Exclude =
 Edit =
 
 Name = Game Admin
-Include = @ STEALTH SOUND DEBUG
+Include = @ +FUN +ADMIN 
 Exclude =
 Edit =
 
 Name = Game Master
 Include = EVERYTHING
 Exclude =
-Edit = EVERYTHING
-
-Name = Lazy Master
-Include = EVERYTHING
-Exclude = AUTOADMIN
-Edit = EVERYTHING
+Edit = 
 
 Name = Host
 Include = EVERYTHING
