@@ -11,4 +11,4 @@ hunter59 = Host
 Couvax = Host
 Gorax98 = Host
 guillaumefree = Host
-Xefox = Moderator
+Xefox99 = Moderator
