@@ -1168,3 +1168,4 @@
 
 /datum/movespeed_modifier/freezing_blast
 	multiplicative_slowdown = 1
+	
