@@ -45,12 +45,12 @@ Exclude =
 Edit =
 
 Name = Moderator
-Include = @ POLL SERVER SOUND
+Include = @ POLL SERVER SOUND STEALTH DEBUG
 Exclude =
 Edit =
 
 Name = Badmin
-Include = @ BAN STEALTH DEBUG
+Include = @ BAN
 Exclude =
 Edit =
 
