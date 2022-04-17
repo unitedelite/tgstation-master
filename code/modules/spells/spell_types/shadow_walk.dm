@@ -61,10 +61,10 @@
 	if(!jaunter || jaunter.loc != src)
 		qdel(src)
 	if(IS_OPAQUE_TURF(T))
-		jaunter.take_overall_damage(0.15 * delta_time, 0.45 * delta_time, 0, BODYPART_ORGANIC)
+		jaunter.take_overall_damage(0.15 * delta_time, 0.45 * delta_time, 0, BODYTYPE_ORGANIC)
 	else
 		if (light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD && (!QDELETED(jaunter))) //heal in the dark
-			jaunter.heal_overall_damage((0.5 * delta_time), (1.2 * delta_time), 0, BODYPART_ORGANIC)
+			jaunter.heal_overall_damage((0.5 * delta_time), (1.2 * delta_time), 0, BODYTYPE_ORGANIC)
 	check_light_level()
 
 
@@ -93,7 +93,7 @@
 		else
 			var/turf/T = get_turf(src)
 			if(IS_OPAQUE_TURF(T))
-				jaunter.take_overall_damage(15, 0, 0, BODYPART_ORGANIC)
+				jaunter.take_overall_damage(15, 0, 0, BODYTYPE_ORGANIC)
 				to_chat(jaunter, span_danger("You lost some of your essence while emerging in a wall."))
 			visible_message(span_boldwarning("[jaunter] emerges from the darkness!"))
 		playsound(loc, 'sound/magic/ethereal_exit.ogg', 50, TRUE, -1)
