@@ -1,35 +1,35 @@
 /datum/mood_event/horridroom
-	description = "<span class='boldwarning'>This room looks terrible!</span>\n"
+	description = "This room looks terrible!"
 	mood_change = -3
 
 /datum/mood_event/badroom
-	description = "<span class='warning'>This room looks quite bad.</span>\n"
+	description = "This room looks quite bad."
 	mood_change = -2
 
 /datum/mood_event/shabbyroom
-	description = "<span class='warning'>This room looks a bit scruffy.</span>\n"
+	description = "This room looks a bit scruffy."
 	mood_change = -1
 
 /datum/mood_event/horridroomsnob
-	description = "<span class='boldwarning'>This room horrible!</span>\n"
+	description = "This room horrible!"
 	mood_change = -6
 
 /datum/mood_event/badroomsnob
-	description = "<span class='warning'>This room looks really bad.</span>\n"
+	description = "This room looks really bad."
 	mood_change = -4
 
 /datum/mood_event/shabbyroomsnob
-	description = "<span class='warning'>This room looks scruffy.</span>\n"
+	description = "This room looks scruffy."
 	mood_change = -2
 
 /datum/mood_event/decentroom
-	description = "<span class='nicegreen'>This room looks alright.</span>\n"
+	description = "This room looks alright."
 	mood_change = 1
 
 /datum/mood_event/goodroom
-	description = "<span class='nicegreen'>This room looks really pretty!</span>\n"
+	description = "This room looks really pretty!"
 	mood_change = 3
 
 /datum/mood_event/greatroom
-	description = "<span class='nicegreen'>This room is beautiful!</span>\n"
+	description = "This room is beautiful!"
 	mood_change = 5

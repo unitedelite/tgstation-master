@@ -66,7 +66,7 @@
 		return ..()
 	if(DT_PROB(4.0, delta_time))
 		owner.manual_emote("clicks with [owner.p_their()] tongue.")
-		owner.say("Noice.")
+		owner.say("Noice.", forced = /datum/reagent/impurity/rosenol)
 	if(DT_PROB(2.0, delta_time))
 		owner.say(pick("Ah! C'était une erreur!", "Horrible.", "Attention tout le monde, la pomme de terre est vraiment chaude.", "Quand j'avais six ans, j'ai mangé un sac de prunes.", "Et s'il y a une chose que je ne supporte pas, ce sont les tomates.", "Et s'il y a une chose que j'aime, ce sont les tomates.", "Nous avions un capitaine qui était si strict, nous n'avions pas le droit de respirer dans la station.", "Les faibles finissaient par mourir soudainement, vous les entendiez tomber sans un bruit."), forced = /datum/reagent/impurity/rosenol)
 	..()
