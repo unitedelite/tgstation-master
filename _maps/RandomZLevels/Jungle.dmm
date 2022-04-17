@@ -31,7 +31,7 @@
 /turf/open/floor/iron,
 /area/awaymission/snowdin/post/dorm)
 "aw" = (
-/turf/open/floor/plating/beach/coastline_t{
+/turf/open/misc/beach/coastline_t{
 	dir = 8
 	},
 /area/awaymission/junglebeach)
@@ -54,7 +54,7 @@
 /area/awaymission/snowdin/cave)
 "aK" = (
 /obj/structure/alien/resin/wall,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "aL" = (
 /obj/structure/flora/junglebush/b,
@@ -69,7 +69,7 @@
 	})
 "aW" = (
 /obj/effect/decal/cleanable/greenglow,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "bc" = (
 /obj/effect/turf_decal/tile/blue{
@@ -86,26 +86,26 @@
 	})
 "bf" = (
 /obj/structure/bonfire/prelit,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "bg" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "bm" = (
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "bu" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "bv" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds/node,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "by" = (
 /obj/structure/flora/junglebush/c,
@@ -124,7 +124,7 @@
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "bL" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -154,7 +154,7 @@
 /area/awaymission/jungleforest)
 "cb" = (
 /obj/item/trash/semki,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "ck" = (
 /obj/effect/spawner/random/structure/crate_loot,
@@ -171,7 +171,7 @@
 	name = "Jungle Outpost - Kitchen"
 	})
 "co" = (
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "cr" = (
 /obj/structure/spider/stickyweb,
@@ -196,7 +196,7 @@
 "cG" = (
 /obj/structure/alien/weeds,
 /obj/structure/bed/nest,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "cJ" = (
 /obj/structure/spider/stickyweb,
@@ -211,7 +211,7 @@
 "cK" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "cQ" = (
 /obj/machinery/light,
@@ -228,18 +228,18 @@
 /area/awaymission/junglebeach)
 "cS" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "cZ" = (
 /obj/structure/fence/corner{
 	dir = 9;
 	pixel_x = -16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "dd" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "dg" = (
 /obj/structure/flora/junglebush/large,
@@ -253,17 +253,17 @@
 /area/awaymission/jungleforest)
 "di" = (
 /obj/structure/barricade/slime,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "dj" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "dl" = (
-/turf/open/floor/plating/beach/coastline_t{
+/turf/open/misc/beach/coastline_t{
 	dir = 5
 	},
 /area/awaymission/junglebeach)
@@ -271,11 +271,11 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "do" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "dr" = (
 /turf/open/floor/holofloor/beach/coast_t{
@@ -285,7 +285,7 @@
 "dx" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "dy" = (
 /obj/structure/table/wood,
@@ -353,12 +353,12 @@
 	})
 "dZ" = (
 /obj/item/grown/bananapeel,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "ej" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglecaves)
 "ek" = (
 /obj/structure/mineral_door/wood,
@@ -427,7 +427,7 @@
 /area/awaymission/snowdin/cave)
 "eD" = (
 /obj/structure/fence/cut/medium,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "eJ" = (
 /obj/structure/closet/syndicate{
@@ -446,7 +446,7 @@
 	})
 "eU" = (
 /obj/structure/fluff/beach_umbrella/syndi,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "eY" = (
 /obj/effect/turf_decal/bot,
@@ -457,11 +457,11 @@
 	})
 "fa" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "fb" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "fd" = (
 /obj/effect/spawner/random/vending/snackvend,
@@ -479,7 +479,7 @@
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "fg" = (
 /mob/living/simple_animal/hostile/asteroid/lobstrosity,
@@ -487,7 +487,7 @@
 /area/awaymission/junglebeach)
 "fk" = (
 /obj/item/toy/beach_ball,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "fo" = (
 /obj/structure/cable,
@@ -511,7 +511,7 @@
 /turf/open/floor/grass,
 /area/awaymission/jungleforest)
 "fv" = (
-/turf/open/floor/plating/beach/coastline_t/sandwater_inner,
+/turf/open/misc/beach/coastline_t/sandwater_inner,
 /area/awaymission/junglebeach)
 "fB" = (
 /obj/effect/turf_decal/stripes/line{
@@ -522,15 +522,15 @@
 /area/awaymission/junglebeach)
 "fJ" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "fM" = (
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "fZ" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "gc" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -554,7 +554,7 @@
 	})
 "go" = (
 /obj/effect/mob_spawn/corpse/human,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "gv" = (
 /mob/living/simple_animal/hostile/ooze/grapes,
@@ -567,12 +567,12 @@
 "gA" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "gC" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/eggcluster/midwife,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "gM" = (
 /turf/open/water,
@@ -590,7 +590,7 @@
 	})
 "gQ" = (
 /obj/item/toy/balloon/corgi,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "gS" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -654,7 +654,7 @@
 "gY" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "hc" = (
 /obj/structure/flora/junglebush,
@@ -729,11 +729,11 @@
 "hH" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "hI" = (
 /obj/structure/railing,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "hJ" = (
 /obj/effect/spawner/random/clothing/bowler_or_that,
@@ -762,7 +762,7 @@
 	pixel_x = 16
 	},
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "hZ" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -772,28 +772,28 @@
 	})
 "ib" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "ig" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/blood/gibs/bubblegum,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "il" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "io" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglecaves)
 "ir" = (
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "it" = (
 /obj/item/clothing/under/shorts/red,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "ix" = (
 /obj/structure/fence{
@@ -801,27 +801,27 @@
 	pixel_x = 16
 	},
 /obj/structure/fence,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "iC" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/eggcluster/bloody,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "iE" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/space)
 "iF" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/engineering/tool_alien,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "iG" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "iJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -831,17 +831,17 @@
 	})
 "iO" = (
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "iU" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/structure/alien/weeds,
 /obj/structure/barricade/wooden/crude,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "je" = (
 /obj/item/trash/cheesie,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "jl" = (
 /obj/structure/spacevine,
@@ -856,7 +856,7 @@
 	})
 "jy" = (
 /obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "jz" = (
 /obj/effect/turf_decal/tile/blue{
@@ -888,7 +888,7 @@
 /obj/structure/fence{
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "jI" = (
 /obj/machinery/biogenerator,
@@ -967,8 +967,8 @@
 /area/awaymission/jungleforest)
 "ka" = (
 /obj/structure/table,
-/obj/item/storage/firstaid,
-/obj/item/storage/firstaid/brute{
+/obj/item/storage/medkit,
+/obj/item/storage/medkit/brute{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -1012,7 +1012,7 @@
 "kD" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "kE" = (
 /obj/structure/flora/junglebush/large,
@@ -1024,7 +1024,7 @@
 	dir = 4;
 	pixel_x = -16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "kK" = (
 /obj/structure/flora/rock/jungle,
@@ -1039,12 +1039,12 @@
 	})
 "kS" = (
 /obj/structure/barricade/wooden/crude,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "kT" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "kY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1062,7 +1062,7 @@
 	})
 "lc" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "ld" = (
 /obj/machinery/oven,
@@ -1072,7 +1072,7 @@
 	})
 "ln" = (
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "lq" = (
 /obj/effect/turf_decal/bot,
@@ -1112,7 +1112,7 @@
 	})
 "lJ" = (
 /obj/effect/spawner/random/exotic/antag_gear,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "lQ" = (
 /obj/structure/flora/junglebush/b,
@@ -1151,11 +1151,11 @@
 	})
 "ms" = (
 /obj/effect/overlay/palmtree_l,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "mv" = (
 /obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "mz" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1191,15 +1191,11 @@
 	})
 "mG" = (
 /obj/structure/falsewall/sandstone,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "mJ" = (
-/obj/machinery/computer/atmos_control/tank{
-	dir = 8;
-	frequency = 1442;
-	name = "Oxygen Supply Control";
-	output_tag = "snowdin_oxygen_out";
-	sensors = list("snowdin_oxygen" = "Tank")
+/obj/machinery/computer/atmos_control/nitrogen_tank{
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/awaymission/snowdin/post/engineering{
@@ -1287,7 +1283,7 @@
 	})
 "ns" = (
 /mob/living/simple_animal/crab,
-/turf/open/floor/plating/beach/coastline_t/sandwater_inner{
+/turf/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 8
 	},
 /area/awaymission/junglebeach)
@@ -1308,12 +1304,12 @@
 /area/awaymission/jungleforest)
 "nT" = (
 /obj/effect/decal/cleanable/blood/gibs/torso,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "nU" = (
 /obj/structure/barricade/slime,
 /obj/structure/barricade/slime,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "nV" = (
 /obj/structure/closet/cabinet,
@@ -1323,8 +1319,14 @@
 "nZ" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider/tarantula,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
+"oc" = (
+/obj/structure/closet/crate/solarpanel_small,
+/turf/open/floor/iron,
+/area/awaymission/snowdin/post/engineering{
+	name = "Jungle Outpost - Engineering"
+	})
 "od" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/clothing/under/costume/pirate,
@@ -1334,7 +1336,7 @@
 /area/awaymission/junglebeach)
 "of" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "og" = (
 /obj/structure/closet/crate/wooden,
@@ -1403,7 +1405,7 @@
 /area/awaymission/jungleforest)
 "os" = (
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "oB" = (
 /obj/structure/flora/junglebush/c,
@@ -1414,7 +1416,7 @@
 "oO" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "oP" = (
 /obj/structure/table,
@@ -1441,25 +1443,25 @@
 "pf" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/stickyweb,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "pj" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/exotic/antag_gear,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "pm" = (
 /mob/living/simple_animal/hostile/jungle/mega_arachnid,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "pn" = (
 /mob/living/simple_animal/hostile/pirate,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "pp" = (
 /obj/structure/flora/grass/jungle,
 /obj/item/clothing/mask/gas/mime,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "pq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -1471,7 +1473,7 @@
 	})
 "pr" = (
 /obj/structure/flora/tree/jungle/small,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "px" = (
 /obj/item/seeds/banana,
@@ -1482,11 +1484,11 @@
 	})
 "pE" = (
 /mob/living/simple_animal/hostile/carp/megacarp,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "pQ" = (
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "pT" = (
 /obj/structure/cable,
@@ -1499,11 +1501,11 @@
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider/tarantula,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "pY" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "qa" = (
 /obj/structure/flora/junglebush/b,
@@ -1551,11 +1553,11 @@
 	})
 "qo" = (
 /obj/item/food/chips,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "qp" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "qs" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -1611,11 +1613,11 @@
 	})
 "qK" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "qL" = (
 /obj/item/flashlight/flare/torch,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "qM" = (
 /turf/closed/wall/mineral/wood,
@@ -1629,7 +1631,7 @@
 	dir = 4;
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "qS" = (
 /obj/structure/cable,
@@ -1640,7 +1642,7 @@
 	})
 "qT" = (
 /obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "qZ" = (
 /obj/machinery/smartfridge,
@@ -1659,7 +1661,7 @@
 	})
 "ri" = (
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "rl" = (
 /obj/structure/spider/stickyweb/genetic,
@@ -1674,7 +1676,7 @@
 /area/awaymission/jungleforest)
 "rp" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "rr" = (
 /obj/effect/turf_decal/tile/blue{
@@ -1693,7 +1695,7 @@
 	})
 "rx" = (
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "rz" = (
 /mob/living/simple_animal/hostile/giant_spider/nurse,
@@ -1709,7 +1711,7 @@
 "rH" = (
 /obj/structure/flora/junglebush/c,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "rK" = (
 /obj/machinery/door/airlock/security{
@@ -1772,7 +1774,7 @@
 "rS" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "rV" = (
 /turf/closed/mineral/random,
@@ -1785,7 +1787,7 @@
 /area/awaymission/jungleforest)
 "sd" = (
 /obj/effect/mob_spawn/corpse/human,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "se" = (
 /obj/machinery/vending/hydroseeds,
@@ -1795,7 +1797,7 @@
 	})
 "sf" = (
 /obj/structure/fence/door,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "sl" = (
 /obj/structure/flora/grass/jungle/b,
@@ -1822,7 +1824,7 @@
 /area/awaymission/jungleforest)
 "st" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "su" = (
 /obj/machinery/power/port_gen/pacman,
@@ -1833,12 +1835,12 @@
 	})
 "sw" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "sx" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "sC" = (
 /obj/structure/tank_dispenser/oxygen,
@@ -1850,14 +1852,14 @@
 /obj/structure/fence{
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "sJ" = (
 /mob/living/simple_animal/hostile/carp,
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "sN" = (
-/turf/open/floor/plating/beach/coastline_t{
+/turf/open/misc/beach/coastline_t{
 	dir = 9
 	},
 /area/awaymission/junglebeach)
@@ -1881,7 +1883,7 @@
 /area/awaymission/junglebeach)
 "tb" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "td" = (
 /obj/effect/turf_decal/tile/blue{
@@ -1903,7 +1905,7 @@
 	})
 "th" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "tq" = (
 /obj/machinery/hydroponics/soil,
@@ -1919,7 +1921,7 @@
 	health = 500;
 	maxHealth = 500
 	},
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "tw" = (
 /obj/structure/closet/crate/wooden,
@@ -1932,7 +1934,7 @@
 /area/awaymission/jungleforest)
 "tz" = (
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "tB" = (
 /turf/open/floor/carpet/donk,
@@ -1961,7 +1963,7 @@
 	})
 "tS" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "tU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1972,25 +1974,21 @@
 "tX" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/eggcluster,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "uc" = (
-/obj/machinery/air_sensor{
-	frequency = 1442;
-	id_tag = "snowdin_oxygen";
-	name = "gas sensor (oxygen)"
-	},
+/obj/machinery/air_sensor/nitrogen_tank,
 /turf/open/floor/engine/n2,
 /area/awaymission/snowdin/post/engineering{
 	name = "Jungle Outpost - Engineering"
 	})
 "ug" = (
 /obj/effect/decal/cleanable/blood/gibs/torso,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "uh" = (
 /obj/structure/water_source/puddle,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "ui" = (
 /obj/effect/turf_decal/tile/blue{
@@ -2000,7 +1998,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/ancient,
+/obj/item/storage/medkit/ancient,
 /obj/item/defibrillator,
 /obj/item/clothing/glasses/hud/health,
 /turf/open/floor/iron/white,
@@ -2009,13 +2007,13 @@
 	})
 "un" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/thirteenloko,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "ur" = (
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 8
 	},
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "uu" = (
 /obj/structure/flora/junglebush/b,
@@ -2024,24 +2022,24 @@
 /area/awaymission/jungleforest)
 "uD" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/sodawater,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "uH" = (
 /obj/structure/alien/weeds,
 /mob/living/simple_animal/hostile/alien,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "uX" = (
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglecaves)
 "uZ" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/exotic/antag_gear_strong,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "vm" = (
 /obj/structure/alien/weeds/node,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "vr" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -2069,12 +2067,8 @@
 /turf/open/floor/carpet/lone/star,
 /area/awaymission/junglebeach)
 "vC" = (
-/obj/machinery/computer/atmos_control/tank{
-	dir = 8;
-	frequency = 1442;
-	name = "Nitrogen Supply Control";
-	output_tag = "snowdin_nitrogen_out";
-	sensors = list("snowdin_nitrogen" = "Tank")
+/obj/machinery/computer/atmos_control/oxygen_tank{
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/awaymission/snowdin/post/engineering{
@@ -2094,7 +2088,7 @@
 	dir = 4;
 	pixel_x = -16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "vO" = (
 /obj/machinery/gateway,
@@ -2146,22 +2140,22 @@
 "wg" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/barricade/wooden/crude,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "wo" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "wp" = (
 /obj/structure/spider/stickyweb,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "wr" = (
 /obj/structure/fence{
 	dir = 4;
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "ww" = (
 /obj/effect/turf_decal/tile/red{
@@ -2178,11 +2172,11 @@
 	})
 "wx" = (
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "wD" = (
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "wG" = (
 /obj/effect/turf_decal/tile/blue{
@@ -2203,7 +2197,7 @@
 "wJ" = (
 /obj/structure/flora/junglebush/c,
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "wK" = (
 /mob/living/simple_animal/hostile/jungle/seedling,
@@ -2238,11 +2232,11 @@
 "wU" = (
 /obj/item/food/grown/grass/fairy,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "wW" = (
 /obj/item/clothing/under/shorts/blue,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "xd" = (
 /obj/effect/turf_decal/tile/red{
@@ -2276,11 +2270,11 @@
 	dir = 1;
 	pixel_x = -1
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "xC" = (
 /obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "xI" = (
 /mob/living/simple_animal/hostile/jungle/mook,
@@ -2288,7 +2282,7 @@
 /area/awaymission/jungleforest)
 "xK" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "xM" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -2308,11 +2302,11 @@
 	dir = 4
 	},
 /obj/structure/sign/nanotrasen,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "xQ" = (
 /obj/structure/alien/weeds,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "xR" = (
 /obj/effect/turf_decal/bot,
@@ -2329,11 +2323,11 @@
 "xV" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /obj/item/trash/chips,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "yc" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "yg" = (
 /obj/structure/spider/stickyweb/genetic,
@@ -2360,7 +2354,7 @@
 	},
 /area/awaymission/junglebeach)
 "yo" = (
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "yx" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -2393,7 +2387,7 @@
 /area/awaymission/snowdin/post/dorm)
 "yI" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "yL" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
@@ -2464,7 +2458,7 @@
 	name = "Jungle Outpost - Gateway"
 	})
 "zk" = (
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglecaves)
 "zl" = (
 /obj/structure/spacevine,
@@ -2503,12 +2497,12 @@
 "zz" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "zA" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/exotic/antag_gear_weak,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "zB" = (
 /obj/effect/turf_decal/tile/blue{
@@ -2518,7 +2512,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/brute{
+/obj/item/storage/medkit/brute{
 	empty = 1
 	},
 /turf/open/floor/iron/white,
@@ -2536,7 +2530,7 @@
 "zH" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "zO" = (
 /mob/living/simple_animal/hostile/gorilla,
@@ -2576,14 +2570,14 @@
 	})
 "Ac" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Ai" = (
 /turf/open/water,
 /area/awaymission/jungleforest)
 "Aj" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "Ak" = (
 /turf/open/floor/holofloor/beach/coast_t{
@@ -2592,13 +2586,13 @@
 /area/awaymission/junglebeach)
 "Ao" = (
 /obj/item/reagent_containers/food/drinks/mug/coco,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Aq" = (
 /obj/structure/fence{
 	pixel_x = -15
 	},
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "Ar" = (
 /obj/effect/spawner/random/exotic/antag_gear,
@@ -2614,11 +2608,11 @@
 /area/awaymission/snowdin/cave)
 "Ax" = (
 /obj/item/trash/popcorn,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "AE" = (
 /mob/living/simple_animal/hostile/giant_spider,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "AH" = (
 /obj/structure/bed{
@@ -2633,12 +2627,12 @@
 "AJ" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "AN" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "AP" = (
 /obj/effect/spawner/random/structure/crate_loot,
@@ -2653,11 +2647,11 @@
 	dir = 4;
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "AX" = (
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "AZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -2708,6 +2702,10 @@
 /area/awaymission/snowdin/post/medbay{
 	name = "Jungle Outpost - Medbay"
 	})
+"Bl" = (
+/obj/effect/decal/cleanable/food/tomato_smudge,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "Bn" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/spacevine,
@@ -2729,7 +2727,7 @@
 "Bs" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "BD" = (
 /turf/open/floor/wood,
@@ -2746,7 +2744,7 @@
 "BN" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/egg/grown,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "BS" = (
 /obj/item/chair/plastic,
@@ -2761,6 +2759,10 @@
 /area/awaymission/snowdin/post/gateway{
 	name = "Jungle Outpost - Gateway"
 	})
+"BX" = (
+/obj/item/shovel/spade,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "Ca" = (
 /turf/closed/wall,
 /area/awaymission/snowdin/post/medbay{
@@ -2768,11 +2770,11 @@
 	})
 "Cf" = (
 /obj/item/toy/balloon,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Ci" = (
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "Cj" = (
 /obj/item/hatchet/wooden,
@@ -2785,19 +2787,19 @@
 	pixel_x = -16
 	},
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Cm" = (
 /turf/closed/indestructible/sandstone,
 /area/awaymission/junglecaves)
 "Cn" = (
-/turf/open/floor/plating/dirt/jungle,
+/turf/open/misc/dirt/jungle,
 /area/awaymission/jungleforest)
 "Cp" = (
 /obj/item/food/grown/grass/fairy,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Ct" = (
 /turf/closed/mineral,
@@ -2806,7 +2808,7 @@
 /obj/structure/fence{
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Cy" = (
 /obj/effect/turf_decal/tile/blue{
@@ -2816,7 +2818,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/fire{
+/obj/item/storage/medkit/fire{
 	empty = 1
 	},
 /obj/machinery/light,
@@ -2828,7 +2830,7 @@
 	})
 "CK" = (
 /obj/structure/barricade/wooden,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglecaves)
 "CM" = (
 /turf/open/floor/holofloor/beach/coast_t,
@@ -2853,7 +2855,7 @@
 "CX" = (
 /obj/item/clothing/head/bronze,
 /obj/item/grown/bananapeel,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "CZ" = (
 /obj/structure/table/wood,
@@ -2863,11 +2865,11 @@
 "Ds" = (
 /obj/machinery/hydroponics/soil,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Dt" = (
 /mob/living/simple_animal/hostile/asteroid/lobstrosity/lava,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Du" = (
 /obj/machinery/atmospherics/components/trinary/mixer/airmix/flipped{
@@ -2880,7 +2882,7 @@
 "Dw" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "DB" = (
 /obj/effect/turf_decal/tile/red{
@@ -2927,20 +2929,20 @@
 /area/awaymission/snowdin/cave)
 "DN" = (
 /obj/item/toy/beach_ball/holoball/dodgeball,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "DY" = (
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "Ed" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Eh" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Ek" = (
 /obj/structure/table,
@@ -3029,7 +3031,7 @@
 "EO" = (
 /obj/structure/alien/weeds,
 /mob/living/simple_animal/hostile/alien/drone,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "EV" = (
 /obj/item/clothing/glasses/sunglasses/spy,
@@ -3038,7 +3040,7 @@
 "Fa" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/medical/surgery_tool_alien,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Fg" = (
 /obj/machinery/door/airlock/external/glass/ruin,
@@ -3072,7 +3074,7 @@
 	})
 "Fk" = (
 /obj/item/toy/plush/carpplushie/dehy_carp,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Fm" = (
 /obj/effect/turf_decal/caution/stand_clear,
@@ -3091,7 +3093,7 @@
 	})
 "Fn" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Fo" = (
 /obj/effect/decal/cleanable/food/flour,
@@ -3110,7 +3112,7 @@
 /area/awaymission/jungleforest)
 "Ft" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Fz" = (
 /obj/structure/table,
@@ -3132,16 +3134,16 @@
 /turf/open/water,
 /area/awaymission/junglebeach)
 "FD" = (
-/obj/effect/spawner/random/medical/firstaid,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/junglebeach)
 "FJ" = (
 /obj/effect/overlay/palmtree_r,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "FN" = (
 /obj/item/assembly/mousetrap/armed,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "FQ" = (
 /obj/effect/overlay/palmtree_r,
@@ -3179,20 +3181,20 @@
 /area/awaymission/jungleforest)
 "Gj" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Gk" = (
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Gs" = (
 /obj/item/clothing/shoes/sandal,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Gu" = (
 /obj/structure/fence{
 	pixel_x = 15
 	},
-/turf/open/floor/plating/beach/coastline_t{
+/turf/open/misc/beach/coastline_t{
 	dir = 1
 	},
 /area/awaymission/junglebeach)
@@ -3209,7 +3211,7 @@
 /area/awaymission/jungleforest)
 "GF" = (
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "GG" = (
 /obj/structure/spacevine,
@@ -3240,7 +3242,7 @@
 	})
 "GR" = (
 /obj/item/flashlight/flare/torch,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "GU" = (
 /obj/structure/table/wood,
@@ -3289,7 +3291,7 @@
 /area/awaymission/junglecaves)
 "Hc" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Hf" = (
 /obj/structure/flora/junglebush/large,
@@ -3312,17 +3314,17 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "Ht" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "Hu" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Hw" = (
 /obj/structure/flora/junglebush/large,
@@ -3346,12 +3348,12 @@
 	})
 "HL" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "HO" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/contraband,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "HP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -3396,10 +3398,10 @@
 "HY" = (
 /obj/structure/flora/rock/jungle,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "Ia" = (
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "Ic" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/pink/visible,
@@ -3430,6 +3432,13 @@
 "Ij" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil{
+	pixel_y = -3
+	},
+/obj/item/stack/cable_coil{
+	pixel_y = 4
+	},
 /turf/open/floor/iron,
 /area/awaymission/snowdin/post/engineering{
 	name = "Jungle Outpost - Engineering"
@@ -3447,7 +3456,7 @@
 	})
 "Iv" = (
 /obj/structure/fence,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "Iz" = (
 /obj/machinery/door/airlock/vault{
@@ -3477,7 +3486,7 @@
 "IT" = (
 /obj/structure/closet/crate/coffin,
 /mob/living/simple_animal/hostile/skeleton,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "IU" = (
 /obj/structure/flora/tree/jungle,
@@ -3529,7 +3538,7 @@
 /obj/structure/fence{
 	pixel_x = 15
 	},
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "Jj" = (
 /obj/structure/spider/stickyweb/genetic,
@@ -3569,15 +3578,15 @@
 "JQ" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "JT" = (
 /obj/item/clothing/head/cowboy_hat_red,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "JU" = (
 /obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "JY" = (
 /obj/effect/turf_decal/stripes/line{
@@ -3593,7 +3602,7 @@
 	})
 "Ke" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Kk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -3610,7 +3619,7 @@
 	name = "Jungle Outpost"
 	})
 "Kp" = (
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "Kq" = (
 /obj/structure/flora/junglebush/large,
@@ -3623,7 +3632,7 @@
 "Ks" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider/nurse,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Kt" = (
 /obj/item/food/cake/clown_cake,
@@ -3645,7 +3654,7 @@
 /area/awaymission/snowdin/cave)
 "KD" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "KI" = (
 /obj/structure/railing,
@@ -3654,7 +3663,7 @@
 "KT" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "KV" = (
 /obj/item/shovel,
@@ -3666,7 +3675,7 @@
 /area/awaymission/jungleforest)
 "Le" = (
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Lj" = (
 /obj/structure/table,
@@ -3682,17 +3691,17 @@
 /area/awaymission/snowdin/post/dorm)
 "Lo" = (
 /obj/effect/mob_spawn/corpse/human,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Lq" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider/viper,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Lt" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/random/entertainment,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Lx" = (
 /obj/structure/flora/tree/jungle/small,
@@ -3708,11 +3717,11 @@
 	},
 /obj/structure/table/glass,
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/o2{
+/obj/item/storage/medkit/o2{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/storage/firstaid/o2{
+/obj/item/storage/medkit/o2{
 	pixel_x = -2;
 	pixel_y = 4
 	},
@@ -3731,7 +3740,7 @@
 /obj/structure/spider/eggcluster{
 	name = "Leaper eggs"
 	},
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "LC" = (
 /obj/structure/cable,
@@ -3748,7 +3757,7 @@
 	name = "Jungle Outpost - Engineering"
 	})
 "LR" = (
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "LY" = (
 /obj/structure/table/wood,
@@ -3768,11 +3777,11 @@
 	})
 "Mk" = (
 /obj/structure/fluff/beach_umbrella/security,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Ml" = (
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "Mq" = (
 /obj/structure/closet/cabinet,
@@ -3790,24 +3799,21 @@
 	})
 "MA" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglecaves)
 "MB" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/jungleforest)
 "MF" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/atmos{
-	dir = 1;
-	piping_layer = 4;
-	pixel_x = 5;
-	pixel_y = 5
+/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
+	dir = 1
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "MI" = (
 /mob/living/simple_animal/hostile/jungle/seedling,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "MN" = (
 /obj/structure/kitchenspike,
@@ -3826,23 +3832,23 @@
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/junglebush/large,
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "MS" = (
 /mob/living/simple_animal/hostile/carp/megacarp,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "MW" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "MX" = (
 /obj/structure/fluff/beach_umbrella/security,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "MZ" = (
 /obj/effect/overlay/coconut,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Ni" = (
 /obj/machinery/door/airlock/public/glass{
@@ -3877,15 +3883,15 @@
 	})
 "Ns" = (
 /obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "Nu" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglecaves)
 "Ny" = (
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Nz" = (
 /obj/effect/turf_decal/tile/red{
@@ -3930,7 +3936,7 @@
 /obj/structure/flora/junglebush,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "NH" = (
 /obj/structure/closet/firecloset/full,
@@ -4021,11 +4027,11 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Oh" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "Om" = (
 /obj/item/clothing/head/clownmitre,
@@ -4043,11 +4049,11 @@
 	name = "Jungle Outpost - Security Checkpoint"
 	})
 "Op" = (
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Oq" = (
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Ot" = (
 /obj/structure/flora/tree/jungle/small,
@@ -4057,7 +4063,7 @@
 "Ou" = (
 /obj/structure/alien/weeds,
 /obj/item/clothing/mask/facehugger,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Ov" = (
 /obj/item/stack/rods,
@@ -4066,20 +4072,20 @@
 "OA" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/flora/tree/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "OE" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "OG" = (
-/turf/open/floor/plating/beach/coastline_t/sandwater_inner{
+/turf/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 8
 	},
 /area/awaymission/junglebeach)
 "ON" = (
 /obj/item/clothing/shoes/bronze,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "OO" = (
 /obj/effect/turf_decal/bot,
@@ -4117,7 +4123,7 @@
 	})
 "OW" = (
 /obj/structure/flora/tree/palm,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "OZ" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -4177,15 +4183,15 @@
 /area/awaymission/jungleforest)
 "Ps" = (
 /obj/effect/decal/cleanable/greenglow,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Py" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "PA" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "PD" = (
 /turf/closed/wall,
@@ -4194,7 +4200,7 @@
 /turf/open/floor/wood,
 /area/awaymission/jungleforest)
 "PN" = (
-/turf/open/floor/plating/beach/coastline_t/sandwater_inner{
+/turf/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 4
 	},
 /area/awaymission/junglebeach)
@@ -4213,16 +4219,16 @@
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Qc" = (
 /obj/item/clothing/head/cowboy_hat_white,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Qd" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Qh" = (
 /turf/open/floor/mineral/bananium,
@@ -4244,32 +4250,32 @@
 /area/awaymission/snowdin/post/dorm)
 "Qn" = (
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Qp" = (
 /obj/structure/alien/weeds,
 /obj/structure/alien/weeds,
 /mob/living/simple_animal/hostile/alien/queen/large,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Qr" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "Qu" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Qx" = (
 /obj/structure/alien/resin/wall,
 /obj/structure/alien/resin/wall,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Qz" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -4324,7 +4330,7 @@
 	})
 "QP" = (
 /obj/structure/alien/resin/flower_bud,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "QW" = (
 /obj/effect/decal/cleanable/blood/gibs/torso,
@@ -4342,7 +4348,7 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "Rc" = (
 /obj/structure/closet/crate/wooden,
@@ -4367,7 +4373,7 @@
 "Rl" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/blood/gibs/down,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Rm" = (
 /obj/effect/turf_decal/tile/blue{
@@ -4413,11 +4419,11 @@
 /obj/structure/flora/junglebush/c,
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "RP" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "RS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -4434,7 +4440,7 @@
 /obj/structure/spacevine,
 /obj/structure/spacevine,
 /mob/living/simple_animal/hostile/jungle/seedling,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Sb" = (
 /obj/structure/bed{
@@ -4461,18 +4467,18 @@
 	})
 "Sj" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Sl" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
+"Sm" = (
+/obj/structure/girder,
+/turf/open/water/beach,
+/area/awaymission/junglebeach)
 "Sr" = (
-/obj/machinery/air_sensor{
-	frequency = 1442;
-	id_tag = "snowdin_nitrogen";
-	name = "gas sensor (nitrogen)"
-	},
+/obj/machinery/air_sensor/oxygen_tank,
 /turf/open/floor/engine/o2,
 /area/awaymission/snowdin/post/engineering{
 	name = "Jungle Outpost - Engineering"
@@ -4486,11 +4492,11 @@
 /turf/closed/mineral,
 /area/awaymission/junglecaves)
 "SA" = (
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "SC" = (
 /obj/item/food/meat/slab/human/mutant/skeleton,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "SD" = (
 /obj/item/bikehorn/golden,
@@ -4508,27 +4514,27 @@
 /obj/structure/fence/corner{
 	dir = 9
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "SN" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "SP" = (
 /turf/open/floor/carpet/executive,
 /area/awaymission/junglebeach)
 "SR" = (
 /mob/living/simple_animal/hostile/jungle/mook,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "ST" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "SU" = (
 /mob/living/simple_animal/hostile/carp/megacarp,
-/turf/open/floor/plating/beach/water,
+/turf/open/water/beach,
 /area/awaymission/junglebeach)
 "SV" = (
 /turf/open/floor/wood/tile,
@@ -4556,7 +4562,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "Tf" = (
 /obj/machinery/power/port_gen/pacman,
@@ -4584,7 +4590,7 @@
 	pixel_x = -16
 	},
 /obj/structure/fence,
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "Tm" = (
 /obj/effect/turf_decal/tile/blue{
@@ -4633,12 +4639,12 @@
 "Tu" = (
 /obj/structure/alien/weeds,
 /mob/living/carbon/alien/larva,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "TA" = (
 /obj/structure/flora/junglebush,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "TB" = (
 /obj/machinery/light{
@@ -4666,8 +4672,12 @@
 	})
 "TI" = (
 /obj/item/clothing/under/pants/classicjeans,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
+"TJ" = (
+/obj/effect/mob_spawn/corpse/human/assistant,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "TN" = (
 /obj/machinery/griddle,
 /obj/machinery/light,
@@ -4685,11 +4695,11 @@
 /area/awaymission/jungleforest)
 "TR" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "TS" = (
 /obj/item/clothing/head/bronze,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "TV" = (
 /obj/machinery/airalarm{
@@ -4735,7 +4745,7 @@
 	})
 "Uh" = (
 /obj/item/trash/peanuts,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Ui" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
@@ -4766,12 +4776,16 @@
 "Ul" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
+/area/awaymission/jungleforest)
+"Un" = (
+/obj/item/food/canned/tomatoes,
+/turf/open/floor/grass,
 /area/awaymission/jungleforest)
 "Up" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/spacevine,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "Uq" = (
 /obj/item/seeds/random,
@@ -4781,7 +4795,7 @@
 "Ut" = (
 /mob/living/simple_animal/hostile/jungle/mega_arachnid,
 /obj/structure/spider/stickyweb,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Uy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -4798,6 +4812,11 @@
 /obj/structure/barricade/slime,
 /turf/open/floor/grass,
 /area/awaymission/jungleforest)
+"UA" = (
+/turf/open/misc/beach/coastline_t{
+	dir = 6
+	},
+/area/awaymission/junglebeach)
 "UC" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -4832,7 +4851,7 @@
 	dir = 4;
 	pixel_x = 16
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "UU" = (
 /turf/closed/wall/mineral/wood,
@@ -4842,11 +4861,11 @@
 /area/awaymission/junglebeach)
 "UY" = (
 /obj/item/restraints/legcuffs/beartrap,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "Va" = (
 /obj/item/clothing/under/pants/jeans,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Vb" = (
 /mob/living/simple_animal/hostile/ooze/gelatinous,
@@ -4867,7 +4886,7 @@
 	pixel_x = -16
 	},
 /obj/structure/fence,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Vi" = (
 /obj/effect/spawner/random/exotic/antag_gear_weak,
@@ -4881,27 +4900,27 @@
 /area/awaymission/jungleforest)
 "Vm" = (
 /obj/item/toy/beach_ball,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Vn" = (
 /obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Vo" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/giant_spider/hunter/flesh,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "Vq" = (
 /obj/item/seeds/replicapod,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Vv" = (
 /obj/structure/fence{
 	dir = 4;
 	pixel_x = -16
 	},
-/turf/open/floor/plating/dirt/jungle/dark,
+/turf/open/misc/dirt/jungle/dark,
 /area/awaymission/jungleforest)
 "VG" = (
 /turf/open/floor/holofloor/beach/coast_t{
@@ -4936,7 +4955,7 @@
 /obj/vehicle/ridden/atv{
 	dir = 8
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "VP" = (
 /obj/structure/table/wood,
@@ -4947,10 +4966,10 @@
 "VT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "VU" = (
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglebeach)
 "VV" = (
 /obj/structure/flora/grass/jungle/b,
@@ -4963,7 +4982,7 @@
 /area/awaymission/snowdin/cave)
 "Wb" = (
 /obj/structure/flora/junglebush,
-/turf/open/floor/plating/dirt/dark,
+/turf/open/misc/dirt/dark,
 /area/awaymission/junglebeach)
 "Wl" = (
 /obj/structure/spider/stickyweb/genetic,
@@ -4998,7 +5017,7 @@
 "Wu" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Wx" = (
 /obj/structure/flora/tree/jungle,
@@ -5022,9 +5041,13 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/open/floor/mineral/bananium,
 /area/awaymission/junglecaves)
+"WE" = (
+/obj/item/food/grown/tomato,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "WF" = (
 /obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/junglecaves)
 "WK" = (
 /obj/effect/turf_decal/tile/blue{
@@ -5080,7 +5103,7 @@
 	})
 "WU" = (
 /obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "WY" = (
 /obj/structure/spider/stickyweb,
@@ -5100,7 +5123,7 @@
 	})
 "Xd" = (
 /obj/effect/decal/cleanable/blood/innards,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Xf" = (
 /obj/item/seeds/potato,
@@ -5118,15 +5141,15 @@
 /area/awaymission/jungleforest)
 "Xl" = (
 /obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/grass/jungle,
+/turf/open/misc/grass/jungle,
 /area/awaymission/jungleforest)
 "Xn" = (
 /obj/structure/fluff/beach_umbrella,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Xt" = (
 /mob/living/simple_animal/crab,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Xv" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -5211,9 +5234,13 @@
 /area/awaymission/snowdin/post/engineering{
 	name = "Jungle Outpost - Engineering"
 	})
+"XR" = (
+/obj/item/seeds/tomato,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "XS" = (
 /mob/living/simple_animal/hostile/alien,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "XX" = (
 /obj/machinery/door/airlock/public/glass,
@@ -5235,7 +5262,7 @@
 	name = "Jungle Outpost"
 	})
 "Yb" = (
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Yc" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible{
@@ -5251,11 +5278,11 @@
 	})
 "Ye" = (
 /obj/structure/flora/rock,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Yg" = (
 /obj/structure/fluff/beach_umbrella,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 "Yi" = (
 /turf/open/floor/engine/o2,
@@ -5278,7 +5305,7 @@
 	})
 "Ym" = (
 /obj/structure/fluff/beach_umbrella/science,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Yr" = (
 /obj/structure/table/wood,
@@ -5293,7 +5320,7 @@
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "YL" = (
 /obj/item/reagent_containers/food/drinks/trophy/bronze_cup,
@@ -5301,17 +5328,17 @@
 /area/awaymission/junglecaves)
 "YM" = (
 /obj/item/clothing/glasses/sunglasses,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "YN" = (
 /obj/structure/spider/stickyweb,
 /mob/living/simple_animal/hostile/jungle/mega_arachnid,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "YT" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/eggcluster/enriched,
-/turf/open/floor/plating/ashplanet/rocky,
+/turf/open/misc/ashplanet/rocky,
 /area/awaymission/junglecaves)
 "YU" = (
 /turf/open/floor/iron,
@@ -5329,10 +5356,14 @@
 /turf/open/floor/grass,
 /area/awaymission/jungleforest)
 "Ze" = (
-/turf/open/floor/plating/beach/coastline_t/sandwater_inner{
+/turf/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 1
 	},
 /area/awaymission/junglebeach)
+"Zf" = (
+/mob/living/simple_animal/hostile/killertomato,
+/turf/open/floor/grass,
+/area/awaymission/jungleforest)
 "Zg" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/junglebush/c,
@@ -5349,12 +5380,12 @@
 	})
 "Zm" = (
 /obj/item/clothing/mask/gas/tiki_mask,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "Zr" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /obj/item/food/chips/shrimp,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "Zs" = (
 /obj/effect/turf_decal/tile/blue{
@@ -5401,11 +5432,11 @@
 	})
 "ZF" = (
 /obj/structure/flora/junglebush/c,
-/turf/open/floor/plating/dirt,
+/turf/open/misc/dirt,
 /area/awaymission/jungleforest)
 "ZI" = (
 /mob/living/simple_animal/hostile/syndicate/ranged,
-/turf/open/floor/plating/beach/sand,
+/turf/open/misc/beach/sand,
 /area/awaymission/junglebeach)
 "ZK" = (
 /obj/effect/turf_decal/tile/blue{
@@ -5439,7 +5470,7 @@
 /area/awaymission/junglebeach)
 "ZV" = (
 /mob/living/simple_animal/hostile/skeleton,
-/turf/open/floor/plating/asteroid,
+/turf/open/misc/asteroid,
 /area/awaymission/junglecaves)
 "ZY" = (
 /obj/machinery/light{
@@ -5453,7 +5484,7 @@
 	})
 "ZZ" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
-/turf/open/floor/plating/beach/sand/coastline_b,
+/turf/open/misc/beach/sand/coastline_b,
 /area/awaymission/junglebeach)
 
 (1,1,1) = {"
@@ -7755,7 +7786,7 @@ Ar
 JO
 UD
 UD
-ta
+Sm
 dr
 Rn
 Rn
@@ -11304,7 +11335,7 @@ Yb
 Yb
 SA
 SA
-VG
+CM
 yo
 yo
 yo
@@ -11505,8 +11536,8 @@ VU
 Yb
 Yb
 SA
-SA
-yo
+fv
+UA
 yo
 yo
 yo
@@ -21268,7 +21299,7 @@ GU
 jS
 vC
 qb
-YU
+oc
 mJ
 qb
 sC
@@ -22743,7 +22774,7 @@ dh
 dh
 dh
 IH
-zO
+dh
 IH
 dh
 dh
@@ -25366,7 +25397,7 @@ dh
 dh
 dh
 dh
-dh
+Zf
 dh
 dh
 Op
@@ -25570,9 +25601,9 @@ rM
 yI
 dh
 Op
-dh
-dh
-dh
+Bl
+Zf
+tq
 Op
 rM
 dh
@@ -25773,7 +25804,7 @@ dh
 dh
 nQ
 dh
-dh
+XR
 dh
 Kq
 dh
@@ -25972,9 +26003,9 @@ rM
 Kq
 dh
 IH
+Zf
 dh
-dh
-dh
+WE
 jZ
 dh
 rM
@@ -26173,13 +26204,13 @@ dh
 dh
 dh
 dh
-dh
+tq
 dh
 jZ
-dh
+Un
 rM
 dh
-dh
+WE
 rM
 dh
 dh
@@ -26378,11 +26409,11 @@ dh
 dh
 dh
 Kq
-dh
-dh
-dh
-dh
-dh
+Zf
+tq
+TJ
+Bl
+Zf
 dh
 dh
 Kq
@@ -26578,10 +26609,10 @@ dh
 Kq
 dh
 Op
-dh
+Bl
 rM
-dh
-dh
+Bl
+BX
 Jx
 dh
 dh
@@ -26780,11 +26811,11 @@ dh
 dh
 dh
 nQ
+WE
+tq
+XR
 dh
-dh
-dh
-dh
-dh
+Zf
 dh
 dh
 dh
@@ -26982,12 +27013,12 @@ Kq
 Op
 rM
 Op
+Zf
 dh
-dh
-dh
+Zf
 rM
 dh
-dh
+tq
 dh
 dh
 dh
@@ -27190,7 +27221,7 @@ dh
 dh
 Op
 nQ
-zO
+dh
 tx
 dh
 dh
@@ -29631,7 +29662,7 @@ dh
 dh
 Kq
 dh
-zO
+dh
 dh
 dh
 Kq
@@ -33856,7 +33887,7 @@ rM
 dh
 dh
 dh
-dh
+zO
 dh
 dh
 dh
@@ -37487,7 +37518,7 @@ dh
 dh
 dh
 dh
-dh
+zO
 dh
 dh
 rM
