@@ -1139,6 +1139,7 @@
 #include "code\game\area\space_station_13_areas.dm"
 #include "code\game\area\areas\away_content.dm"
 #include "code\game\area\areas\centcom.dm"
+#include "code\game\area\areas\couvaxarea.dm"
 #include "code\game\area\areas\holodeck.dm"
 #include "code\game\area\areas\mining.dm"
 #include "code\game\area\areas\shuttles.dm"
