@@ -286,7 +286,7 @@ Used by the AI doomsday and the self-destruct nuke.
 		add_new_zlevel("Empty Area [space_levels_so_far]", ZTRAITS_SPACE)
 
 	if(config.minetype == "lavaland")
-		if (prob(50))
+		if (prob(100))
 			LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
 		else
 			LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland-NewStation.dmm", default_traits = ZTRAITS_LAVALAND)
